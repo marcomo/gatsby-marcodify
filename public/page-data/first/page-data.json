@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-generic-js",
+    "path": "/first",
+    "result": {"pageContext":{"title":"first page","description":"I'm the first page"}},
+    "staticQueryHashes": []}

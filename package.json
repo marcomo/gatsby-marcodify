@@ -1,0 +1,21 @@
+{
+  "name": "gatsby-marcodify",
+  "version": "1.0.0",
+  "description": "Website for marcodify.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby build && gatsby serve"
+  },
+  "author": "Marco Morales",
+  "email": "me@marcodify.com",
+  "url": "http://linkedin.com/in/marcodify",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "gatsby": "^3.14.0",
+    "path-browserify": "^1.0.1"
+  }
+}
