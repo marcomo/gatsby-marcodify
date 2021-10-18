@@ -1,19 +1,20 @@
 import React from "react";
 import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faLongArrowRight } from "@fortawesome/pro-light-svg-icons";
 
 const Markdown = (props) => {
   const {
     data: {
-      markdownRemark: { frontmatter, html },
+      markdownRemark: { html },
     },
   } = props;
   return (
-    <article>
-      <h2>MARKDOWN</h2>
-      <h1>{frontmatter.title}</h1>
-      <p>{frontmatter.description}</p>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </article>
+    <Layout>
+      <article dangerouslySetInnerHTML={{ __html: html }} />
+      {/* <FontAwesomeIcon icon={faLongArrowRight} /> */}
+    </Layout>
   );
 };
 

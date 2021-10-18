@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=Nunito&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
+}
+$green: #7ea45e;
+$grey-100: #838aab;
+$grey-200: #24283b;
+$grey-300: #1f2235;
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: $grey-200;
+  color: $grey-100;
+}
+
+#mdfy-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  main {
+    flex: 1;
+    padding: 4rem;
+  }
+  aside {
+    width: 20rem;
+  }
+  nav,
+  footer {
+    padding: 4rem;
+  }
+  footer {
+    background-color: $grey-300;
+    color: $grey-100;
+  }
+}
+#mdfy-brand-logo {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 300;
+  font-size: 3rem;
+  color: $green;
+  letter-spacing: -0.1ch;
+  span:nth-child(2) {
+    font-weight: 700;
+  }
+}
+h1 {
+  color: $green;
+  font-size: 3rem;
+  font-family: "Comfortaa", sans-serif;
+  + p {
+    font-size: 1.5rem;
+    color: $green;
+  }
+}
+h2 {
+  font-weight: normal;
+  font-size: 1.5rem;
+}

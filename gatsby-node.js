@@ -11,6 +11,22 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   });
 };
 
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefs = `
+  type MarkdownRemark implements Node {
+    frontmatter: Frontmatter
+  }
+  type Frontmatter @infer {
+    title: String
+    description: String
+    slug: String!
+    featuredImage: File @fileByRelativePath
+  }
+`;
+  createTypes(typeDefs);
+};
+
 const path = require("path");
 const data = require("./src/data/page_data");
 
@@ -25,10 +41,6 @@ exports.createPages = async ({ actions, graphql }) => {
         description: page.description,
       },
     });
-  });
-  createPage({
-    path: "/created",
-    component: path.resolve("./src/templates/Generic.js"),
   });
 
   // How many markdown pages do I have; just give me the slug
@@ -46,7 +58,7 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `);
 
-  // build pages with Mardown template; pass the slug to look up the page
+  // build pages with Markdown template; pass the slug to look up the page
   mdPages.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.slug,
