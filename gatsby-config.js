@@ -23,6 +23,7 @@ module.exports = {
             options: {
               maxWidth: 800,
               backgroundColor: "transparent",
+              linkImagesToOriginal: false,
               withWebp: true,
               tracedSVG: {
                 color: "coral",
