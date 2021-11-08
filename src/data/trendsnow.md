@@ -4,5 +4,5 @@ description: Web App
 slug: /ingrooves-trends-now
 ---
 
-![ingrooves trends now](../images/tn_user_sotm.png)
-![ingrooves trends now](../images/tn_maps.png)
+![ingrooves trends now songs on the move](../images/ingrooves/tn/user_sotm.png)
+![ingrooves trends now territories](../images/ingrooves/tn/maps.png)
