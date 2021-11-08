@@ -25,11 +25,33 @@ body {
   flex-direction: column;
   height: 100%;
   main {
+    display: flex;
     flex: 1;
     padding: 4rem;
-  }
-  aside {
-    width: 20rem;
+    aside {
+      width: 20rem;
+      flex: 1 0 20%;
+      ul {
+        list-style-type: unset;
+        padding-inline-start: 0;
+        > li {
+          color: white;
+          list-style: none;
+          margin-bottom: 1rem;
+          a {
+            color: inherit;
+            text-decoration: none;
+            &:hover {
+              padding-bottom: 0.25em;
+              border-bottom: 1px dotted $grey-100;
+            }
+          }
+        }
+      }
+    }
+    article {
+      flex: 0 0 80%;
+    }
   }
   nav,
   footer {

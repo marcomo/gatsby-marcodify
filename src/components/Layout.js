@@ -1,4 +1,5 @@
 import React from "react";
+import SideNav from "./SideNav";
 
 const Layout = (props) => {
   return (
@@ -11,7 +12,12 @@ const Layout = (props) => {
           </div>
         </nav>
       </header>
-      <main>{props.children}</main>
+      <main>
+        <aside>
+          <SideNav />
+        </aside>
+        {props.children}
+      </main>
       <footer>© 2021 Marco Morales</footer>
     </div>
   );
