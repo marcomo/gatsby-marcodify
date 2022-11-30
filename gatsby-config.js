@@ -1,4 +1,5 @@
 module.exports = {
+  graphqlTypegen: true,
   plugins: [
     {
       resolve: "gatsby-source-filesystem",
@@ -25,9 +26,9 @@ module.exports = {
               backgroundColor: "transparent",
               linkImagesToOriginal: false,
               withWebp: true,
-              tracedSVG: {
-                color: "coral",
-              },
+              // tracedSVG: {
+              //   color: "coral",
+              // },
             },
           },
         ],

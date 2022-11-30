@@ -1,5 +1,6 @@
 ---
 title: Ingrooves Trends Now
+h1: Ingrooves Trends Now
 description: Web App
 slug: /ingrooves-trends-now
 ---
