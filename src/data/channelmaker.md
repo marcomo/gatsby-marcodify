@@ -1,5 +1,6 @@
 ---
 title: Vadio Channelmaker
+h1: Vadio Channelmaker
 description: Web App
 slug: /vadio-channel-maker
 ---

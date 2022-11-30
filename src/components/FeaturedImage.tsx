@@ -1,14 +1,15 @@
 import React from "react";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const FeaturedImage = (props) => {
   return (
     (props.featuredImage && (
-      <Img
-        fluid={props.featuredImage.childImageSharp.fluid}
+      <GatsbyImage
+        image={props.data}
+        // fluid={props.featuredImage.childImageSharp.fluid}
         alt="Pursued by Bear"
         loading="eager"
-        fadeIn={false}
+        // fadeIn={false}
       />
     )) ||
     null
