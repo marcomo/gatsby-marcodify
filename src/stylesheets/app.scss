@@ -84,14 +84,49 @@ body {
     }
   }
 }
-#mdfy-brand-logo {
+.mdfy-brand-logo {
+  position: relative;
   font-family: "Comfortaa", sans-serif;
   font-weight: 300;
   font-size: 3rem;
+  height: 4rem;
+  margin-right: auto;
   color: $green;
   letter-spacing: -0.1ch;
-  span:nth-child(2) {
+  display: inline-flex;
+  &:before,
+  &:after {
+    overflow: hidden;
+    white-space: nowrap;
+    transition-property: flex, margin, letter-spacing, font-size, color;
+    transition-duration: 500ms;
+    margin: 0;
+  }
+  &:before {
+    content: "marco morales";
+    flex: 0 1 92px;
+  }
+  &:after {
     font-weight: 700;
+    content: "codify";
+    flex: 0 1 140px;
+  }
+  &:hover {
+    &:before {
+      color: white;
+      margin-bottom: auto;
+      font-size: 1.5rem;
+      content: "marco morales";
+      flex: 0 1 190px;
+      letter-spacing: initial;
+    }
+    &:after {
+      margin-left: calc(93px - 180px);
+      margin-top: 1.5rem;
+      font-size: 2rem;
+      content: "codify the UI";
+      flex: 0 1 190px;
+    }
   }
 }
 h1 {
