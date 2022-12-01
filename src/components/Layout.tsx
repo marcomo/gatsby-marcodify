@@ -1,16 +1,12 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
+import MainNav from "./MainNav";
 import SideNav from "./SideNav";
 
-const Layout = (props) => {
+const Layout: React.FunctionComponent<PropsWithChildren> = (props) => {
   return (
     <div id="mdfy-wrapper">
       <header>
-        <nav>
-          <div id="mdfy-brand-logo">
-            <span>mar</span>
-            <span>codify</span>
-          </div>
-        </nav>
+        <MainNav />
       </header>
       <main>
         <aside>
