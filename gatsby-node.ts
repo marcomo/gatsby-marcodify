@@ -24,6 +24,9 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
     title: String
     description: String
     h1: String
+    company: String
+    client: String
+    role: String
     slug: String!
     featuredImage: File @fileByRelativePath
   }

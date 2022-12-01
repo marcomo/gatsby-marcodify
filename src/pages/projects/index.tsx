@@ -7,7 +7,7 @@ import Layout from '../../components/Layout';
 
 const Index : React.FunctionComponent<PageProps<Queries.ProjectsQuery>> = ({ data }) => {
   console.log(data)
-  const projects = data.allMarkdownRemark.edges
+  const { projects } = data.allMarkdownRemark
   return (
     <Layout>
       <div className='flex-item'>
@@ -31,8 +31,8 @@ export default Index;
 
 export const query = graphql`
   query Projects {
-    allMarkdownRemark {
-      edges {
+    allMarkdownRemark(sort: [{frontmatter: {rank: ASC}}, {frontmatter: {title: ASC}}]) {
+      projects: edges {
         node {
           frontmatter {
             slug
