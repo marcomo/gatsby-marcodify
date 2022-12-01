@@ -2,7 +2,7 @@
 title: Vadio Channelmaker
 h1: Vadio Channelmaker
 description: Web App
-slug: /vadio-channel-maker
+slug: vadio-channel-maker
 ---
 
 ![vadio channel maker add to playlist](../images/vadio/channelmaker/add_to_playlist.png)

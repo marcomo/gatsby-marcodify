@@ -2,7 +2,7 @@
 title: Design Systems
 h1: Design Systems
 description: Design Systems
-slug: /design-systems
+slug: design-systems
 ---
 
 ## Meez
