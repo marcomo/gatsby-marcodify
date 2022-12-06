@@ -15,7 +15,7 @@ const Index : React.FunctionComponent<PageProps<Queries.ProjectsQuery>> = ({ dat
         <h3>Projects</h3>
         <div>{
           projects.map(proj => (
-            <ConditionalRender shouldRender={!!proj.node.frontmatter}>
+            <ConditionalRender shouldRender={!!proj.node.frontmatter} key={proj.node.id}>
               <Link to={"/projects/" + proj.node.frontmatter?.slug ?? ""} key={proj.node.id}>
                 <h4>{ proj.node.frontmatter?.title }</h4>
               </Link>
@@ -30,17 +30,33 @@ const Index : React.FunctionComponent<PageProps<Queries.ProjectsQuery>> = ({ dat
 export default Index;
 
 export const query = graphql`
-  query Projects {
-    allMarkdownRemark(sort: [{frontmatter: {rank: ASC}}, {frontmatter: {title: ASC}}]) {
-      projects: edges {
-        node {
-          frontmatter {
-            slug
-            title
+query Projects {
+  allMarkdownRemark(
+    sort: [{frontmatter: {rank: ASC}}, {frontmatter: {title: ASC}}]
+  ) {
+    projects: edges {
+      node {
+        frontmatter {
+          slug
+          title
+          thumb {
+            childrenImageSharp {
+              fluid {
+                srcSet
+              }
+            }
           }
-          id
+          images {
+            childrenImageSharp {
+              fluid {
+                srcSet
+              }
+            }
+          }
         }
+        id
       }
     }
   }
+}
 `

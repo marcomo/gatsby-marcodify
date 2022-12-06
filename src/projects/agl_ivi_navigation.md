@@ -6,6 +6,20 @@ slug: agl-ivi-navigation
 company: Jaguar Land Rover
 role: ["UX Designer"]
 rank: 1
+thumb: ../images/jlr/navigation/republic_integrated_thumb.jpg
+featuredImg: ../images/jlr/navigation/republic_guide_cover.jpg
+images: [
+  ../images/jlr/navigation/hmi_map_views.jpg,
+  ../images/jlr/navigation/app_screen_destination.png,
+  ../images/jlr/navigation/hmi_flow_navigation.jpg,
+  ../images/jlr/navigation/app_screen_route.png,
+  ../images/jlr/navigation/app_screen_driving.png,
+  ../images/jlr/navigation/app_screen_add_location_en_route.png,
+  ../images/jlr/navigation/app_screen_destination_3d.png,
+  ../images/jlr/navigation/hmi_app_views.jpg,
+  ../images/jlr/navigation/app_screen_menu_maps.png,
+  ../images/jlr/navigation/app_screen_menu_reco_maps.png
+]
 ---
 
 ## Proof-of-Concept Prototype
@@ -13,6 +27,8 @@ rank: 1
 Starting with Navit, an open source navigation system, I designed an enhanced user experience and interface based on Navit’s fundamental features. The app centralizes many of the Navit features to the map view to give the user a more seamless interaction and a focus on navigating streets not menus.
 
 I served as the design and UX point person working with our dev team to see this built as a functional prototype which we successfully ran on-board on the road.
+
+![Destination found on map](../images/jlr/navigation/app_screen_destination.png)
 
 The main map view gives the user the ability to navigate the map, select locations, search, get their position, and change their view orientation.
 

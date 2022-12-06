@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowRight } from "@fortawesome/pro-light-svg-icons";
 import { GatsbyImage } from "gatsby-plugin-image";
 
-const Markdown: React.FunctionComponent<PageProps<Queries.MarkdownQuery>> = (props) => {
+const Markdown: React.FunctionComponent<PageProps</* Queries.MarkdownQuery */any>> = (props) => {
   const markdownRemark = props?.data?.markdownRemark
   return (
     <Layout>
@@ -21,22 +21,22 @@ const Markdown: React.FunctionComponent<PageProps<Queries.MarkdownQuery>> = (pro
 };
 
 // use the passed in slug to lookup the data
-export const pageQuery = graphql`
-  query Markdown ($slug: String) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        description
-        slug
-        h1
-        featuredImage {
-          childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED)
-          }
-        }
-      }
-    }
-  }
-`;
+// export const pageQuery = graphql`
+//   query Markdown ($slug: String) {
+//     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+//       html
+//       frontmatter {
+//         description
+//         slug
+//         h1
+//         featuredImg {
+//           childImageSharp {
+//             gatsbyImageData(layout: CONSTRAINED)
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
 
 export default Markdown;

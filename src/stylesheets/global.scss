@@ -16,7 +16,7 @@ body {
 body {
   font-family: "Nunito", sans-serif;
   background-color: $grey-200;
-  color: $grey-100;
+  color: $light;
 }
 
 a {
@@ -136,10 +136,6 @@ h1 {
   color: $green;
   font-size: 3rem;
   font-family: "Comfortaa", sans-serif;
-  + p {
-    font-size: 1.5rem;
-    color: $green;
-  }
 }
 h2 {
   font-weight: normal;

@@ -6,10 +6,54 @@ slug: ingrooves-trends-now
 company: Ingrooves Music Group
 role: ["Product Designer", "UX Designer", "Frontend Developer"]
 rank: 1
+thumb: ../images/schwab/republic_airways/republic_integrated_thumb.jpg
+featuredImg: ../images/schwab/republic_airways/republic_guide_cover.jpg
+images: [
+  ../images/ingrooves/tn/user_sotm.png,
+  ../images/ingrooves/tn/maps.png
+]
 ---
 
-![ingrooves trends now songs on the move](../images/ingrooves/tn/user_sotm.png)
-![ingrooves trends now territories](../images/ingrooves/tn/maps.png)
+<iframe
+  style="border: 1px solid rgba(0, 0, 0, 0.1);"
+  width="100%"
+  height="800"
+  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FTQJ7pZPXaPAKQeAwqhAYeJ%2FTrends-Team-Views%3Fpage-id%3D1100%253A317313%26node-id%3D482%253A23795%26viewport%3D150%252C3641%252C0.33%26scaling%3Dscale-down%26starting-point-node-id%3D482%253A23795"
+  allowfullscreen></iframe>
+
+<iframe
+  style="border: 1px solid rgba(0, 0, 0, 0.1);"
+  width="100%"
+  height="800"
+  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FTQJ7pZPXaPAKQeAwqhAYeJ%2FTrends-Team-Views%3Fpage-id%3D1303%253A336221%26node-id%3D1150%253A332157%26viewport%3D860%252C665%252C0.13%26scaling%3Dmin-zoom%26starting-point-node-id%3D1150%253A332157"
+  allowfullscreen></iframe>
+
+<iframe src="https://codesandbox.io/embed/map-chart-with-tooltip-forked-e3r4b?fontsize=14&hidenavigation=1&theme=dark&view=preview"
+     style="border:0; border-radius: 4px; overflow:hidden;"
+     width="100%" height="800"
+     title="Map chart with tooltip (forked)"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
+<iframe
+  width="100%"
+  height="800"
+  src="https://www.youtube.com/embed/wQW5WkX-FJU"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen></iframe>
+
+<iframe
+  src="https://player.vimeo.com/video/777512579?h=bbfbb0be52"
+  width="100%"
+  height="800"
+  frameborder="0"
+  allow="autoplay; fullscreen; picture-in-picture"
+  allowfullscreen></iframe>
+
+
 
 ## An AI-powered music analytics tool for multiple streaming services
 
