@@ -98,7 +98,8 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql 
   }
   `);
 
-  // build projects with Project template; pass the slug to look up the page
+  // create a project page for each in query
+  // using Project template
   mdProjects.data?.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage<Partial<typeof node>>({
       path: "/projects/" + (node.frontmatter?.slug ?? ""),

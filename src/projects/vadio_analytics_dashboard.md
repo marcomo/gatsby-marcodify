@@ -6,6 +6,7 @@ slug: vadio-analytics-dashboard
 company: Vadio
 role: ["UX Designer", "Frontend Developer"]
 rank: 3
+thumb: ../images/vadio/analytics_dashboard/vadio_analyticsdashboard_thumb.jpg
 ---
 
 This web app gives Vadio partners the ability to review data analytics for their video content channels. The UI is an interface to Vadio's Analytics API and provides data visualization of key metrics and timeframes. Users can view metrics over a number of graphs that dynamically update based on the channels selected. The aggregation panel gives a quick view of total metrics and trends against the previous period. Under the hood, the application is React with Redux, Chartjs, Webpack, Sass, and Typescript.

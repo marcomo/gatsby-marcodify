@@ -1,12 +1,12 @@
 ---
 title: In-Vehicle Navigation
 h1: In-Vehicle Navigation
-description: Automotice Grade Linux In-Vehicle Navigation App
+description: A mobile peer-to-peer navigation app to use with an open source in-vehicle system
 slug: agl-ivi-navigation
 company: Jaguar Land Rover
 role: ["UX Designer"]
 rank: 1
-thumb: ../images/jlr/navigation/republic_integrated_thumb.jpg
+thumb: ../images/jlr/navigation/hmi_app_thumb.jpg
 featuredImg: ../images/jlr/navigation/republic_guide_cover.jpg
 images: [
   ../images/jlr/navigation/hmi_map_views.jpg,
@@ -21,8 +21,6 @@ images: [
   ../images/jlr/navigation/app_screen_menu_reco_maps.png
 ]
 ---
-
-## Proof-of-Concept Prototype
 
 Starting with Navit, an open source navigation system, I designed an enhanced user experience and interface based on Navit’s fundamental features. The app centralizes many of the Navit features to the map view to give the user a more seamless interaction and a focus on navigating streets not menus.
 

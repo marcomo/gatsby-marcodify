@@ -1,16 +1,30 @@
 ---
 title: Ingrooves Trends Now
 h1: Ingrooves Trends Now
-description: Web App
+description: AI-Powered music analtyics dashboard for labels to track song and artists trends across multiple streaming services
 slug: ingrooves-trends-now
 company: Ingrooves Music Group
 role: ["Product Designer", "UX Designer", "Frontend Developer"]
 rank: 1
-thumb: ../images/schwab/republic_airways/republic_integrated_thumb.jpg
+thumb: ../images/ingrooves/tn/trendsnow_thumb.png
 featuredImg: ../images/schwab/republic_airways/republic_guide_cover.jpg
 images: [
-  ../images/ingrooves/tn/user_sotm.png,
-  ../images/ingrooves/tn/maps.png
+  ../images/ingrooves/tn/images/Current Playlists - Add-Drop Badge@2x.png,
+  ../images/ingrooves/tn/images/Current Playlists - Type Column@2x.png,
+  ../images/ingrooves/tn/images/maps.png,
+  ../images/ingrooves/tn/images/SCD - Create SA Ad Button - Tablet Icon expands to Popover.png,
+  ../images/ingrooves/tn/images/SCD - Create SA Ad Button - Tablet Stacked.png,
+  ../images/ingrooves/tn/images/SCD Homepage - 5 Songs.png,
+  ../images/ingrooves/tn/images/SCD Homepage.png,
+  ../images/ingrooves/tn/images/Song View - 375@2x.png,
+  ../images/ingrooves/tn/images/Song View - Milestone hover@2x.png,
+  ../images/ingrooves/tn/images/TN - Song Page V6 - Passive Playlist - Continuation - V2.png,
+  ../images/ingrooves/tn/images/TN - Wireframe 4 WIP - inline logo - V2@2x.png,
+  ../images/ingrooves/tn/images/user_sotm.png,
+  ../images/ingrooves/tn/images/YT - 480.png,
+  ../images/ingrooves/tn/images/YT - 960.png,
+  ../images/ingrooves/tn/images/YT - 1120 .png,
+  ../images/ingrooves/tn/images/YT - Desktop.png
 ]
 ---
 

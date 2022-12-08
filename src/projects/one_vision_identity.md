@@ -6,6 +6,10 @@ slug: one-vision-identity
 company: One Vision Entertainment
 role: ["Art Director"]
 rank: 4
+thumb: ../images/onevision/onevision_thumb.jpg
+images: [
+  ../images/onevision/images/postcard_front.jpg
+]
 ---
 
 Voluptate excepteur ut aliqua exercitation ad fugiat ex Lorem ex exercitation. Ex veniam incididunt do occaecat proident. Ipsum enim sunt ex laborum irure qui.

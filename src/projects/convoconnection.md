@@ -6,6 +6,7 @@ slug: convo-connection
 company: Convoconnection
 role: ["Art Director", "UX Designer"]
 rank: 2
+thumb: ../images/convoconnection/convoconnection_thumb.jpg
 ---
 
 Voluptate excepteur ut aliqua exercitation ad fugiat ex Lorem ex exercitation. Ex veniam incididunt do occaecat proident. Ipsum enim sunt ex laborum irure qui.

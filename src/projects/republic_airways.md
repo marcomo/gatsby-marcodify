@@ -8,13 +8,13 @@ client: Republic Airways
 role: ["Art Director"]
 rank: 4
 thumb: ../images/schwab/republic_airways/republic_integrated_thumb.jpg
-featuredImg: ../images/schwab/republic_airways/republic_guide_cover.jpg
+featuredImg: ../images/schwab/republic_airways/images/republic_guide_cover.jpg
 images: [
-  ../images/schwab/republic_airways/republic_guide_cover.jpg, 
-  ../images/schwab/republic_airways/republic_guide_spread_1.jpg,
-  ../images/schwab/republic_airways/republic_guide_spread_2.jpg, 
-  ../images/schwab/republic_airways/republic_mailer_cover.jpg, 
-  ../images/schwab/republic_airways/republic_mailer_spread.jpg
+  ../images/schwab/republic_airways/images/republic_guide_cover.jpg, 
+  ../images/schwab/republic_airways/images/republic_guide_spread_1.jpg,
+  ../images/schwab/republic_airways/images/republic_guide_spread_2.jpg, 
+  ../images/schwab/republic_airways/images/republic_mailer_cover.jpg, 
+  ../images/schwab/republic_airways/images/republic_mailer_spread.jpg
 ]
 ---
 

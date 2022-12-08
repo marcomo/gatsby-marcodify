@@ -6,6 +6,40 @@ slug: vadio-channel-maker
 company: Vadio
 role: ["UX Designer", "Frontend Developer"]
 rank: 3
+thumb: ../images/vadio/channelmaker/vadio_channelmaker_thumb.jpg
+images: [
+  ../images/vadio/channelmaker/images/add_to_playlist.png,
+  ../images/vadio/channelmaker/images/get_video_from_url_result_item_edit.png,
+  ../images/vadio/channelmaker/images/get_video_from_url_results.png,
+  ../images/vadio/channelmaker/images/get_video_from_url.png,
+  ../images/vadio/channelmaker/images/playlist_ad_break_insert.png,
+  ../images/vadio/channelmaker/images/playlist_ad_break_item.png,
+  ../images/vadio/channelmaker/images/playlist_insert_item_2.png,
+  ../images/vadio/channelmaker/images/playlist_item_edit_2.png,
+  ../images/vadio/channelmaker/images/playlist_item_edit_3.png,
+  ../images/vadio/channelmaker/images/playlist_item_edit_4.png,
+  ../images/vadio/channelmaker/images/playlist_item_edit_w_search.png,
+  ../images/vadio/channelmaker/images/playlist_item_edit.png,
+  ../images/vadio/channelmaker/images/playlist_multi_select.png,
+  ../images/vadio/channelmaker/images/playlist_new_item.png,
+  ../images/vadio/channelmaker/images/related_items.png,
+  ../images/vadio/channelmaker/images/search_input_2.png,
+  ../images/vadio/channelmaker/images/search_input.png,
+  ../images/vadio/channelmaker/images/search_result_item_edit.png,
+  ../images/vadio/channelmaker/images/search_results_add_all.png,
+  ../images/vadio/channelmaker/images/search_results.png,
+  ../images/vadio/channelmaker/images/settings_1.png,
+  ../images/vadio/channelmaker/images/settings_2.png,
+  ../images/vadio/channelmaker/images/trending_item_edit_2.png,
+  ../images/vadio/channelmaker/images/trending_item_edit.png,
+  ../images/vadio/channelmaker/images/trending_item_selected_2.png,
+  ../images/vadio/channelmaker/images/trending_item_selected_3.png,
+  ../images/vadio/channelmaker/images/trending_selected_item.png,
+  ../images/vadio/channelmaker/images/upload_from_csv_explorer.png,
+  ../images/vadio/channelmaker/images/upload_from_csv_file_shorter.png,
+  ../images/vadio/channelmaker/images/upload_from_csv_file.png,
+  ../images/vadio/channelmaker/images/upload_from_csv_input.png
+]
 ---
 
 
