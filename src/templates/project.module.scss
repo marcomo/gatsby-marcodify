@@ -1,0 +1,16 @@
+@import "../stylesheets/_variables";
+.content-text {
+  font-size: 1.5rem;
+  font-weight: 100;
+  line-height: 3rem;
+}
+.project {
+  flex: 1 0 80%;
+  header {
+    p {
+      color: rgba($light, .6);
+      font-weight: 100;
+      font-size: 2rem;
+    }
+  }
+}

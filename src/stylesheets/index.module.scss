@@ -1,0 +1,8 @@
+.homepage {
+  h1 {
+    font-size: 6rem;
+    &:first-letter {
+      margin-left: -0.1em;
+    }
+  }
+}

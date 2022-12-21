@@ -1,0 +1,146 @@
+@mixin li-active($color: $green) {
+  border-top: 1px solid $color;
+  border-bottom: none;
+  padding-top: 1rem;
+}
+@import './base';
+.header {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.nav {
+  position: relative;
+  display: flex;
+  padding: 2rem 4rem;
+  box-sizing: border-box;
+  height: 8rem;
+  align-items: flex-end;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    // outline: 1px solid red;
+    z-index: -1;
+    background-image: repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent 31px,
+        rgba(15, 138, 138, 0.1) 31px,
+        rgba(15, 138, 138, 0.1) 32px
+      ),
+      repeating-linear-gradient(
+        to right,
+        transparent,
+        transparent 31px,
+        rgba(15, 138, 138, 0.1) 31px,
+        rgba(15, 138, 138, 0.1) 32px
+      );
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    // outline: 1px solid red;
+    background-color: rgba($grey-200, 0.9);
+    z-index: -2;
+    background-image: repeating-linear-gradient(
+      to right,
+      transparent,
+      transparent 3px,
+      rgba(255, 255, 255, 0.1) 3px,
+      rgba(255, 255, 255, 0.1) 4px
+    );
+  }
+}
+
+.ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 1rem;
+  align-items: flex-end;
+  li {
+    list-style-type: none;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 1rem;
+    color: $green;
+    line-height: 1rem;
+    a {
+      transition: border-top 300ms;
+      padding-bottom: 0;
+      @include li-active(rgba($green, 0));
+      &.li-active {
+        @include li-active(rgba($green, 0.7));
+      }
+      &:hover {
+        @include li-active;
+      }
+    }
+  }
+}
+
+.mdfy-brand-logo {
+  position: relative;
+  // font-family: "Comfortaa", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 2rem;
+  height: 4rem;
+  margin-right: auto;
+  color: $green;
+  display: inline-flex;
+  &::before,
+  &::after {
+    overflow: hidden;
+    white-space: nowrap;
+    transition-property: flex, margin, letter-spacing, font-size, color;
+    transition-duration: 500ms;
+    margin: 0;
+  }
+  &::before {
+    content: 'marco morales';
+    flex: 0 1 92px;
+  }
+  &::after {
+    font-weight: 700;
+    content: 'codify';
+    flex: 0 1 140px;
+  }
+  &:hover {
+    &::before {
+      color: white;
+      margin-bottom: auto;
+      font-size: 1.5rem;
+      content: 'marco morales';
+      flex: 0 1 190px;
+      letter-spacing: initial;
+    }
+    &::after {
+      margin-left: calc(93px - 180px);
+      margin-top: 1.5rem;
+      font-size: 2rem;
+      content: 'codify the UI';
+      flex: 0 1 190px;
+    }
+  }
+}
+
+.logo-link,
+.logo-link:hover {
+  flex: 1;
+  border: none;
+  padding: 0;
+  height: 2rem;
+}

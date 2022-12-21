@@ -5,3 +5,114 @@
 .flex-item {
   flex: 1;
 }
+
+.pr-4 {
+  padding-right: 4rem;
+}
+
+.pr-8 {
+  padding-right: 8rem;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+@mixin grid-container-base {
+  display: grid;
+  column-gap: 4rem;
+  row-gap: 4rem;
+}
+
+.grid-1-1 {
+  @include grid-container-base;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "area1 area2";
+}
+
+.grid-2-4 {
+  @include grid-container-base;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "area1 area2 area3 area4"
+    "area5 area6 area7 area8"
+  ;
+  &.offset-even {
+    :nth-child(even) {
+      transform: translateY(50%);
+    }
+  }
+}
+
+.grid-2-5 {
+  @include grid-container-base;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "area1 area2 area3 area4 area5"
+    "area6 area7 area8 area9 area10"
+  ;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  &.offset-even {
+    :nth-child(even) {
+      transform: translateY(50%);
+    }
+  }
+}
+
+@mixin corner-icon($name, $top-or-bottom, $left-or-right) {
+  .icon-#{$name} {
+    background-image: url("/icons/#{$name}.svg");
+    position: absolute;
+    #{$top-or-bottom}: 0;
+    #{$left-or-right}: 0;
+  }
+}
+
+.gridarea-1 {
+  grid-area: area1;
+}
+
+.gridarea-2 {
+  grid-area: area2;
+}
+
+.gridarea-3 {
+  grid-area: area3;
+}
+
+.gridarea-4 {
+  grid-area: area4;
+}
+
+.gridarea-5 {
+  grid-area: area5;
+}
+
+.gridarea-6 {
+  grid-area: area6;
+}
+
+.gridarea-7 {
+  grid-area: area7;
+}
+
+.gridarea-8 {
+  grid-area: area8;
+}
+
+.gridarea-9 {
+  grid-area: area9;
+}
+
+.gridarea-10 {
+  grid-area: area10;
+}
+
+// FILTERS
+
+.drop-shadow {
+  filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.5));
+}
