@@ -1,6 +1,8 @@
 import React from "react";
+import Layout from "./src/components/Layout";
+import GlobalProvider from "./src/components/GlobalProvider";
 
-export const onRenderBody = ({ setHeadComponents }, pluginOptions) => {
+export const onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
     <script
       key="fontawesome6pro"
@@ -9,3 +11,11 @@ export const onRenderBody = ({ setHeadComponents }, pluginOptions) => {
     ></script>,
   ]);
 };
+
+export const wrapRootElement = ({ element }) => (
+  <GlobalProvider>{element}</GlobalProvider>
+);
+
+export const wrapPageElement = ({ element, props }) => (
+  <Layout {...props}>{element}</Layout>
+);

@@ -2,7 +2,6 @@ import { graphql, Link, PageProps } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import React from 'react';
 import ConditionalRender from '../../components/ConditionalRender';
-import ProvidedLayout from '../../components/ProvidedLayout';
 import * as styles from '../../stylesheets/projects.module.scss';
 
 const Index: React.FunctionComponent<PageProps<Queries.ProjectsQuery>> = ({
@@ -10,43 +9,39 @@ const Index: React.FunctionComponent<PageProps<Queries.ProjectsQuery>> = ({
 }) => {
   const { projects } = data.allMdx;
   return (
-    <ProvidedLayout>
-      <>
-        <h2>Portfolio</h2>
-        <h3>Projects</h3>
-        <div className="flex-row">
-          <div className="flex-item">
-            <div className={styles.projects}>
-              {projects.map((proj) => {
-                return (
-                  <ConditionalRender
-                    shouldRender={!!proj.node.frontmatter}
-                    key={proj.node.id}
-                  >
-                    <Link to={'/projects/' + proj.node.frontmatter?.slug ?? ''}>
-                      <div className={proj.node.id}>
-                        {proj.node.frontmatter?.thumb?.childImageSharp
-                          ?.fluid ? (
-                          <GatsbyImage
-                            image={
-                              proj.node.frontmatter?.thumb?.childImageSharp
-                                ?.fluid
-                            }
-                            alt=""
-                          />
-                        ) : null}
-                      </div>
-                      <h4>{proj.node.frontmatter?.title}</h4>
-                      <p>{proj.node.frontmatter?.description}</p>
-                    </Link>
-                  </ConditionalRender>
-                );
-              })}
-            </div>
+    <>
+      <h2>Portfolio</h2>
+      <h3>Projects</h3>
+      <div className="flex-row">
+        <div className="flex-item">
+          <div className={styles.projects}>
+            {projects.map((proj) => {
+              return (
+                <ConditionalRender
+                  shouldRender={!!proj.node.frontmatter}
+                  key={proj.node.id}
+                >
+                  <Link to={'/projects/' + proj.node.frontmatter?.slug ?? ''}>
+                    <div className={proj.node.id}>
+                      {proj.node.frontmatter?.thumb?.childImageSharp?.fluid ? (
+                        <GatsbyImage
+                          image={
+                            proj.node.frontmatter?.thumb?.childImageSharp?.fluid
+                          }
+                          alt=""
+                        />
+                      ) : null}
+                    </div>
+                    <h4>{proj.node.frontmatter?.title}</h4>
+                    <p>{proj.node.frontmatter?.description}</p>
+                  </Link>
+                </ConditionalRender>
+              );
+            })}
           </div>
         </div>
-      </>
-    </ProvidedLayout>
+      </div>
+    </>
   );
 };
 

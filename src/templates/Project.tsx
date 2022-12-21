@@ -5,7 +5,7 @@ import { PageProps } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
 import { project, contentText } from './project.module.scss';
 import FeaturedImage from '../components/FeaturedImage';
-import ProvidedLayout from '../components/ProvidedLayout';
+import { MDXProvider } from '@mdx-js/react';
 
 type PropsType = Queries.AllMdxProjectsQuery['allMdx']['edges'][number];
 type ContextType = PropsType['node'];
@@ -41,13 +41,13 @@ const Project: React.FunctionComponent<PageProps<PropsType, ContextType>> = (
   props
 ) => {
   return (
-    <ProvidedLayout
+    <MDXProvider
       components={{
         p: (props) => <p className={contentText}>{props.children}</p>,
       }}
     >
       <ProjectSection {...props} />
-    </ProvidedLayout>
+    </MDXProvider>
   );
 };
 
