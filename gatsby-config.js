@@ -2,10 +2,21 @@ module.exports = {
   graphqlTypegen: true,
   plugins: [
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        name: "projects",
-        path: `${__dirname}/src/projects`,
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-responsive-iframe`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 650,
+              linkImagesToOriginal: false,
+              backgroundColor: "transparent",
+              withWebp: true,
+            },
+          },
+        ],
       },
     },
     {
@@ -18,44 +29,28 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        name: "projects",
+        path: `${__dirname}/src/projects`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "markdown",
+        path: `${__dirname}/src/markdown`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
         name: "images",
         path: `${__dirname}/src/images`,
       },
     },
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: `gatsby-plugin-page-creator`,
       options: {
-        plugins: [
-          {
-            resolve: "gatsby-remark-images",
-            options: {
-              maxWidth: 800,
-              backgroundColor: "transparent",
-              linkImagesToOriginal: false,
-              withWebp: true,
-              // tracedSVG: {
-              //   color: "coral",
-              // },
-            },
-          },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: [`.mdx`, `.md`],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-              backgroundColor: "transparent",
-              linkImagesToOriginal: false,
-              withWebp: true,
-            },
-          },
-        ],
+        path: `${__dirname}/src/projects`,
       },
     },
     "gatsby-transformer-sharp",

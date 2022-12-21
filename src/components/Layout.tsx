@@ -1,20 +1,15 @@
-import React, { PropsWithChildren } from "react";
-import MainNav from "./MainNav";
-import SideNav from "./SideNav";
+import React, { PropsWithChildren } from 'react';
+import Footer from './Footer';
+import Header from './Header';
+import Modal from './Modal';
 
 const Layout: React.FunctionComponent<PropsWithChildren> = (props) => {
   return (
     <div id="mdfy-wrapper">
-      <header>
-        <MainNav />
-      </header>
-      <main>
-        <aside>
-          <SideNav />
-        </aside>
-        {props.children}
-      </main>
-      <footer>© 2021 Marco Morales</footer>
+      <Modal />
+      <Header />
+      <main>{props.children}</main>
+      <Footer />
     </div>
   );
 };

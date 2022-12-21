@@ -5,7 +5,7 @@ const SideNav: React.FunctionComponent = () => {
   // Get all markdown pages, title and slug
   const data = useStaticQuery<Queries.SideNavQuery>(graphql`
   query SideNav {
-    allMarkdownRemark {
+    allMdx {
       nodes {
         id
         frontmatter {
@@ -19,7 +19,7 @@ const SideNav: React.FunctionComponent = () => {
   return (
     <ul>
       <p>menu</p>
-      {data.allMarkdownRemark.nodes.map((node) => {
+      {data.allMdx.nodes.map((node) => {
         return node.frontmatter ?
           <li key={node.id}>
             <Link to={node.frontmatter.slug}>{node.frontmatter.title}</Link>

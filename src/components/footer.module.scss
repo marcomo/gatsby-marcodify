@@ -1,0 +1,11 @@
+@import './base';
+.footer {
+  display: flex;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+  height: 8rem;
+  min-height: 8rem;
+  align-items: center;
+}
