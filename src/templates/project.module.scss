@@ -1,16 +1,23 @@
-@import "../stylesheets/_variables";
-.content-text {
-  font-size: 1.5rem;
-  font-weight: 100;
-  line-height: 3rem;
-}
+@import '../stylesheets/_variables';
 .project {
   flex: 1 0 80%;
   header {
+    grid-template-columns: 33% auto;
+    h1 {
+      max-width: 36rem;
+    }
     p {
-      color: rgba($light, .6);
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      max-width: 36rem;
+      color: rgba($light, 0.6);
       font-weight: 100;
       font-size: 2rem;
+      line-height: 140%;
     }
+  }
+  article {
+    padding: 8rem 0;
   }
 }

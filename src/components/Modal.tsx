@@ -21,19 +21,14 @@ const Modal: React.FunctionComponent = () => {
     <CSSTransition
       nodeRef={nodeRef}
       in={showModal}
-      timeout={500}
+      timeout={300}
       classNames="fade"
       onExited={clear}
       unmountOnExit
     >
-      <div ref={nodeRef} className="mdfy-modal">
+      <div ref={nodeRef} className="mdfy-modal" onClick={close}>
         <div ref={contentRef} className="mdfy-modal-content">
           {content}
-        </div>
-        <div>
-          <button type="button" onClick={close}>
-            Close
-          </button>
         </div>
       </div>
     </CSSTransition>
