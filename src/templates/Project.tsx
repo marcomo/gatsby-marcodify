@@ -24,6 +24,9 @@ const ProjectSection: React.FunctionComponent<
     <section className={project}>
       <header className="grid-1-1">
         <div className="gridarea-1 my-auto pr-4" style={{ minWidth: '30rem' }}>
+          <div className="text-label">
+            <span>{frontmatter?.company}</span>
+          </div>
           <h1>{frontmatter?.h1}</h1>
           <p>{frontmatter?.description}</p>
           <div className="mt-4">

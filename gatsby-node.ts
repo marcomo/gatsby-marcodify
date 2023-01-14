@@ -89,6 +89,7 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql 
             body
             frontmatter {
               description
+              company
               featuredImg {
                 childImageSharp {
                   gatsbyImageData(layout: CONSTRAINED width: 650)

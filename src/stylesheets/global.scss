@@ -149,6 +149,9 @@ li {
 h1 {
   color: $green;
   font-size: 3rem;
+  .text-label + & {
+    margin-top: 0.5rem;
+  }
 }
 h2 {
   font-weight: normal;
@@ -199,6 +202,14 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.text-label {
+  color: $light;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .text-label-med {
