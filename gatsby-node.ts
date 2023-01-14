@@ -30,6 +30,7 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
     featuredText: String
     h1: String
     images: [File] @fileByRelativePath
+    imageAlts: [String]
     position: String
     skills: [String]
     slug: String!
@@ -39,8 +40,6 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
 `;
   createTypes(typeDefs);
 };
-
-
 
 export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql }) => {
   const { createPage } = actions;
@@ -83,7 +82,7 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql 
   const mdProjects = await graphql<Queries.AllMdxProjectsQuery>(`
     query AllMdxProjects {
       allMdx(
-        filter: {internal: {contentFilePath: {regex: "/(/projects/)/"}}}
+        filter: {internal: {contentFilePath: {regex: "/(/projects)/"}}}
       ) {
         edges {
           node {
@@ -102,15 +101,18 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql 
               h1
               images {
                 childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED width: 650)
+                  gatsbyImageData(layout: CONSTRAINED width: 1200)
                   resize {
                     aspectRatio
                   }
                   id
                 }
               }
+              imageAlts
               slug
               title
+              position
+              role
             }
             id
             internal {

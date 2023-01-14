@@ -30,7 +30,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "projects",
-        path: `${__dirname}/src/projects`,
+        path: `${__dirname}/src/projects/publish`,
       },
     },
     {
@@ -50,7 +50,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-page-creator`,
       options: {
-        path: `${__dirname}/src/projects`,
+        path: `${__dirname}/src/projects/publish`,
       },
     },
     "gatsby-transformer-sharp",

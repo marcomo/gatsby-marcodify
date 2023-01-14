@@ -1,9 +1,7 @@
-import { faLongArrowRight } from '@fortawesome/pro-light-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { PageProps } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
-import { project, contentText } from './project.module.scss';
+import { project } from './project.module.scss';
 import FeaturedImage from '../components/FeaturedImage';
 import { MDXProvider } from '@mdx-js/react';
 
@@ -25,14 +23,21 @@ const ProjectSection: React.FunctionComponent<
   return (
     <section className={project}>
       <header className="grid-1-1">
-        <div className="gridarea-1 pr-8 m-auto">
+        <div className="gridarea-1 my-auto pr-4" style={{ minWidth: '30rem' }}>
           <h1>{frontmatter?.h1}</h1>
           <p>{frontmatter?.description}</p>
+          <div className="mt-4">
+            <h2 className="text-label-med">position</h2>
+            <p>{frontmatter?.position}</p>
+            <h2 className="text-label-med">roles</h2>
+            {(frontmatter?.role ?? []).map((role, i) => (
+              <p key={`${role.replace(' ', '-')}-${i}`}>{role}</p>
+            ))}
+          </div>
         </div>
         <div className="grid-2">{featuredImgNode}</div>
       </header>
       <article>{props.children}</article>
-      <FontAwesomeIcon icon={faLongArrowRight} />
     </section>
   );
 };
@@ -43,7 +48,7 @@ const Project: React.FunctionComponent<PageProps<PropsType, ContextType>> = (
   return (
     <MDXProvider
       components={{
-        p: (props) => <p className={contentText}>{props.children}</p>,
+        p: (props) => <p>{props.children}</p>,
       }}
     >
       <ProjectSection {...props} />

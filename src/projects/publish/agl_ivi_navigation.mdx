@@ -1,0 +1,117 @@
+---
+title: In-Vehicle Navigation
+h1: Connected Car Navigation
+description: An open-source mobile navigation app for in-vehicle systems
+featuredText: Jaguar Land Rover's contributes software to the Automitive Grade Linux (AGL) project. AGL is an open-source base platform for developing applications for in-vehicle infotaintment.
+slug: agl-ivi-navigation
+company: Jaguar Land Rover
+position: Design Technologist
+role: ['Visual Designer', 'Protoyper']
+rank: 1
+thumb: ../../images/jlr/navigation/app_screen_enroute_northup_dark_01.png
+featuredImg: ../../images/jlr/navigation/app_screen_enroute_northup_dark_01.png
+images:
+  [
+    ../../images/jlr/navigation/app_screen_start_dark.png,
+    ../../images/jlr/navigation/app_screen_current_location_dark.png,
+    ../../images/jlr/navigation/app_screen_settings_headup_light.png,
+    ../../images/jlr/navigation/app_screen_eiffel_location_headup_light.png,
+    ../../images/jlr/navigation/app_screen_search_eiffel_results.png,
+    ../../images/jlr/navigation/app_screen_eiffel_route_northup_light.png,
+    ../../images/jlr/navigation/app_screen_enroute_headup_light_02.png,
+    ../../images/jlr/navigation/app_screen_enroute_northup_dark_01.png,
+    ../../images/jlr/navigation/route_selection_wireflow.png,
+    ../../images/jlr/navigation/search_wireflow.png,
+    ../../images/jlr/navigation/navigation_wireflow.png,
+    ../../images/jlr/navigation/add_waypoint_wireflow.png,
+  ]
+imageAlts:
+  [
+    'Navigation app start screen',
+    'Navigation app current location',
+    'Navigation app settings',
+    'Navigation app Eiffel location',
+    'Navigation app Eiffel search results',
+    'Navigation app Eiffel route',
+    'Navigation app Eiffel enroute almost there',
+    'Navigation app Eiffel enroute just started',
+    'Route selection wireflow',
+    'Search wireflow',
+    'Navigation wireflow',
+    'Add route waypoint wireflow',
+  ]
+---
+
+import EmbedContainer from '../../components/EmbedContainer';
+import FigmaEmbed from '../../components/FigmaEmbed';
+import Image from '../../components/Image';
+import Grid from '../../components/layouts/Grid';
+import AppScreens from '../../components/projects/jlr/navigation/AppScreens.tsx';
+import UserFlows from '../../components/projects/jlr/navigation/UserFlows.tsx';
+import ExternalLink from '../../components/ExternalLink';
+
+# Overview
+
+Navigation is standard functionality and the most widely used application of <span className="text-no-wrap">in-vehicle</span> infotainment (IVI). Jaguar Land Rover contributes software to <ExternalLink href="https://www.automotivelinux.org/">an open source project</ExternalLink> as part of its research and development. This project provided a base navigation app that could be developed for an IVI system or peer-to-peer device.
+
+We started with <ExternalLink href="https://www.navit-project.org/">Navit</ExternalLink>, an open-source navigation system built on <ExternalLink href="https://www.openstreetmap.org">OpenStreetMaps</ExternalLink>. While Navit served as a good framework for development, it lacked an engaging and simple user experience. The map was quite difficult to read and many tasks required deep menu drilling to be completed. I centralized key Navit features into the main map view, and reduced menu fatigue by using expanding lists and toggle switches.
+
+<div className="my-8">
+  <AppScreens id="nav" />
+</div>
+
+<div className="my-8">
+
+## Features
+
+We conducted some simple surveys amongst staff and colleagues to determine our target features which included:
+
+<Grid rows={1} columns={2}>
+  <div className="gridarea-1">
+
+    - Finding a location
+    - Selecting a navigation route
+    - Adding a waypoint to a route
+    - Locating current position
+    - Head-up / North-up orientation
+
+  </div>
+  <div className="gridarea-2">
+
+    - Saving a favorite location
+    - Selecting a location from favorites
+    - Keeping a location history
+    - Selecting a location from history
+    - Downloading maps (for offline rendering)
+
+  </div>
+</Grid>
+
+</div>
+
+<div className="my-8">
+  ## Wireflows
+  <UserFlows id="nav" />
+</div>
+
+## Prototypes
+
+<Grid rows={1} columns={2}>
+  <iframe
+    src="https://player.vimeo.com/video/788880746?h=b0e977f48e&byline=0&portrait=0"
+    width="640"
+    height="360"
+    frameBorder="0"
+    allow="autoplay; fullscreen"
+    allowFullScreen
+  ></iframe>
+  <iframe
+    className={`gridarea-2`}
+    src="https://player.vimeo.com/video/788884155?h=524d384261e&byline=0&portrait=0"
+    width="640"
+    height="360"
+    frameBorder="0"
+    allow="autoplay; fullscreen"
+    allowFullScreen
+  ></iframe>
+</Grid>
