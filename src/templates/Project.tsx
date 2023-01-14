@@ -22,7 +22,7 @@ const ProjectSection: React.FunctionComponent<
 
   return (
     <section className={project}>
-      <header className="grid-1-1">
+      <header className="grid-1-2">
         <div className="gridarea-1 my-auto pr-4" style={{ minWidth: '30rem' }}>
           <div className="text-label">
             <span>{frontmatter?.company}</span>
@@ -38,7 +38,7 @@ const ProjectSection: React.FunctionComponent<
             ))}
           </div>
         </div>
-        <div className="grid-2">{featuredImgNode}</div>
+        <div className="gridarea-2 flex-row flex-center">{featuredImgNode}</div>
       </header>
       <article>{props.children}</article>
     </section>
