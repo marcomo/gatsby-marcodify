@@ -1,129 +1,243 @@
 ---
-title: Ingrooves Trends Now
-h1: Ingrooves Trends Now
-description: AI-Powered music analtyics dashboard for labels to track song and artists trends across multiple streaming services
+title: Trends Now
+h1: Trends Now
+description: AI-powered music insights across multiple streaming services
 slug: ingrooves-trends-now
-company: Ingrooves Music Group
+company: Ingrooves
 position: 'Principal UI Developer'
-skills: ['Product Design', 'UX Design', 'Frontend Development']
+role: ['Product Designer', 'Frontend Developer']
 rank: 1
-thumb: ../../images/ingrooves/tn/trendsnow_thumb.png
-featuredImg: ../../images/schwab/republic_airways/republic_guide_cover.jpg
-images:
-  [
-    ../../images/ingrooves/tn/images/maps.png,
-    ../../images/ingrooves/tn/images/SCD - Create SA Ad Button - Tablet Icon expands to Popover.png,
-    ../../images/ingrooves/tn/images/SCD - Create SA Ad Button - Tablet Stacked.png,
-    ../../images/ingrooves/tn/images/SCD Homepage - 5 Songs.png,
-    ../../images/ingrooves/tn/images/SCD Homepage.png,
-    ../../images/ingrooves/tn/images/Song View - 375@2x.png,
-    ../../images/ingrooves/tn/images/Song View - Milestone hover@2x.png,
-    ../../images/ingrooves/tn/images/TN - Song Page V6 - Passive Playlist - Continuation - V2.png,
-    ../../images/ingrooves/tn/images/TN - Wireframe 4 WIP - inline logo - V2@2x.png,
-    ../../images/ingrooves/tn/images/user_sotm.png,
-    ../../images/ingrooves/tn/images/YT - 480.png,
-    ../../images/ingrooves/tn/images/YT - 960.png,
-    ../../images/ingrooves/tn/images/YT - 1120 .png,
-    ../../images/ingrooves/tn/images/YT - Desktop.png,
-  ]
+thumb: ../../images/ingrooves/tn/trendsnow_thumb.jpg
+featuredImg: ../../images/ingrooves/tn/trends_now_hero.png
+images: [../../images/ingrooves/tn/app_screen_territories_01.png]
+imageAlts: [Territories view]
 ---
 
 import EmbedContainer from '../../components/EmbedContainer';
 import Image from '../../components/Image';
+import Grid from '../../components/layouts/Grid';
 
-## Playlist Activity
+## Overview
 
-<Image caption="Playlist Activity Add Drop Badge">
-  ![Playlist Activity Add Drop
-  Badge](../../images/ingrooves/tn/images/Current_Playlists_AddDrop_Badge@2x.png)
-</Image>
+Trends Now was developed to help the customers at Ingrooves—label managers, artists, and music industry professionals—discover how their music is performing across a number of streaming retailers and territories. At the time of its creation, an analytics tool already existed but only provided raw data; it gave no insightful analysis into the data or any actionable recommendations. And it was painfully slow and buggy due to a lack of people resources and outdated technology.
 
-<Image caption="Playlist Activity Type Column">
-  ![Playlist Activity Type
-  Column](../../images/ingrooves/tn/images/Current_Playlists_Type_Column@2x.png)
-</Image>
+I came on as a contractor in 2017, having worked in music analytics previously. With my experience as a designer and developer, I was able to launch this product without disruption to other products or teams.
 
-<EmbedContainer>
-  <iframe
-    style={{ border: '1px solid rgba(0, 0, 0, 0.1)' }}
-    width="800"
-    height="450"
-    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FTQJ7pZPXaPAKQeAwqhAYeJ%2FTrends-Team-Views%3Fpage-id%3D1100%253A317313%26node-id%3D482%253A23795%26viewport%3D368%252C5636%252C0.5%26scaling%3Dmin-zoom%26starting-point-node-id%3D482%253A23795%26show-proto-sidebar%3D1"
-    allowFullScreen
-  ></iframe>
-</EmbedContainer>
+<div>
+  <Grid rows={1} columns={2} className="cols-30-70">
+    <div className="gridarea-1">
+      <Image caption="Playlist Activity Add Drop Badge" includeShadow={false}>
+        ![Playlist Activity Add Drop Badge](../../images/ingrooves/tn/card_model.png)
+      </Image>
+    </div>
+    <div className="gridarea-2">
+      We had a simple model:
+      
+      - Give meaningful insights
+      - Support them with data
+      - And promote action
+      
+      We had the data but not the insights and actions. And users were struggling to make sense of the data we did have. The insights were being developed by the data science team and the actions—by way of an ad platform—were being developed by the marketing product team. Trends Now was the mechanism to deliver insights, data, and marketing, allowing users to better understand music performance while delivering a new revenue stream.
 
-<EmbedContainer>
-  <iframe
-    src="https://player.vimeo.com/video/777512579?h=bbfbb0be52"
-    width="640"
-    height="400"
-    frameborder="0"
-    allow="autoplay; fullscreen; picture-in-picture"
-    allowFullScreen
-  ></iframe>
-</EmbedContainer>
+    </div>
 
-<EmbedContainer>
-  <iframe
-    src="https://codesandbox.io/embed/map-chart-with-tooltip-forked-e3r4b?autoresize=1&fontsize=14&hidenavigation=1&theme=dark"
-    style={{
-      width: '640',
-      height: '400',
-      border: 0,
-      borderRadius: '4px',
-      overflow: 'hidden',
-    }}
-    title="Map chart with tooltip (forked)"
-    allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-    sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-  ></iframe>
-</EmbedContainer>
+  </Grid>
+</div>
 
-<EmbedContainer>
-  <iframe
-    style={{ border: '1px solid rgba(0, 0, 0, 0.1)' }}
-    width="640"
-    height="400"
-    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FTQJ7pZPXaPAKQeAwqhAYeJ%2FTrends-Team-Views%3Fpage-id%3D1303%253A336221%26node-id%3D1150%253A332157%26viewport%3D860%252C665%252C0.13%26scaling%3Dmin-zoom%26starting-point-node-id%3D1150%253A332157"
-    allowFullScreen
-  ></iframe>
-</EmbedContainer>
+<div className="my-8">
 
-## Analysis
+## Features
 
-### Issues
+<Grid rows={1} columns={2} className="cols-60-40">
+  <div className="gridarea-1">
 
-#### It's clunky
+    ### Territories
 
-The current analytics tool is slow due to the vast amount of data, poorly optimized searches and data aggregation, and old tech
+    #### Challenge
 
-#### No good place to start
+    Users wanted to know how their songs were doing in specific
+    countries and have the ability to filter by other dimensions. What started
+    off as a massive table in MVP turned into an approachable interactive map
+    visualization.
 
-Users sturggle to find and disect data, there's no good starting point
+    #### Wants
 
-#### I don't understand
+    - How is my song performing in country X
+    - Which countries are performing best
+    - Which countries have the greatest improvement
+    - Wwhich retailers are my song performing best
 
-The current analytics tool doesn't provide any insights into what the data means
+    #### Highlights
 
-#### Data is missing
+    - Focus on one, many, or all territories
+    - Fully responsive down to iPhone 5
+    - Map view makes gives user the quickest way to data
+    - Table view gives user the ranking
+    - Territory search gives user a short path to finding places that are hard to spell or locate
+    - Leverages modal and layered content
 
-Users are mashing up individual streaming retailer data with data from disjointed internal sources to make sense of label, artist and song performance
+    #### What I learned
 
-### Solutions
+    - Maps are hard
+    - Tiny maps are harder
+    - Tiny maps aren't an awful experience
 
-#### Fast first
+    #### Retro
 
-Leverage modern technology, from data collection to user interface, to deliver with minimal delay
+    User feedback and page analytics indicate the map is used a lot more than the table. Users target known territories that are easy to find but on the occasion that they’re trying to locate say Granada, the map isn’t great, especially on a phone. So the table and filtering serve as a good alternate experience.
 
-#### Invite exploration
+  </div>
 
-The new analytics dashboard encourages exploration via featured insights and more interactions
+  <div className="gridarea-2">
+    <Image>
+      ![Territories
+      view](../../images/ingrooves/tn/app_screen_territories_01.png)
+    </Image>
 
-#### Say what it means
+  </div>
+</Grid>
 
-The new dashboard should emphasize insights over data
+<div className="my-8">
+<Grid rows={1} columns={2} className="cols-40-60">
+  <div className="gridarea-2">
 
-#### Tell the whole story
+    ### Search
 
-The new dashboard should provide retailer-specific and aggregate data across data ranges and territories to tell the story of the user, the labels, the artists and the songs
+    #### Challenge
+
+    Ullamco sit mollit deserunt incididunt. Amet non nostrud nulla ullamco sint fugiat enim Lorem labore et officia esse qui occaecat. Cillum minim sit Lorem do in. Dolore reprehenderit magna id ut aliqua sint. Do laboris commodo duis anim ipsum ut aliquip velit nisi in ut laborum. Nulla excepteur voluptate quis non dolor voluptate nostrud aliqua incididunt elit.
+
+    #### Wants
+
+    - Tempor irure laborum occaecat minim sit quis Lorem et qui duis aute in
+    - Est deserunt deserunt ullamco cillum laboris dolor pariatur
+    - Consequat elit non sunt voluptate culpa qui qui est ut consequat
+    - Excepteur cupidatat aliquip deserunt aute qui esse ex irure nisi officia aute.
+
+    #### Highlights
+
+    - Ipsum ex et ad minim adipisicing mollit esse consequat
+    - Esse ut minim pariatur amet laboris aliquip in esse duis ea ex culpa qui
+    - Do ipsum ut sint veniam anim
+    - Velit enim minim sit mollit minim eu dolore ex sunt duis excepteur
+    - Quis ea reprehenderit do ipsum tempor quis proident sunt
+    - Et eu irure ullamco cillum voluptate ipsum amet nulla fugiat culpa ad irure
+
+    #### What I learned
+
+    - Cupidatat tempor commodo nisi incididunt
+    - Amet reprehenderit ea non sint et deserunt sit in ex qui
+    - Reprehenderit Lorem aliquip anim id magna exercitation nostrud ex ullamco laboris
+
+    #### Retro
+
+    Sit veniam mollit aliqua ea do deserunt duis. Nostrud occaecat est esse pariatur dolore Lorem. Enim commodo aliqua laborum quis est sunt id eiusmod magna qui velit tempor deserunt cillum. Ad esse aliqua sint adipisicing do ea. Duis est pariatur sint commodo consectetur exercitation Lorem irure aliquip magna ut mollit proident.
+
+  </div>
+
+  <div className="gridarea-1">
+    <Image>
+      ![Territories
+      view](../../images/ingrooves/tn/app_screen_search_01.png)
+    </Image>
+
+  </div>
+</Grid>
+</div>
+
+<div className="my-8">
+<Grid rows={1} columns={2} className="cols-60-40">
+  <div className="gridarea-1">
+
+    ### Songs on the Move
+
+    #### Challenge
+
+    Dolore ipsum duis nisi non officia dolor dolore pariatur. Velit fugiat fugiat duis in excepteur esse. Consequat quis esse dolor ea Lorem anim laborum elit fugiat labore sunt. Ex aliquip mollit velit fugiat mollit ullamco consectetur esse.
+
+    #### Wants
+
+    - Sunt velit reprehenderit quis sit
+    - Esse sunt aliqua esse veniam aliquip aliquip do laborum nulla id laboris
+    - Ut cupidatat culpa minim pariatur pariatur nisi deserunt quis ipsum cupidatat minim laborum incididunt do
+    - Eu enim nisi nulla exercitation sint qui magna pariatur commodo
+
+    #### Highlights
+
+    - Minim dolor exercitation esse do ex mollit magna mollit
+    - Anim ut ea ut quis ullamco laboris in nulla aliqua mollit amet do dolor anim
+    - Quis magna proident sit cillum cupidatat ut
+    - Esse minim do commodo ea minim et officia occaecat irure nostrud eiusmod ex labore commodo
+    - Laboris ad aliquip nostrud dolor et ex officia
+    - Cupidatat enim quis veniam labore nostrud culpa ut do adipisicing irure nulla
+
+    #### What I learned
+
+    - In et occaecat non velit tempor commodo in nostrud
+    - Consequat dolore esse anim ullamco non aute irure amet
+    - Ut exercitation ea labore nostrud laboris id nostrud ullamco ea aute labore sunt excepteur
+
+    #### Retro
+
+    Deserunt in eu nulla duis eu ipsum anim Lorem sit id mollit consectetur. Laborum non consequat aute exercitation aliqua tempor eiusmod pariatur adipisicing sint non. Sint voluptate cupidatat aute mollit aliquip incididunt officia duis exercitation amet non et adipisicing excepteur. Magna enim laboris cillum consectetur consectetur ut enim incididunt fugiat. Deserunt aliqua culpa Lorem aliquip ex esse. Id ex voluptate velit non non Lorem. Sit aliqua aliqua officia nulla commodo ullamco nostrud incididunt exercitation.
+
+  </div>
+
+  <div className="gridarea-2">
+    <Image>
+      ![Songs on the Move mobile view](../../images/ingrooves/tn/app_screen_sotm_mobile_01.png)
+    </Image>
+
+  </div>
+</Grid>
+</div>
+
+<div className="my-8">
+<Grid rows={1} columns={2} className="cols-40-60">
+  <div className="gridarea-2">
+
+    ### Playlists
+
+    #### Challenge
+
+    Tempor enim consectetur et incididunt non quis est veniam exercitation in. Voluptate non sit officia quis pariatur labore ex deserunt adipisicing esse occaecat consectetur magna est. Tempor commodo adipisicing adipisicing amet irure. Fugiat nisi velit sint qui veniam nostrud.
+
+    #### Wants
+
+    - Minim ad amet tempor est id dolore ut velit consectetur laboris quis
+    - Ad sint deserunt dolor consequat magna deserunt ipsum cupidatat labore aliquip
+    - Amet eiusmod elit incididunt laborum amet anim excepteur
+    - Cupidatat sit aliquip in nulla cillum et do ea amet cillum
+
+    #### Highlights
+
+    - Duis laboris ullamco reprehenderit ipsum et
+    - Non pariatur consectetur pariatur ut
+    - Veniam officia tempor sint nisi
+    - Fugiat quis minim laborum reprehenderit do proident nostrud exercitation laboris Lorem amet elit
+    - Excepteur ullamco quis ad tempor dolore do anim
+    - Commodo consequat sint tempor esse excepteur sit id magna officia consequat culpa est consequat cillum
+
+    #### What I learned
+
+    - Eiusmod enim ad ea ex laborum cupidatat aliqua nisi ipsum eiusmod nostrud cillum nisi incididunt
+    - Incididunt id enim culpa ut excepteur irure fugiat officia enim excepteur
+    - Ea commodo adipisicing sunt est esse Lorem exercitation Lorem aute ea cupidatat
+
+    #### Retro
+
+    Laborum ea sint ex incididunt quis reprehenderit aliquip esse aliqua cillum voluptate voluptate in duis. Veniam Lorem non in eiusmod. Incididunt do Lorem occaecat duis qui eu. Veniam aliqua labore non pariatur et pariatur tempor. Culpa reprehenderit fugiat et non velit enim elit irure fugiat.
+
+  </div>
+
+  <div className="gridarea-1">
+    <Image includeShadow={false}>
+      ![Territories
+      view](../../images/ingrooves/tn/app_screen_territories_01.png)
+    </Image>
+
+  </div>
+</Grid>
+</div>
+
+</div>
