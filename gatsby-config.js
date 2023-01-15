@@ -14,6 +14,7 @@ module.exports = {
               linkImagesToOriginal: false,
               backgroundColor: "transparent",
               withWebp: true,
+              disableBgImageOnAlpha: true,
             },
           },
         ],

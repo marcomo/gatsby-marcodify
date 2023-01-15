@@ -8,4 +8,5 @@
   height: 8rem;
   min-height: 8rem;
   align-items: center;
+  @include overlay-stripes;
 }

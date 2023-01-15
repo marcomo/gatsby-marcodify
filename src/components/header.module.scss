@@ -1,9 +1,10 @@
+@import './base';
+
 @mixin li-active($color: $green) {
   border-top: 1px solid $color;
   border-bottom: none;
   padding-top: 1rem;
 }
-@import './base';
 .header {
   position: fixed;
   width: 100vw;
@@ -18,50 +19,7 @@
   box-sizing: border-box;
   height: 8rem;
   align-items: flex-end;
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    box-sizing: border-box;
-    // outline: 1px solid red;
-    z-index: -1;
-    background-image: repeating-linear-gradient(
-        to bottom,
-        transparent,
-        transparent 31px,
-        rgba(15, 138, 138, 0.1) 31px,
-        rgba(15, 138, 138, 0.1) 32px
-      ),
-      repeating-linear-gradient(
-        to right,
-        transparent,
-        transparent 31px,
-        rgba(15, 138, 138, 0.1) 31px,
-        rgba(15, 138, 138, 0.1) 32px
-      );
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    box-sizing: border-box;
-    // outline: 1px solid red;
-    background-color: rgba($grey-200, 0.9);
-    z-index: -2;
-    background-image: repeating-linear-gradient(
-      to right,
-      transparent,
-      transparent 3px,
-      rgba(255, 255, 255, 0.1) 3px,
-      rgba(255, 255, 255, 0.1) 4px
-    );
-  }
+  @include overlay-stripes;
 }
 
 .ul {
