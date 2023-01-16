@@ -27,7 +27,6 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
     company: String
     description: String
     featuredImg: File @fileByRelativePath
-    featuredText: String
     h1: String
     images: [File] @fileByRelativePath
     imageAlts: [String]
@@ -36,6 +35,7 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
     slug: String!
     title: String!
     thumb: File @fileByRelativePath
+    isConcept: Boolean
   }
 `;
   createTypes(typeDefs);
@@ -114,6 +114,7 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql 
               title
               position
               role
+              isConcept
             }
             id
             internal {

@@ -121,6 +121,9 @@
 
 .gridarea-2 {
   grid-area: area2;
+}
+
+[class^='gridarea-'] {
   :first-child {
     margin-top: 2rem;
   }
@@ -156,6 +159,14 @@
 
 .gridarea-10 {
   grid-area: area10;
+}
+
+.col-span-2 {
+  grid-column: span 2;
+}
+
+.row-span-2 {
+  grid-row: span 2;
 }
 
 // FILTERS
