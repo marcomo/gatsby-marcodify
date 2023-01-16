@@ -9,49 +9,74 @@ role: ['Product Designer', 'Frontend Developer']
 rank: 1
 thumb: ../../images/ingrooves/tn/trendsnow_thumb.jpg
 featuredImg: ../../images/ingrooves/tn/trends_now_hero.png
-images: [../../images/ingrooves/tn/app_screen_territories_01.png]
-imageAlts: [Territories view]
+images:
+  [
+    ../../images/ingrooves/tn/app_screen_territories_01.png,
+    ../../images/ingrooves/tn/app_screen_territories_02.png,
+    ../../images/ingrooves/tn/app_screen_territories_03.png,
+  ]
+imageAlts:
+  [
+    Territories view,
+    Territories view single territory,
+    Territories view single territory expanded,
+  ]
 ---
 
 import EmbedContainer from '../../components/EmbedContainer';
 import Image from '../../components/Image';
 import Grid from '../../components/layouts/Grid';
+import TerritoriesScreens from '../../components/projects/ingrooves/TerritoriesScreens.tsx';
 
 ## Overview
 
 Trends Now was developed to help the customers at Ingrooves—label managers, artists, and music industry professionals—discover how their music is performing across a number of streaming retailers and territories. At the time of its creation, an analytics tool already existed but only provided raw data; it gave no insightful analysis into the data or any actionable recommendations. And it was painfully slow and buggy due to a lack of people resources and outdated technology.
 
-I came on as a contractor in 2017, having worked in music analytics previously. With my experience as a designer and developer, I was able to launch this product without disruption to other products or teams.
+I came on as a contractor in 2017, having done music analytics previously. With my experience as a designer and developer, I was able to launch this product without disruption to other products or teams.
 
-<div>
-  <Grid rows={1} columns={2} className="cols-30-70">
-    <div className="gridarea-1">
-      <Image caption="Playlist Activity Add Drop Badge" includeShadow={false}>
-        ![Playlist Activity Add Drop Badge](../../images/ingrooves/tn/card_model.png)
-      </Image>
-    </div>
-    <div className="gridarea-2">
-      We had a simple model:
-      
-      - Give meaningful insights
-      - Support them with data
-      - And promote action
-      
-      We had the data but not the insights and actions. And users were struggling to make sense of the data we did have. The insights were being developed by the data science team and the actions—by way of an ad platform—were being developed by the marketing product team. Trends Now was the mechanism to deliver insights, data, and marketing, allowing users to better understand music performance while delivering a new revenue stream.
+<Grid rows={1} columns={2} className="cols-30-70">
+  <div className="gridarea-1">
+    <Image caption="Playlist Activity Add Drop Badge" includeShadow={false}>
+      ![Playlist Activity Add Drop Badge](../../images/ingrooves/tn/card_model.png)
+    </Image>
+  </div>
+  <div className="gridarea-2">
+    We had a simple model:
+    
+    - Give meaningful insights
+    - Support them with data
+    - And promote action
+    
+    We had data but not the insights or actions. The insights were being developed by 
+    the data science team and the actions—by way of an ad platform—were being developed by 
+    the marketing product team. Trends Now would bring it all together.
 
-    </div>
+  </div>
 
-  </Grid>
+</Grid>
+
+In the early MVP stage, I worked directly with the head of product and the CTO. A dedicated team eventually developed
+and I worked alongside a product manager, data science experts, and engineers. I also partnered with designers
+and engineers on the marketing team to integrate Trends Now with the ad platform being built.
+
+<div className="flex-row">
+
+<div className="flex-item m-auto">
+  
+  ## Features
+
+### Territories
+
 </div>
 
-<div className="my-8">
+  <div className="flex-item-3">
+    <TerritoriesScreens id="territories" />
+  </div>
+</div>
 
-## Features
+<Grid rows={1} columns={2}>
 
-<Grid rows={1} columns={2} className="cols-60-40">
   <div className="gridarea-1">
-
-    ### Territories
 
     #### Challenge
 
@@ -62,76 +87,53 @@ I came on as a contractor in 2017, having worked in music analytics previously. 
 
     #### Wants
 
-    - How is my song performing in country X
+    - How is my song performing in a specific country
     - Which countries are performing best
     - Which countries have the greatest improvement
-    - Wwhich retailers are my song performing best
+    - Which retailers are performing best for my song
+
+  </div>
+
+  <div className="gridarea-2">
 
     #### Highlights
 
     - Focus on one, many, or all territories
     - Fully responsive down to iPhone 5
-    - Map view makes gives user the quickest way to data
-    - Table view gives user the ranking
+    - Map view gives the user the quickest way to observe trend volume
+    - Table view gives the user ranking lost in the map
     - Territory search gives user a short path to finding places that are hard to spell or locate
     - Leverages modal and layered content
 
-    #### What I learned
-
-    - Maps are hard
-    - Tiny maps are harder
-    - Tiny maps aren't an awful experience
-
-    #### Retro
-
-    User feedback and page analytics indicate the map is used a lot more than the table. Users target known territories that are easy to find but on the occasion that they’re trying to locate say Granada, the map isn’t great, especially on a phone. So the table and filtering serve as a good alternate experience.
-
   </div>
 
-  <div className="gridarea-2">
-    <Image>
-      ![Territories
-      view](../../images/ingrooves/tn/app_screen_territories_01.png)
-    </Image>
-
-  </div>
 </Grid>
 
-<div className="my-8">
-<Grid rows={1} columns={2} className="cols-40-60">
+<Grid rows={1} columns={2} className="cols-40-60 my-8">
   <div className="gridarea-2">
 
     ### Search
 
     #### Challenge
 
-    Ullamco sit mollit deserunt incididunt. Amet non nostrud nulla ullamco sint fugiat enim Lorem labore et officia esse qui occaecat. Cillum minim sit Lorem do in. Dolore reprehenderit magna id ut aliqua sint. Do laboris commodo duis anim ipsum ut aliquip velit nisi in ut laborum. Nulla excepteur voluptate quis non dolor voluptate nostrud aliqua incididunt elit.
+    Song, artist, and label names are creative and run the gamut.
+    The user needed to be able to differentiate between them quickly.
 
     #### Wants
 
-    - Tempor irure laborum occaecat minim sit quis Lorem et qui duis aute in
-    - Est deserunt deserunt ullamco cillum laboris dolor pariatur
-    - Consequat elit non sunt voluptate culpa qui qui est ut consequat
-    - Excepteur cupidatat aliquip deserunt aute qui esse ex irure nisi officia aute.
+    - Access specific content types, it's not always about a song
+    - Find the best performing content first
+    - Be able to search with more than words, like song ID
+    - Quickly revisit previous content
+    - Asn easy-to-explore mobile experience
 
     #### Highlights
 
-    - Ipsum ex et ad minim adipisicing mollit esse consequat
-    - Esse ut minim pariatur amet laboris aliquip in esse duis ea ex culpa qui
-    - Do ipsum ut sint veniam anim
-    - Velit enim minim sit mollit minim eu dolore ex sunt duis excepteur
-    - Quis ea reprehenderit do ipsum tempor quis proident sunt
-    - Et eu irure ullamco cillum voluptate ipsum amet nulla fugiat culpa ad irure
-
-    #### What I learned
-
-    - Cupidatat tempor commodo nisi incididunt
-    - Amet reprehenderit ea non sint et deserunt sit in ex qui
-    - Reprehenderit Lorem aliquip anim id magna exercitation nostrud ex ullamco laboris
-
-    #### Retro
-
-    Sit veniam mollit aliqua ea do deserunt duis. Nostrud occaecat est esse pariatur dolore Lorem. Enim commodo aliqua laborum quis est sunt id eiusmod magna qui velit tempor deserunt cillum. Ad esse aliqua sint adipisicing do ea. Duis est pariatur sint commodo consectetur exercitation Lorem irure aliquip magna ut mollit proident.
+    - Results are categorized so users can focus in before or after doing their search
+    - Full-screen results for maximum readability
+    - Results are ordered and styled to show trending content first matching their design in the main view
+    - Search comes prelouded with recent searches
+    - Searching by label or song ID also works
 
   </div>
 
@@ -143,101 +145,40 @@ I came on as a contractor in 2017, having worked in music analytics previously. 
 
   </div>
 </Grid>
-</div>
 
-<div className="my-8">
 <Grid rows={1} columns={2} className="cols-60-40">
   <div className="gridarea-1">
 
-    ### Songs on the Move
+    ### On the Move
 
     #### Challenge
 
-    Dolore ipsum duis nisi non officia dolor dolore pariatur. Velit fugiat fugiat duis in excepteur esse. Consequat quis esse dolor ea Lorem anim laborum elit fugiat labore sunt. Ex aliquip mollit velit fugiat mollit ullamco consectetur esse.
+    Ingrooves uses AI to analyze trending data and identify drivers of continuing growth.
+    When paired with social data, an audience can be created and labels can promote their labels
+    through ads.
+
+    There are various levels of growth, so we needed to create styling and language that told
+    the songs story in phases while emphasizing marketing opportunities.
 
     #### Wants
 
-    - Sunt velit reprehenderit quis sit
-    - Esse sunt aliqua esse veniam aliquip aliquip do laborum nulla id laboris
-    - Ut cupidatat culpa minim pariatur pariatur nisi deserunt quis ipsum cupidatat minim laborum incididunt do
-    - Eu enim nisi nulla exercitation sint qui magna pariatur commodo
+    - Highlight songs that can be promoted immediately
+    - Hightlight songs that are in a growth phase and give attribution
+    - Show the growth history of the song to identify patterns that can useful for understand other song behavior
 
     #### Highlights
 
-    - Minim dolor exercitation esse do ex mollit magna mollit
-    - Anim ut ea ut quis ullamco laboris in nulla aliqua mollit amet do dolor anim
-    - Quis magna proident sit cillum cupidatat ut
-    - Esse minim do commodo ea minim et officia occaecat irure nostrud eiusmod ex labore commodo
-    - Laboris ad aliquip nostrud dolor et ex officia
-    - Cupidatat enim quis veniam labore nostrud culpa ut do adipisicing irure nulla
-
-    #### What I learned
-
-    - In et occaecat non velit tempor commodo in nostrud
-    - Consequat dolore esse anim ullamco non aute irure amet
-    - Ut exercitation ea labore nostrud laboris id nostrud ullamco ea aute labore sunt excepteur
-
-    #### Retro
-
-    Deserunt in eu nulla duis eu ipsum anim Lorem sit id mollit consectetur. Laborum non consequat aute exercitation aliqua tempor eiusmod pariatur adipisicing sint non. Sint voluptate cupidatat aute mollit aliquip incididunt officia duis exercitation amet non et adipisicing excepteur. Magna enim laboris cillum consectetur consectetur ut enim incididunt fugiat. Deserunt aliqua culpa Lorem aliquip ex esse. Id ex voluptate velit non non Lorem. Sit aliqua aliqua officia nulla commodo ullamco nostrud incididunt exercitation.
+    - On the Move songs are surfaced before all other content
+    - Smart Audience opportunities are emphasized most
+    - Song growth is backed by attribution and noted on preview card
+    - Song view expands to a timeline view where users can traverse historic drivers
 
   </div>
 
   <div className="gridarea-2">
     <Image>
-      ![Songs on the Move mobile view](../../images/ingrooves/tn/app_screen_sotm_mobile_01.png)
+      ![On the Move mobile view](../../images/ingrooves/tn/app_screen_sotm_mobile_01.png)
     </Image>
 
   </div>
 </Grid>
-</div>
-
-<div className="my-8">
-<Grid rows={1} columns={2} className="cols-40-60">
-  <div className="gridarea-2">
-
-    ### Playlists
-
-    #### Challenge
-
-    Tempor enim consectetur et incididunt non quis est veniam exercitation in. Voluptate non sit officia quis pariatur labore ex deserunt adipisicing esse occaecat consectetur magna est. Tempor commodo adipisicing adipisicing amet irure. Fugiat nisi velit sint qui veniam nostrud.
-
-    #### Wants
-
-    - Minim ad amet tempor est id dolore ut velit consectetur laboris quis
-    - Ad sint deserunt dolor consequat magna deserunt ipsum cupidatat labore aliquip
-    - Amet eiusmod elit incididunt laborum amet anim excepteur
-    - Cupidatat sit aliquip in nulla cillum et do ea amet cillum
-
-    #### Highlights
-
-    - Duis laboris ullamco reprehenderit ipsum et
-    - Non pariatur consectetur pariatur ut
-    - Veniam officia tempor sint nisi
-    - Fugiat quis minim laborum reprehenderit do proident nostrud exercitation laboris Lorem amet elit
-    - Excepteur ullamco quis ad tempor dolore do anim
-    - Commodo consequat sint tempor esse excepteur sit id magna officia consequat culpa est consequat cillum
-
-    #### What I learned
-
-    - Eiusmod enim ad ea ex laborum cupidatat aliqua nisi ipsum eiusmod nostrud cillum nisi incididunt
-    - Incididunt id enim culpa ut excepteur irure fugiat officia enim excepteur
-    - Ea commodo adipisicing sunt est esse Lorem exercitation Lorem aute ea cupidatat
-
-    #### Retro
-
-    Laborum ea sint ex incididunt quis reprehenderit aliquip esse aliqua cillum voluptate voluptate in duis. Veniam Lorem non in eiusmod. Incididunt do Lorem occaecat duis qui eu. Veniam aliqua labore non pariatur et pariatur tempor. Culpa reprehenderit fugiat et non velit enim elit irure fugiat.
-
-  </div>
-
-  <div className="gridarea-1">
-    <Image includeShadow={false}>
-      ![Territories
-      view](../../images/ingrooves/tn/app_screen_territories_01.png)
-    </Image>
-
-  </div>
-</Grid>
-</div>
-
-</div>

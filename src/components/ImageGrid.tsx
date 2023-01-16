@@ -10,15 +10,20 @@ const ImageGrid: React.FunctionComponent<
     id: string;
     frontmatter: Queries.ProjectImagesQuery['mdx']['frontmatter'];
     showCaptions?: boolean;
+    classNames?: string;
   }>
 > = (props) => {
   return (
-    <Grid rows={props.rows} columns={props.columns}>
+    <Grid
+      rows={props.rows}
+      columns={props.columns}
+      className={props.classNames || ''}
+    >
       {props.frontmatter.images.map((img, i) => {
         const alt = props.frontmatter.imageAlts[i];
         return (
           <div key={`${props.id}-${i}`} className={`gridarea-${i + 1}`}>
-            <Image alt={alt} allowModal showCaption>
+            <Image alt={alt} allowModal showCaption={props.showCaptions}>
               <GatsbyImage
                 key={`image-${i}`}
                 image={getImage(img.childrenImageSharp[0].gatsbyImageData)}
