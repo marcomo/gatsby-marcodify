@@ -1,0 +1,171 @@
+---
+title: Channel Maker
+h1: Channel Maker
+description: A web app for building ad-based video playlists around artists and their music
+slug: vadio-channel-maker
+company: Vadio
+position: 'Frontend Developer'
+role: ['Product Designer', 'Frontend Developer']
+rank: 1
+thumb: ../../images/vadio/channelmaker/vadio_channelmaker_thumb.jpg
+featuredImg: ../../images/vadio/channelmaker/channelmaker_hero.png
+images: [
+    ../../images/vadio/channelmaker/channelmaker_playlist.jpg
+    ../../images/vadio/channelmaker/channelmaker_edit_from_search_selection.jpg
+    ../../images/vadio/channelmaker/channelmaker_replace_selection.jpg,
+    ../../images/vadio/channelmaker/channelmaker_insert_ad.jpg,
+  ]
+imageAlts:
+  [
+    Browse video playlist and recommended videos,
+    Select and edit a video from search results,
+    Replace a video in the playlist with one from search,
+    Insert and position an ad into the video playlist,
+  ]
+---
+
+import EmbedContainer from '../../components/EmbedContainer';
+import Image from '../../components/Image';
+import Grid from '../../components/layouts/Grid';
+
+## Overview
+
+Channel Maker provides a way for Vadio partners to quickly and easily generate custom playlists to embed into various music engagement platforms, giving partners a new revenue stream and a chance at new fans. This app contributed to partnership deals with Warner Music, Metro Lyrics, and Shazam.
+
+## Features
+
+### Playlist
+
+<Image showCaption alt="Browse video playlist and recommended videos">
+  ![Browse video playlist and recommended
+  videos](../../images/vadio/channelmaker/channelmaker_playlist.jpg)
+</Image>
+
+<Grid rows={1} columns={2} className="my-8">
+  <div className="gridarea-1">
+    The playlist panel allows for drag-and-drop from adjacent lists and for reordering. It is always visible.
+
+    #### Goal
+
+    Give the user a clear representation of their playlist.
+
+    #### Solution
+
+    The playlist was designed to be visible in the app at all times giving the user context for making changes and decisions on videos and ads.
+
+    By keeping the playlist visible, central, and actionable, we shortened the time to complete tasks and gave the user an environment to experiment with playlist generation. This would have been much more difficult with modals and flyout panels.
+
+  </div>
+  <div className="gridarea-2">
+    #### Usability
+
+    No matter what other feature the user is engaging, they can still adjust and view the playlist. A user could:
+
+    - Place a video from search or explore panels to the playlist
+    - Place other video while actively editing another
+    - Move an item being actively edited to the playlist
+    - See real-time playlist length changes while editing or replacing a video
+    - Place, move, delete, and adjust ads while editing a video
+    - Place multiple ads
+
+  </div>
+</Grid>
+
+### Search
+
+<Image showCaption alt="Select and edit a video from search results">
+  ![Select and edit a video from search
+  results](../../images/vadio/channelmaker/channelmaker_edit_from_search_selection.jpg)
+</Image>
+
+<Grid rows={1} columns={2} className="my-8">
+  <div className="gridarea-1">
+    The search panel allows users to find, select, and place videos into the central playlist.
+
+    #### Goal
+
+    Allow users to find and place videos quickly.
+
+    #### Solution
+
+    The search results automotically load into an actionable list when typing. There's no select dropdown or search modal. Search results can immediately be edited or moved to the playlist.
+
+  </div>
+  <div className="gridarea-2">
+    #### Usability
+
+    Async search allows the user to see results faster and promotes discovery by showing partial string matches. Showing results directly in a list view alongside the playlist, allows the user to more easily compare them.
+
+  </div>
+</Grid>
+
+### Replace
+
+<Image showCaption alt="Replace a video in the playlist with one from search">
+  ![Replace a video in the playlist with one from
+  search](../../images/vadio/channelmaker/channelmaker_replace_selection.jpg)
+</Image>
+
+<Grid rows={1} columns={2} className="my-8">
+  <div className="gridarea-1">
+    The replace feature gives the user the ability to swap out videos, avoiding a more manual flow.
+
+    #### Goal
+
+    Give the user an easy path to swap out multiple or old videos.
+
+    #### Solution
+
+    Users can swap any number of videos in search or explore with any number of videos in the playlist.
+
+  </div>
+  <div className="gridarea-2">
+    #### Usability
+
+    Flexibility in how the user reshapes their playlist improves efficiency and satisfaction.
+
+    Users don't need to:
+
+    - Pre-delete videos before adding new ones
+    - Manually delete and replace individual videos
+    - Search through the playlist to replace duplicates of the same video
+
+    Users can:
+    - Use replace to start over
+    - Quickly replace large parts of a playlist with a specific artists
+    - Create variety in playlists by replace large parts with selections from the explore panel
+
+  </div>
+</Grid>
+
+### Ad Placement
+
+<Image showCaption alt="Insert and position an ad into the video playlist">
+  ![Insert and position an ad into the video
+  playlist](../../images/vadio/channelmaker/channelmaker_insert_ad.jpg)
+</Image>
+
+<Grid rows={1} columns={2} className="my-8">
+  <div className="gridarea-1">
+    The ad feature gives users control over ad placement, deciding where ads are placed and how long they will be.
+
+    #### Goal
+
+    Make ad insertion and editing simple. Treat an ad just like another video.
+
+    #### Solution
+
+    We separated ad insertion from placement to reduce the amount of complexity. Ads are placed in their earliest position then the user can move them to where they want. This significantly uncomplicated our previous UI where there were buttons between every two videos.
+
+    We also moved ad placement validation to the "save" step to avoid disrupting the user's experience just to show errors. An auto-correct feature could adjust ad placements for the user at validation time.
+
+  </div>
+  <div className="gridarea-2">
+    #### Usability
+
+    The insert-then-place flow for ads was more efficient and less complex. A user could place a bunch of ads, spread them around, and save just once.
+
+    The ad placement validation and auto-correct steps reduced interuption of playlist creation.
+
+  </div>
+</Grid>
