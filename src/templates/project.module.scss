@@ -20,4 +20,16 @@
   article {
     padding: 8rem 0;
   }
+  .concept-badge {
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: $green;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 0.75rem 0.25rem;
+    & + p {
+      margin-top: 0.5rem;
+    }
+  }
 }

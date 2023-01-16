@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageProps } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
-import { project } from './project.module.scss';
+import { project, conceptBadge } from './project.module.scss';
 import FeaturedImage from '../components/FeaturedImage';
 import { MDXProvider } from '@mdx-js/react';
 
@@ -20,6 +20,8 @@ const ProjectSection: React.FunctionComponent<
     <FeaturedImage image={featuredImg} alt={frontmatter?.title ?? ''} />
   );
 
+  const roles = frontmatter?.role ?? [];
+
   return (
     <section className={project}>
       <header className="grid-1-2">
@@ -28,12 +30,17 @@ const ProjectSection: React.FunctionComponent<
             <span>{frontmatter?.company}</span>
           </div>
           <h1>{frontmatter?.h1}</h1>
+          {frontmatter?.isConcept ? (
+            <div className={conceptBadge}>concept</div>
+          ) : null}
           <p>{frontmatter?.description}</p>
           <div className="mt-4">
             <h2 className="text-label-med">position</h2>
             <p>{frontmatter?.position}</p>
-            <h2 className="text-label-med">roles</h2>
-            {(frontmatter?.role ?? []).map((role, i) => (
+            <h2 className="text-label-med">
+              role{roles.length > 1 ? 's' : ''}
+            </h2>
+            {roles.map((role, i) => (
               <p key={`${role.replace(' ', '-')}-${i}`}>{role}</p>
             ))}
           </div>
