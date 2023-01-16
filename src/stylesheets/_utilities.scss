@@ -121,6 +121,9 @@
 
 .gridarea-2 {
   grid-area: area2;
+  :first-child {
+    margin-top: 2rem;
+  }
 }
 
 .gridarea-3 {
