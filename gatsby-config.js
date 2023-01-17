@@ -1,6 +1,7 @@
 module.exports = {
   graphqlTypegen: true,
   plugins: [
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
