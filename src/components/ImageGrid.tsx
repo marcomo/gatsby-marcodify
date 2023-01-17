@@ -5,8 +5,10 @@ import Image from './Image';
 
 const ImageGrid: React.FunctionComponent<
   PropsWithChildren<{
-    rows: number;
-    columns: number;
+    dtrows: number;
+    dtcolumns: number;
+    mbrows?: number;
+    mbcolumns?: number;
     id: string;
     frontmatter: Queries.ProjectImagesQuery['mdx']['frontmatter'];
     showCaptions?: boolean;
@@ -15,8 +17,10 @@ const ImageGrid: React.FunctionComponent<
 > = (props) => {
   return (
     <Grid
-      rows={props.rows}
-      columns={props.columns}
+      dtrows={props.dtrows}
+      dtcolumns={props.dtcolumns}
+      mbcolumns={props.mbcolumns}
+      mbrows={props.mbrows}
       className={props.classNames || ''}
     >
       {props.frontmatter.images.map((img, i) => {

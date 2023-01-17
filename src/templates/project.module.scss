@@ -32,4 +32,15 @@
       margin-top: 0.5rem;
     }
   }
+  @media (max-width: 1200px) {
+    article {
+      padding: 4rem 0;
+    }
+    header {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas: 'area2' 'area1';
+      row-gap: 4rem;
+    }
+  }
 }

@@ -92,7 +92,7 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql 
               company
               featuredImg {
                 childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED width: 1200)
+                  gatsbyImageData(layout: CONSTRAINED width: 1200 placeholder: BLURRED)
                   resize {
                     aspectRatio
                   }
@@ -102,7 +102,7 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql 
               h1
               images {
                 childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED width: 1200)
+                  gatsbyImageData(layout: CONSTRAINED width: 1200 placeholder: BLURRED)
                   resize {
                     aspectRatio
                   }

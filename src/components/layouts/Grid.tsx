@@ -1,23 +1,29 @@
 import React, { PropsWithChildren } from 'react';
 
 interface IProps {
-  rows?: number
-  columns?: number
-  className?: string
+  dtrows?: number;
+  dtcolumns?: number;
+  mbrows?: number;
+  mbcolumns?: number;
+  className?: string;
 }
 
 const Grid: React.FunctionComponent<PropsWithChildren<IProps>> = (props) => {
   return (
-    <div className={`grid-${props.rows}-${props.columns} ${props.className}`}>
+    <div
+      className={`dt-grid-${props.dtrows}-${props.dtcolumns} ${props.className} mb-grid-${props.mbrows}-${props.mbcolumns} ${props.className}`}
+    >
       {props.children}
     </div>
   );
 };
 
 Grid.defaultProps = {
-  rows: 1,
-  columns: 1,
-  className: ""
-}
+  dtrows: 1,
+  dtcolumns: 1,
+  mbrows: 1,
+  mbcolumns: 1,
+  className: '',
+};
 
 export default Grid;

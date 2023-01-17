@@ -11,16 +11,10 @@ const Index: React.FunctionComponent<PageProps<Queries.HomeProjectsQuery>> = ({
   const { projects } = data.allMdx;
   return (
     <>
-      <Grid rows={1} columns={2} className="cols-30-70">
+      <Grid dtrows={1} dtcolumns={2} mbrows={2} mbcolumns={1}>
         <div className="gridearea-1" style={{ minWidth: '20rem' }}>
           <h1>
-            Designing UIs
-            <br />
-            with heart.
-            <br />
-            And Figma.
-            <br />
-            And code.
+            Designing enjoyable user experiences with creativity and code.
           </h1>
         </div>
         <div
@@ -28,14 +22,10 @@ const Index: React.FunctionComponent<PageProps<Queries.HomeProjectsQuery>> = ({
           style={{ marginRight: '5%', marginTop: '.5rem' }}
         >
           <p>
-            I&rsquo;m a UI developer and designer doing everything I can to keep
-            digital products from getting lost in translation.
-          </p>
-
-          <p>
-            It&rsquo;s a pleasure to craft complex web apps, interactive
-            experiences, and visual stories. All to create meaningful user
-            experiences and help businesses succeed.
+            I&rsquo;m always looking to create and build fun, interactive, and
+            engaging products. To discover and learn new tools. Experiment with
+            new techniques. And make things that bring a little joy to the
+            people who use them.
           </p>
         </div>
       </Grid>

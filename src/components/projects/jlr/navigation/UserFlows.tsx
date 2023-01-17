@@ -46,8 +46,8 @@ const AppScreens: React.FunctionComponent<
 
   return (
     <ImageGrid
-      rows={2}
-      columns={2}
+      dtrows={2}
+      dtcolumns={2}
       frontmatter={frontmatter}
       id={props.id}
       showCaptions

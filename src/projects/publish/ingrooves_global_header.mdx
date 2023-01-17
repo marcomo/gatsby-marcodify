@@ -24,7 +24,7 @@ The purpose of this project was to redesign the universal navigation model and i
 
 ## Previous navigation
 
-<Grid rows={1} columns={2} className="cols-40-60">
+<Grid dtrows={1} dtcolumns={2} mbrows={2} mbcolumns={1} className="cols-40-60">
   <div className="gridarea-1">
 
     - Products are split into three groupings at the top level <small>(white fill)</small>
@@ -51,7 +51,7 @@ without first visiting those products. That's because each grouping only shows i
 
 ## New Navigation
 
-<Grid rows={1} columns={2} className="cols-60-40">
+<Grid dtrows={1} dtcolumns={2} mbrows={2} mbcolumns={1} className="cols-60-40 rows-auto">
   <div className="gridarea-1">
     <Image caption="New universal navigation model" includeShadow={false}>
       ![New universal navigation
@@ -78,17 +78,19 @@ without first visiting those products. That's because each grouping only shows i
 
 ## New Navigation Menu
 
-<Grid rows={1} columns={2} className="cols-40-60">
+<Grid dtrows={1} dtcolumns={2} mbrows={2} mbcolumns={1} className="cols-40-60">
   <div className="gridarea-1">
     <Image caption="New product menus" showCaption>
       ![New product menus](../../images/ingrooves/productnav/product_menus.png)
     </Image>
   </div>
   <div className="gridarea-2">
-    <Image caption="Previous navigation menus" includeShadow={false} showCaption>
-      ![Previous navigation
-      menus](../../images/ingrooves/productnav/old_menus.png)
-    </Image>
+    <div className="hide-on-mobile">
+      <Image caption="Previous navigation menus" includeShadow={false} showCaption>
+        ![Previous navigation
+        menus](../../images/ingrooves/productnav/old_menus.png)
+      </Image>
+    </div>
 
     <div className="mt-4">
 
