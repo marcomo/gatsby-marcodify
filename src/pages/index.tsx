@@ -5,7 +5,7 @@ import ConditionalRender from '../components/ConditionalRender';
 import Grid from '../components/layouts/Grid';
 import * as styles from '../stylesheets/projects.module.scss';
 
-const Index: React.FunctionComponent<PageProps<Queries.ProjectsQuery>> = ({
+const Index: React.FunctionComponent<PageProps<Queries.HomeProjectsQuery>> = ({
   data,
 }) => {
   const { projects } = data.allMdx;
@@ -23,7 +23,10 @@ const Index: React.FunctionComponent<PageProps<Queries.ProjectsQuery>> = ({
             And code.
           </h1>
         </div>
-        <div className="gridarea-2" style={{ marginRight: '5%' }}>
+        <div
+          className="gridarea-2"
+          style={{ marginRight: '5%', marginTop: '.5rem' }}
+        >
           <p>
             I&rsquo;m a UI developer and designer doing everything I can to keep
             digital products from getting lost in translation.
@@ -53,6 +56,7 @@ const Index: React.FunctionComponent<PageProps<Queries.ProjectsQuery>> = ({
                           image={
                             proj.node.frontmatter?.thumb?.childImageSharp?.fluid
                           }
+                          loading="eager"
                           alt=""
                         />
                       ) : null}
@@ -74,7 +78,7 @@ export default Index;
 
 // Get all projects so we can generate a list in the Projects view
 export const query = graphql`
-  query Projects {
+  query HomeProjects {
     allMdx(
       sort: [{ frontmatter: { rank: ASC } }, { frontmatter: { title: ASC } }]
       filter: { internal: { contentFilePath: { regex: "/(/projects/)/" } } }
