@@ -6,17 +6,19 @@ const Header: React.FunctionComponent = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <Link to="/" className={styles.logoLink}>
-          <div className={styles.mdfyBrandLogo} />
+        <Link
+          to="/"
+          className={styles.mdfySimpleLogo}
+          style={{ borderBottom: 'none' }}
+        >
+          <p>Marco Morales</p>
+          <div>UI designer and frontend developer</div>
         </Link>
         <ul className={styles.ul}>
           <li>
             <Link to="/projects" activeClassName={styles.liActive}>
               projects
             </Link>
-          </li>
-          <li>
-            <Link to="/about">about</Link>
           </li>
         </ul>
       </nav>
