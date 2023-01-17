@@ -93,7 +93,11 @@ export const query = graphql`
             description
             thumb {
               childImageSharp {
-                fluid: gatsbyImageData(width: 400, height: 400)
+                fluid: gatsbyImageData(
+                  width: 400
+                  height: 400
+                  placeholder: NONE
+                )
               }
             }
           }
