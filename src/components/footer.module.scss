@@ -9,4 +9,9 @@
   min-height: 8rem;
   align-items: center;
   @include overlay-stripes;
+  justify-content: space-between;
+}
+.linkedin {
+  color: $light;
+  font-size: 2rem;
 }

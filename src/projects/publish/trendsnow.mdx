@@ -36,21 +36,24 @@ At the time of its creation, an analytics tool already existed but only provided
 analysis into the data or any actionable recommendations. And it was painfully slow and buggy due to a lack of
 people resources and outdated technology.
 
-<Grid rows={1} columns={2} className="cols-30-70">
-  <div className="gridarea-1">
-    <Image caption="Playlist Activity Add Drop Badge" includeShadow={false}>
-      ![Playlist Activity Add Drop Badge](../../images/ingrooves/tn/card_model.png)
-    </Image>
+<Grid dtrows={1} dtcolumns={2} mbrows={2} mbcolumns={1} className="cols-30-70 rows-70-30 mobile-images">
+  <div className="hide-on-mobile">
+    <div className="gridarea-1">
+      <Image caption="Playlist Activity Add Drop Badge" includeShadow={false}>
+        ![Playlist Activity Add Drop Badge](../../images/ingrooves/tn/card_model.png)
+      </Image>
+    </div>
   </div>
   <div className="gridarea-2">
+
     We had a simple model:
-    
+
     - Give meaningful insights
-    - Support them with data
+    - Support those insights with data
     - Promote action
-    
-    We had data but not the insights or actions. The insights were being developed by 
-    the data science team and the actions—by way of an ad platform—were being developed by 
+
+    We had the data but not the insights or actions. The insights were being developed by
+    the data science team and the actions—by way of an ad platform—were being developed by
     the marketing product team. Trends Now would bring it all together.
 
   </div>
@@ -62,7 +65,7 @@ people resources and outdated technology.
 I came on as a contractor in 2017, having done music analytics previously. Ingrooves needed someone
 who could handle design and development and move quickly. I was the sole frontend developer and
 product designer on the project for the first two years. I was then joined by another frontend
-developer to support me while I focused more on user experience and new features.
+developer to tackle code while I focused more on user experience and new features.
 
 In the early MVP stage, I worked directly with the Head of Product and the CTO. A dedicated team
 eventually developed and I worked alongside a Product Manager, Data Scientists, and Engineers.
@@ -89,7 +92,8 @@ the ad platform being built.
   </div>
 </div>
 
-<Grid rows={1} columns={2}>
+<section>
+<Grid dtrows={1} dtcolumns={2} mbrows={2} mbcolumns={1}>
 
   <div className="gridarea-1">
 
@@ -116,15 +120,15 @@ the ad platform being built.
     - Focus on one, many, or all territories
     - Fully responsive down to iPhone 5
     - Map view gives the user the quickest way to observe trend volume
-    - Table view gives the user ranking lost in the map
-    - Territory search gives user a short path to finding places that are hard to spell or locate
-    - Leverages modal and layered content
+    - Table view allows the user to rank and sort
+    - Territory search gives the user a short path to finding places that are hard to spell or locate
 
   </div>
 
 </Grid>
+</section>
 
-<Grid rows={1} columns={2} className="cols-40-60 my-8">
+<Grid dtrows={1} dtcolumns={2} mbrows={2} mbcolumns={1} className="cols-40-60 my-max">
   <div className="gridarea-2">
 
     ### Search
@@ -161,7 +165,7 @@ the ad platform being built.
   </div>
 </Grid>
 
-<Grid rows={1} columns={2} className="cols-60-40">
+<Grid dtrows={1} dtcolumns={2} mbcolumns={1} mbrows={2} className="cols-60-40">
   <div className="gridarea-1">
 
     ### On the Move

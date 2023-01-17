@@ -54,6 +54,9 @@ a {
   &:hover {
     border-bottom-color: $light;
   }
+  .no-underline {
+    border-bottom: none;
+  }
 }
 
 button {
@@ -240,4 +243,30 @@ h4 {
 .thin-colum-gap {
   display: grid;
   column-gap: 2rem;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 12px;
+  }
+  section {
+    margin-top: 8rem;
+  }
+  iframe {
+    width: 100%;
+  }
+  h4 {
+    margin-top: 2rem;
+  }
+  figcaption {
+    display: none;
+  }
+  #mdfy-wrapper main {
+    padding: 2rem 0;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+  .hide-on-mobile {
+    display: none !important;
+  }
 }

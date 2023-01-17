@@ -1,4 +1,4 @@
-@import "./_variables";
+@import './_variables';
 .projects {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -9,7 +9,13 @@
     margin: 1rem auto 0;
   }
   p {
-    color: rgba($light, .6);
-    margin-top: .5rem;
+    color: rgba($light, 0.6);
+    margin-top: 0.5rem;
+  }
+}
+@media (max-width: 1200px) {
+  .projects {
+    grid-template-columns: 1fr 1fr;
+    margin: 2rem 0;
   }
 }
