@@ -11,9 +11,6 @@
   top: 0;
   left: 0;
   z-index: 1;
-  + main {
-    margin-top: 16rem !important;
-  }
 }
 .nav {
   position: relative;
@@ -22,6 +19,7 @@
   box-sizing: border-box;
   height: 8rem;
   align-items: flex-end;
+  justify-content: space-between;
   @include overlay-stripes;
 }
 

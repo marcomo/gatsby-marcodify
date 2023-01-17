@@ -14,6 +14,13 @@ const Header: React.FunctionComponent = () => {
           <p>Marco Morales</p>
           <div>UI designer and frontend developer</div>
         </Link>
+        <ul className={styles.ul}>
+          <li>
+            <Link to="/projects" activeClassName={styles.liActive}>
+              projects
+            </Link>
+          </li>
+        </ul>
       </nav>
     </header>
   );

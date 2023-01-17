@@ -10,8 +10,7 @@ const Index: React.FunctionComponent<PageProps<Queries.ProjectsQuery>> = ({
   const { projects } = data.allMdx;
   return (
     <>
-      <h2>Portfolio</h2>
-      <h3>Projects</h3>
+      <h2>Projects</h2>
       <div className="flex-row">
         <div className="flex-item">
           <div className={styles.projects}>
