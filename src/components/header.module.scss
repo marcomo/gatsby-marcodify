@@ -11,6 +11,9 @@
   top: 0;
   left: 0;
   z-index: 1;
+  + main {
+    margin-top: 16rem !important;
+  }
 }
 .nav {
   position: relative;
@@ -45,6 +48,19 @@
       &:hover {
         @include li-active;
       }
+    }
+  }
+}
+
+.mdfy-simple-logo {
+  p {
+    font-weight: 400;
+    font-size: 2rem;
+    color: $green;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    + div:first-of-type {
+      font-size: 1.25rem;
     }
   }
 }
