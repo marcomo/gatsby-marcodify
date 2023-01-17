@@ -56,6 +56,7 @@ const Index: React.FunctionComponent<PageProps<Queries.HomeProjectsQuery>> = ({
                           image={
                             proj.node.frontmatter?.thumb?.childImageSharp?.fluid
                           }
+                          loading="eager"
                           alt=""
                         />
                       ) : null}
