@@ -54,7 +54,7 @@ a {
   &:hover {
     border-bottom-color: $light;
   }
-  .no-underline {
+  &.no-underline {
     border-bottom: none;
   }
 }
@@ -65,7 +65,7 @@ button {
   outline: none;
   border: 2px solid white;
   margin: 1rem;
-  padding: 1rem 2rem;
+  padding: 0;
   font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
@@ -73,6 +73,16 @@ button {
 
 .btn-pill {
   border-radius: 3rem;
+  overflow: hidden;
+  > a {
+    padding: 1rem 2rem 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 150ms;
+    &:hover {
+      background-color: rgba($dark, 0.1);
+    }
+  }
 }
 
 figure {
@@ -129,10 +139,11 @@ figure {
   }
   h2 a {
     &:hover::after {
-      transform: translateX(0.25rem);
+      transform: translate(0.25rem, 0);
     }
     &::after {
       font-size: 2rem;
+      transform: translate(0, 0);
       transition: transform 100ms;
       display: inline-block;
       font-family: 'Font Awesome 6 Pro';

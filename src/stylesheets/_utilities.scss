@@ -31,13 +31,58 @@
   justify-content: center;
 }
 
-.pr-4 {
-  padding-right: 4rem;
+// PADDING
+
+$spacing-rems: 1 2 4 8;
+
+@each $space in $spacing-rems {
+  .pr-#{$space} {
+    padding-right: #{$space}rem;
+  }
+  .pl-#{$space} {
+    padding-left: #{$space}rem;
+  }
+  .pt-#{$space} {
+    padding-top: #{$space}rem;
+  }
+  .pb-#{$space} {
+    padding-bottom: #{$space}rem;
+  }
+  .py-#{$space} {
+    padding-top: #{$space}rem;
+    padding-bottom: #{$space}rem;
+  }
+  .px-#{$space} {
+    padding-left: #{$space}rem;
+    padding-right: #{$space}rem;
+  }
+  .mr-#{$space} {
+    margin-right: #{$space}rem;
+  }
+  .ml-#{$space} {
+    margin-left: #{$space}rem;
+  }
+  .mt-#{$space} {
+    margin-top: #{$space}rem;
+  }
+  .mt-#{$space} {
+    margin-bottom: #{$space}rem;
+  }
+  .my-#{$space} {
+    margin-top: #{$space}rem;
+    margin-bottom: #{$space}rem;
+  }
+  .mx-#{$space} {
+    margin-left: #{$space}rem;
+    margin-right: #{$space}rem;
+  }
 }
 
-.pr-8 {
-  padding-right: 8rem;
+.pt-half {
+  padding-top: 0.5rem;
 }
+
+// MARGIN
 
 .m-auto {
   margin: auto;
