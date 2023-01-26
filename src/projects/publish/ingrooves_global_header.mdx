@@ -7,7 +7,7 @@ company: Ingrooves
 position: 'Principal UI Developer'
 role: ['UX Designer']
 rank: 4
-thumb: ../../images/ingrooves/productnav/ingrooves_productnav_thumb.jpg
+thumb: ../../images/ingrooves/productnav/ingrooves_productnav_hero.png
 featuredImg: ../../images/ingrooves/productnav/ingrooves_productnav_hero.png
 images: [../../images/ingrooves/productnav/prev_universal_navigation_model.png]
 imageAlts: ['Previous universal navigation model']
@@ -15,6 +15,7 @@ imageAlts: ['Previous universal navigation model']
 
 import Image from '../../components/Image';
 import Grid from '../../components/layouts/Grid';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 ## Overview
 
@@ -24,7 +25,7 @@ The purpose of this project was to redesign the universal navigation model and i
 
 ## Previous navigation
 
-<Grid dtrows={1} dtcolumns={2} mbrows={2} mbcolumns={1} className="cols-40-60">
+<Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1} className="cols-40-60 thick-row-gaps">
   <div className="gridarea-1">
 
     - Products are split into three groupings at the top level <small>(white fill)</small>
@@ -35,7 +36,7 @@ The purpose of this project was to redesign the universal navigation model and i
 
   </div>
   <div className="gridarea-2">
-    <Image caption="Previous universal navigation model" includeShadow={false}>
+    <Image caption="Previous universal navigation model" includeShadow={false} className="no-figure-margins">
       ![Previous universal navigation
       model](../../images/ingrooves/productnav/prev_universal_navigation_model.png)
     </Image>
@@ -51,9 +52,9 @@ without first visiting those products. That's because each grouping only shows i
 
 ## New Navigation
 
-<Grid dtrows={1} dtcolumns={2} mbrows={2} mbcolumns={1} className="cols-60-40 rows-auto">
+<Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1} className="cols-60-40 rows-auto thick-row-gaps">
   <div className="gridarea-1">
-    <Image caption="New universal navigation model" includeShadow={false}>
+    <Image caption="New universal navigation model" includeShadow={false} className="no-figure-margins">
       ![New universal navigation
       model](../../images/ingrooves/productnav/new_universal_navigation_model.png)
     </Image>
@@ -78,9 +79,9 @@ without first visiting those products. That's because each grouping only shows i
 
 ## New Navigation Menu
 
-<Grid dtrows={1} dtcolumns={2} mbrows={2} mbcolumns={1} className="cols-40-60">
+<Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1} className="cols-40-60" >
   <div className="gridarea-1">
-    <Image caption="New product menus" showCaption>
+    <Image caption="New product menus" showCaption className="mdx-image">
       ![New product menus](../../images/ingrooves/productnav/product_menus.png)
     </Image>
   </div>

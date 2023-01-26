@@ -27,7 +27,7 @@ const Modal: React.FunctionComponent = () => {
       unmountOnExit
     >
       <div ref={nodeRef} className="mdfy-modal" onClick={close}>
-        <div ref={contentRef} className="mdfy-modal-content">
+        <div ref={contentRef} className="mdfy-modal-content no-figure-margins">
           {content}
         </div>
       </div>

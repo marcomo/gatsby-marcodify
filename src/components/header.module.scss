@@ -15,11 +15,11 @@
 .nav {
   position: relative;
   display: flex;
-  padding: 2rem 4rem;
+  padding: 2rem 8rem;
   box-sizing: border-box;
   height: 8rem;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: center;
   @include overlay-stripes;
 }
 
@@ -27,8 +27,6 @@
   display: flex;
   margin: 0;
   padding: 0;
-  height: 1rem;
-  align-items: flex-end;
   li {
     list-style-type: none;
     display: flex;
@@ -36,6 +34,7 @@
     padding: 0 1rem;
     color: $green;
     line-height: 1rem;
+    margin-bottom: 0.5rem;
     a {
       transition: border-top 300ms;
       padding-bottom: 0;
@@ -117,11 +116,22 @@
   height: 2rem;
 }
 
+@media (max-width: 1200px) {
+  .header {
+    nav {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+}
+
 @media (max-width: 600px) {
   .header {
     nav {
       height: auto;
       align-items: center;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
   }
 }

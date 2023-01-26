@@ -10,57 +10,72 @@ const Index: React.FunctionComponent<PageProps<Queries.HomeProjectsQuery>> = ({
 }) => {
   const { projects } = data.allMdx;
   return (
-    <>
-      <Grid dtrows={1} dtcolumns={2} mbrows={2} mbcolumns={1}>
-        <div className="gridearea-1" style={{ minWidth: '20rem' }}>
-          <h1>
-            Designing enjoyable user experiences with creativity and code.
-          </h1>
-        </div>
-        <div
-          className="gridarea-2"
-          style={{ marginRight: '5%', marginTop: '.5rem' }}
-        >
-          <p>
-            I&rsquo;m always looking to create and build fun, interactive, and
-            engaging products. To discover and learn new tools. Experiment with
-            new techniques. And make things that bring a little joy to the
-            people who use them.
-          </p>
-        </div>
-      </Grid>
-      <h3 className="mt-4">Projects</h3>
-      <div className="flex-row">
-        <div className="flex-item">
-          <div className={styles.projects}>
-            {projects.map((proj) => {
-              return (
-                <ConditionalRender
-                  shouldRender={!!proj.node.frontmatter}
-                  key={proj.node.id}
-                >
-                  <Link to={'/projects/' + proj.node.frontmatter?.slug ?? ''}>
-                    <div className={proj.node.id}>
-                      {proj.node.frontmatter?.thumb?.childImageSharp?.fluid ? (
-                        <GatsbyImage
-                          image={
-                            proj.node.frontmatter?.thumb?.childImageSharp?.fluid
-                          }
-                          loading="eager"
-                          alt=""
-                        />
-                      ) : null}
-                    </div>
-                    <h4>{proj.node.frontmatter?.title}</h4>
-                    <p>{proj.node.frontmatter?.description}</p>
-                  </Link>
-                </ConditionalRender>
-              );
-            })}
+    <main className="width-control">
+      <section>
+        <Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1}>
+          <div className="gridearea-1" style={{ minWidth: '20rem' }}>
+            <h1 className="mt-0">
+              At the intersection
+              <br />
+              of <strong>design</strong> and <strong>technology,</strong>
+              <br />
+              you&rsquo;ve got to look{' '}
+              <span className="text-no-wrap">both ways.</span>
+            </h1>
+          </div>
+          <div
+            className="gridarea-2"
+            style={{ marginRight: '5%', marginTop: '.5rem' }}
+          >
+            <p>
+              Product design moves fast. Nobody wants to make a wrong turn. So
+              I&rsquo;m doing my part to navigate ideas from concept to
+              prototype to production.
+            </p>
+            <p>
+              I merge design and technology to help design teams build complex
+              interfaces, high fidelity prototypes, and coded UIs. To help get
+              ideas to their destination.
+            </p>
+          </div>
+        </Grid>
+      </section>
+      <section>
+        <h3>Projects</h3>
+        <div className="flex-row">
+          <div className="flex-item">
+            <div className={styles.projects}>
+              {projects.map((proj) => {
+                return (
+                  <ConditionalRender
+                    shouldRender={!!proj.node.frontmatter}
+                    key={proj.node.id}
+                  >
+                    <Link to={'/projects/' + proj.node.frontmatter?.slug ?? ''}>
+                      <div className={proj.node.id}>
+                        {proj.node.frontmatter?.thumb?.childImageSharp
+                          ?.fluid ? (
+                          <GatsbyImage
+                            image={
+                              proj.node.frontmatter?.thumb?.childImageSharp
+                                ?.fluid
+                            }
+                            loading="eager"
+                            alt=""
+                          />
+                        ) : null}
+                      </div>
+                      <h4>{proj.node.frontmatter?.title}</h4>
+                      <p>{proj.node.frontmatter?.description}</p>
+                    </Link>
+                  </ConditionalRender>
+                );
+              })}
+            </div>
           </div>
         </div>
-      </div>
-    </>
+      </section>
+    </main>
   );
 };
 
@@ -83,7 +98,11 @@ export const query = graphql`
             description
             thumb {
               childImageSharp {
-                fluid: gatsbyImageData(width: 400, height: 400)
+                fluid: gatsbyImageData(
+                  layout: CONSTRAINED
+                  placeholder: BLURRED
+                  width: 400
+                )
               }
             }
           }

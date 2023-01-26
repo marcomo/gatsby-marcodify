@@ -7,13 +7,15 @@ company: Ingrooves
 position: 'Principal UI Developer'
 role: ['Product Designer', 'Frontend Developer']
 rank: 1
-thumb: ../../images/ingrooves/tn/trendsnow_thumb.jpg
+thumb: ../../images/ingrooves/tn/trends_now_hero.png
 featuredImg: ../../images/ingrooves/tn/trends_now_hero.png
 images:
   [
     ../../images/ingrooves/tn/app_screen_territories_01.png,
     ../../images/ingrooves/tn/app_screen_territories_02.png,
     ../../images/ingrooves/tn/app_screen_territories_03.png,
+    ../../images/ingrooves/tn/app_screen_sotm_mobile_01.png,
+    ../../images/ingrooves/tn/app_screen_search_01.png,
   ]
 imageAlts:
   [
@@ -26,7 +28,9 @@ imageAlts:
 import EmbedContainer from '../../components/EmbedContainer';
 import Image from '../../components/Image';
 import Grid from '../../components/layouts/Grid';
-import TerritoriesScreens from '../../components/projects/ingrooves/TerritoriesScreens.tsx';
+import Territories from '../../components/projects/ingrooves/Territories.tsx';
+import OnTheMove from '../../components/projects/ingrooves/OnTheMove.tsx';
+import Search from '../../components/projects/ingrooves/Search.tsx';
 
 ## Overview
 
@@ -36,7 +40,7 @@ At the time of its creation, an analytics tool already existed but only provided
 analysis into the data or any actionable recommendations. And it was painfully slow and buggy due to a lack of
 people resources and outdated technology.
 
-<Grid dtrows={1} dtcolumns={2} mbrows={2} mbcolumns={1} className="cols-30-70 rows-70-30 mobile-images">
+<Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1} className="cols-30-70 rows-70-30">
   <div className="hide-on-mobile">
     <div className="gridarea-1">
       <Image caption="Playlist Activity Add Drop Badge" includeShadow={false}>
@@ -73,29 +77,11 @@ eventually developed and I worked alongside a Product Manager, Data Scientists, 
 I also partnered with Designers and Engineers on the marketing team to integrate Trends Now with
 the ad platform being built.
 
-<div className="flex-row">
+## Features
 
-<div className="flex-column flex-item">
-  
-  ## Features
-
-  <div className="flex-row flex-item align-center">
+<Territories id="territories">
 
     ### Territories
-
-  </div>
-
-</div>
-
-  <div className="flex-item-3">
-    <TerritoriesScreens id="territories" />
-  </div>
-</div>
-
-<section>
-<Grid dtrows={1} dtcolumns={2} mbrows={2} mbcolumns={1}>
-
-  <div className="gridarea-1">
 
     #### Challenge
 
@@ -111,10 +97,6 @@ the ad platform being built.
     - Which countries have the greatest improvement
     - Which retailers are performing best for my song
 
-  </div>
-
-  <div className="gridarea-2">
-
     #### Highlights
 
     - Focus on one, many, or all territories
@@ -123,15 +105,11 @@ the ad platform being built.
     - Table view allows the user to rank and sort
     - Territory search gives the user a short path to finding places that are hard to spell or locate
 
-  </div>
+</Territories>
 
-</Grid>
-</section>
+### Search
 
-<Grid dtrows={1} dtcolumns={2} mbrows={2} mbcolumns={1} className="cols-40-60 my-max">
-  <div className="gridarea-2">
-
-    ### Search
+<Search id="search">
 
     #### Challenge
 
@@ -154,21 +132,11 @@ the ad platform being built.
     - Search comes preloaded with recent searches
     - Searching by label or song ID also works
 
-  </div>
+</Search>
 
-  <div className="gridarea-1">
-    <Image>
-      ![Territories
-      view](../../images/ingrooves/tn/app_screen_search_01.png)
-    </Image>
+### On the Move
 
-  </div>
-</Grid>
-
-<Grid dtrows={1} dtcolumns={2} mbcolumns={1} mbrows={2} className="cols-60-40">
-  <div className="gridarea-1">
-
-    ### On the Move
+<OnTheMove id="sotm">
 
     #### Challenge
 
@@ -192,12 +160,4 @@ the ad platform being built.
     - Song growth is backed by attribution and noted on preview card
     - Song view expands to a timeline view where users can traverse historic drivers
 
-  </div>
-
-  <div className="gridarea-2">
-    <Image>
-      ![On the Move mobile view](../../images/ingrooves/tn/app_screen_sotm_mobile_01.png)
-    </Image>
-
-  </div>
-</Grid>
+</OnTheMove>

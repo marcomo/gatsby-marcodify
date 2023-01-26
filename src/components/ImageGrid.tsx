@@ -1,27 +1,24 @@
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React, { PropsWithChildren } from 'react';
-import Grid from './layouts/Grid';
+import Grid, { IProps as IGridProps } from './layouts/Grid';
 import Image from './Image';
 
-const ImageGrid: React.FunctionComponent<
-  PropsWithChildren<{
-    dtrows: number;
-    dtcolumns: number;
-    mbrows?: number;
-    mbcolumns?: number;
-    id: string;
-    frontmatter: Queries.ProjectImagesQuery['mdx']['frontmatter'];
-    showCaptions?: boolean;
-    classNames?: string;
-  }>
-> = (props) => {
+interface IProps extends IGridProps {
+  id: string;
+  frontmatter: Queries.ProjectImagesQuery['mdx']['frontmatter'];
+  showCaptions?: boolean;
+}
+
+const ImageGrid: React.FunctionComponent<PropsWithChildren<IProps>> = (
+  props
+) => {
   return (
     <Grid
-      dtrows={props.dtrows}
-      dtcolumns={props.dtcolumns}
-      mbcolumns={props.mbcolumns}
-      mbrows={props.mbrows}
-      className={props.classNames || ''}
+      lgrows={props.lgrows}
+      lgcolumns={props.lgcolumns}
+      mdcolumns={props.mdcolumns}
+      mdrows={props.mdrows}
+      className={props.className || ''}
     >
       {props.frontmatter.images.map((img, i) => {
         const alt = props.frontmatter.imageAlts[i];
@@ -32,6 +29,9 @@ const ImageGrid: React.FunctionComponent<
                 key={`image-${i}`}
                 image={getImage(img.childrenImageSharp[0].gatsbyImageData)}
                 alt={alt}
+                objectFit="contain"
+                imgStyle={{ maxHeight: '75vh' }}
+                style={{ maxHeight: '75vh' }}
               />
             </Image>
           </div>

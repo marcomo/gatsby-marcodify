@@ -3,22 +3,32 @@
   flex: 1 0 80%;
   header {
     grid-template-columns: 33% auto;
-    h1 {
-      max-width: 36rem;
-    }
     p {
       margin-top: 1rem;
       margin-bottom: 1rem;
       font-size: 1.5rem;
-      max-width: 36rem;
       color: rgba($light, 0.6);
       font-weight: 300;
-      font-size: 2rem;
-      line-height: 140%;
+      font-size: 1.5rem;
+      line-height: 100%;
+      &.intro {
+        font-size: 2rem;
+        line-height: 140%;
+      }
+    }
+    .credits {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 4rem;
+      h2 {
+        margin-top: 1rem;
+      }
     }
   }
   article {
-    padding: 8rem 0;
+    h2 {
+      margin-top: 8rem;
+    }
   }
   .concept-badge {
     display: inline-block;
@@ -41,6 +51,9 @@
       grid-template-rows: repeat(2, auto);
       grid-template-areas: 'area2' 'area1';
       row-gap: 4rem;
+      .credits {
+        flex-direction: row;
+      }
     }
   }
 }
