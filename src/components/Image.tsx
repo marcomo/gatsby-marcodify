@@ -7,6 +7,7 @@ interface IProps {
   allowModal?: boolean;
   showCaption?: boolean;
   includeShadow?: boolean;
+  className?: string;
 }
 
 const Image: React.FunctionComponent<PropsWithChildren<IProps>> = (props) => {
@@ -30,8 +31,13 @@ const Image: React.FunctionComponent<PropsWithChildren<IProps>> = (props) => {
 
   return (
     <div
-      className={props.includeShadow ? 'drop-shadow' : ''}
-      onClick={props.allowModal && openModal}
+      className={[
+        props.includeShadow ? 'drop-shadow' : '',
+        props.className || '',
+      ].join(' ')}
+      onClick={() => {
+        if (props.allowModal) openModal();
+      }}
     >
       {figure}
     </div>

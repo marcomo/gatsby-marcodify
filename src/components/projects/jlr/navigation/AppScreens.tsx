@@ -46,12 +46,13 @@ const AppScreens: React.FunctionComponent<
 
   return (
     <ImageGrid
-      dtrows={2}
-      dtcolumns={4}
-      mbrows={4}
-      mbcolumns={2}
+      lgrows={4}
+      lgcolumns={2}
+      mdrows={4}
+      mdcolumns={2}
       frontmatter={frontmatter}
       id={props.id}
+      className="no-figure-margins"
     />
   );
 };

@@ -1,15 +1,24 @@
 @import './base';
 .footer {
   display: flex;
-  padding: 2rem;
+  padding: 2rem 8rem;
   width: 100%;
   box-sizing: border-box;
   z-index: 1;
   height: 8rem;
   min-height: 8rem;
-  align-items: center;
+  justify-content: center;
   @include overlay-stripes;
-  justify-content: space-between;
+
+  @media (max-width: 1200px) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  @media (max-width: 600px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 .linkedin {
   color: $light;

@@ -7,7 +7,7 @@ company: Jaguar Land Rover
 position: Design Technologist
 role: ['Visual Designer', 'Prototyper']
 rank: 3
-thumb: ../../images/jlr/navigation/jlr_nav_thumb.jpg
+thumb: ../../images/jlr/navigation/jlr_nav_hero.png
 featuredImg: ../../images/jlr/navigation/jlr_nav_hero.png
 images:
   [
@@ -65,7 +65,7 @@ We started with <ExternalLink href="https://www.navit-project.org/">Navit</Exter
 
 We conducted some simple surveys amongst staff and colleagues to determine our target features which included:
 
-<Grid dtrows={1} dtcolumns={2} mbrows={2} mbcolumns={1}>
+<Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1}>
   <div className="gridarea-1">
 
     - Finding a location
@@ -95,8 +95,17 @@ We conducted some simple surveys amongst staff and colleagues to determine our t
 
 ## Prototypes
 
-<Grid dtrows={1} dtcolumns={2} mbcolumns={1} mbrows={2}>
+<Grid
+  lgrows={1}
+  lgcolumns={2}
+  mdcolumns={1}
+  mdrows={2}
+  smrows={2}
+  smcolumns={1}
+  className="no-row-gaps"
+>
   <iframe
+    className="gridarea-1"
     src="https://player.vimeo.com/video/788880746?h=b0e977f48e&byline=0&portrait=0"
     width="640"
     height="360"
@@ -105,7 +114,7 @@ We conducted some simple surveys amongst staff and colleagues to determine our t
     allowFullScreen
   ></iframe>
   <iframe
-    className={`gridarea-2`}
+    className="gridarea-2"
     src="https://player.vimeo.com/video/788884155?h=524d384261e&byline=0&portrait=0"
     width="640"
     height="360"

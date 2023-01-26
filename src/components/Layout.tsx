@@ -8,7 +8,7 @@ const Layout: React.FunctionComponent<PropsWithChildren> = (props) => {
     <div id="mdfy-wrapper">
       <Modal />
       <Header />
-      <main>{props.children}</main>
+      {props.children}
       <Footer />
     </div>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageProps } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
-import { project, conceptBadge } from './project.module.scss';
+import { project, conceptBadge, intro, credits } from './project.module.scss';
 import FeaturedImage from '../components/FeaturedImage';
 import { MDXProvider } from '@mdx-js/react';
 
@@ -23,9 +23,9 @@ const ProjectSection: React.FunctionComponent<
   const roles = frontmatter?.role ?? [];
 
   return (
-    <section className={project}>
-      <header className="dt-grid-1-2 mb-grid-2-1">
-        <div className="gridarea-1 my-auto pr-4">
+    <main className={[project, 'width-control'].join(' ')}>
+      <header className="lg-grid-2-1 md-grid-1-2">
+        <div className="gridarea-1 my-auto">
           <div className="text-label">
             <span>{frontmatter?.company}</span>
           </div>
@@ -33,22 +33,26 @@ const ProjectSection: React.FunctionComponent<
           {frontmatter?.isConcept ? (
             <div className={conceptBadge}>concept</div>
           ) : null}
-          <p>{frontmatter?.description}</p>
-          <div className="mt-4">
-            <h2 className="text-label-med">position</h2>
-            <p>{frontmatter?.position}</p>
-            <h2 className="text-label-med">
-              role{roles.length > 1 ? 's' : ''}
-            </h2>
-            {roles.map((role, i) => (
-              <p key={`${role.replace(' ', '-')}-${i}`}>{role}</p>
-            ))}
+          <p className={intro}>{frontmatter?.description}</p>
+          <div className={credits}>
+            <div className="flex-item">
+              <h2 className="text-label-med">position</h2>
+              <p>{frontmatter?.position}</p>
+            </div>
+            <div className="flex-item">
+              <h2 className="text-label-med">
+                role{roles.length > 1 ? 's' : ''}
+              </h2>
+              {roles.map((role, i) => (
+                <p key={`${role.replace(' ', '-')}-${i}`}>{role}</p>
+              ))}
+            </div>
           </div>
         </div>
         <div className="gridarea-2 flex-row flex-center">{featuredImgNode}</div>
       </header>
       <article>{props.children}</article>
-    </section>
+    </main>
   );
 };
 
