@@ -16,98 +16,83 @@ images:
     ../../images/ingrooves/tn/app_screen_territories_03.png,
     ../../images/ingrooves/tn/app_screen_sotm_mobile_01.png,
     ../../images/ingrooves/tn/app_screen_search_01.png,
+    ../../images/ingrooves/tn/search_v0.png,
+    ../../images/ingrooves/tn/territories_v0.png,
+    ../../images/ingrooves/tn/sotm_desktop.png,
+    ../../images/ingrooves/tn/card_progression.png,
+    ../../images/ingrooves/tn/card_progression_grid.png,
   ]
 imageAlts:
   [
-    Territories view,
-    Territories view single territory,
-    Territories view single territory expanded,
+    Territories mobile view,
+    Territories mobile view single territory,
+    Territories mobile view single territory expanded,
+    On the Move 2022 screen mobile,
+    Search 2022 screen mobile,
+    Search dropdown MVP desktop design,
+    Territories MVP desktop design,
+    On the Move screen desktop,
+    Evolution of a trend card 2017-2022,
+    Evolution of a trend card 2017-2022,
   ]
 ---
 
 import EmbedContainer from '../../components/EmbedContainer';
 import Image from '../../components/Image';
 import Grid from '../../components/layouts/Grid';
+import Concept from '../../components/projects/ingrooves/Concept.tsx';
 import Territories from '../../components/projects/ingrooves/Territories.tsx';
 import OnTheMove from '../../components/projects/ingrooves/OnTheMove.tsx';
 import Search from '../../components/projects/ingrooves/Search.tsx';
 
 ## Overview
 
-Trends Now was developed to help the customers at Ingrooves—label managers, artists, and music industry
-professionals—discover how their music is performing across a number of streaming retailers and territories.
-At the time of its creation, an analytics tool already existed but only provided raw data; it gave no insightful
-analysis into the data or any actionable recommendations. And it was painfully slow and buggy due to a lack of
-people resources and outdated technology.
-
-<Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1} className="cols-30-70 rows-70-30">
-  <div className="hide-on-mobile">
-    <div className="gridarea-1">
-      <Image caption="Playlist Activity Add Drop Badge" includeShadow={false}>
-        ![Playlist Activity Add Drop Badge](../../images/ingrooves/tn/card_model.png)
-      </Image>
-    </div>
-  </div>
+<Grid lgrows={2} lgcolumns={2} mdrows={3} mdcolumns={1} className="rows-auto cols-60-40 no-figure-margins no-row-gaps">
   <div className="gridarea-2">
+    <Image
+      caption="Early concept of card model and view"
+      includeShadow
+      showCaption
+    >
+      ![Early concept of card model and
+      view](../../images/ingrooves/tn/early_concept_01.png)
+    </Image>
+  </div>
 
-    We had a simple model:
+  <div className="gridarea-1">
 
-    - Give meaningful insights
-    - Support those insights with data
-    - Promote action
+    Trends Now was developed to help the customers at Ingrooves&#8212;label managers, artists, and music industry
+    professionals&#8212;discover how their music is performing across a number of streaming retailers and territories.
 
-    We had the data but not the insights or actions. The insights were being developed by
-    the data science team and the actions—by way of an ad platform—were being developed by
-    the marketing product team. Trends Now would bring it all together.
+    We needed to replace an existing analytics product which was outdated and lacked many features needed to compete with competitors.
 
   </div>
 
 </Grid>
 
-## My Role
+<Concept id="progression">
 
-I came on as a contractor in 2017, having done music analytics previously. Ingrooves needed someone
-who could handle design and development and move quickly. I was the sole frontend developer and
-product designer on the project for the first two years. I was then joined by another frontend
-developer to tackle code while I focused more on user experience and new features.
+    ### Concept
 
-In the early MVP stage, I worked directly with the Head of Product and the CTO. A dedicated team
-eventually developed and I worked alongside a Product Manager, Data Scientists, and Engineers.
+    The initial concept was to have actionable insights supported by data. 'Trend' cards would be presented in views by user, label, artist, or song alongside high-level aggregations. Over the span of 4 years, I iterated the design and developed the UI to make it more engaging and to better align with user wants.
 
-I also partnered with Designers and Engineers on the marketing team to integrate Trends Now with
-the ad platform being built.
+</Concept>
 
 ## Features
 
 <Territories id="territories">
 
-    ### Territories
-
     #### Challenge
 
-    Users wanted to know how their songs were doing in specific
-    countries and have the ability to filter by other dimensions. What started
-    off as a massive table in MVP turned into an approachable interactive map
-    visualization.
+    Users wanted to know how each of their songs was performing in specific
+    countries, retailers, and timeframes.
 
-    #### Wants
+    #### Solution
 
-    - How is my song performing in a specific country
-    - Which countries are performing best
-    - Which countries have the greatest improvement
-    - Which retailers are performing best for my song
-
-    #### Highlights
-
-    - Focus on one, many, or all territories
-    - Fully responsive down to iPhone 5
-    - Map view gives the user the quickest way to observe trend volume
-    - Table view allows the user to rank and sort
-    - Territory search gives the user a short path to finding places that are hard to spell or locate
+    The MVP I designed had all the functionality but no sizzle. I evolved it to an interactive map
+    visualization for desktop and mobile.
 
 </Territories>
-
-### Search
 
 <Search id="search">
 
@@ -116,48 +101,21 @@ the ad platform being built.
     Song, artist, and label names are creative and run the gamut.
     The user needed to be able to differentiate between them quickly.
 
-    #### Wants
+    #### Solution
 
-    - Access specific content types; it's not always about a song
-    - Find the best performing content first
-    - Be able to search with more than words, like song ID
-    - Quickly revisit previous content
-    - An easy-to-explore mobile experience
-
-    #### Highlights
-
-    - Results are categorized so users can focus in before or after doing their search
-    - Full-screen results for maximum readability
-    - Results are ordered and styled to show trending content first matching their design in the main view
-    - Search comes preloaded with recent searches
-    - Searching by label or song ID also works
+    We started with a traditional lookup search in a dropdown list but there's only so much you can show before the user is overwhelmed. So we expanded search to the full window giving us room to better categorize and highlight results.
 
 </Search>
-
-### On the Move
 
 <OnTheMove id="sotm">
 
     #### Challenge
 
     Ingrooves uses AI to analyze trending data and identify drivers of continuing growth.
-    When paired with social data, an audience can be created and labels can promote their artists
-    through ads.
+    There are various stages of growth so we needed a styling system to handle varying messaging and emphasis high value insights.
 
-    There are various levels of growth, so we needed to create styling and language that told
-    the songs story in phases while emphasizing marketing opportunities.
+    #### Solution
 
-    #### Wants
-
-    - Highlight songs that can be promoted immediately
-    - Hightlight songs that are in a growth phase and give attribution
-    - Show the growth history of the song to identify patterns that can be useful for understanding other song behavior
-
-    #### Highlights
-
-    - On the Move songs are surfaced before all other content
-    - Smart Audience opportunities are emphasized most
-    - Song growth is backed by attribution and noted on preview card
-    - Song view expands to a timeline view where users can traverse historic drivers
+    Songs with marketing opportunities get the greatest emphasis while browsing through all trending songs is made easier by paging and scrolling.
 
 </OnTheMove>
