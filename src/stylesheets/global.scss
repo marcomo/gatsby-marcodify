@@ -89,6 +89,7 @@ figure {
   figcaption {
     text-align: center;
     margin: 1rem 0;
+    color: $grey-100;
   }
 }
 
@@ -175,7 +176,7 @@ li {
 }
 p,
 li {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 300;
   line-height: 2.5rem;
 }
@@ -311,6 +312,10 @@ h4 {
   }
 }
 
+iframe {
+  width: 100%;
+}
+
 @media (max-width: 1200px) {
   html {
     font-size: 12px;
@@ -318,17 +323,11 @@ h4 {
   section {
     margin-top: 8rem;
   }
-  iframe {
-    width: 100%;
-  }
   h3 {
-    margin-top: 6rem;
+    margin-top: 4rem;
   }
   h4 {
     margin-top: 2rem;
-  }
-  figcaption {
-    display: none;
   }
   #mdfy-wrapper main {
     margin-left: 0;
@@ -341,6 +340,9 @@ h4 {
 }
 
 @media (max-width: 600px) {
+  h3 {
+    margin-top: 4rem;
+  }
   #mdfy-wrapper main {
     padding: 4rem 2rem;
   }

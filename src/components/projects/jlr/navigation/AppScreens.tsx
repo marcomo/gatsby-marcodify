@@ -2,6 +2,7 @@ import { useStaticQuery } from 'gatsby';
 import { graphql } from 'gatsby';
 import React, { PropsWithChildren } from 'react';
 import ImageGrid from '../../../ImageGrid';
+import Media from 'react-media';
 
 const AppScreens: React.FunctionComponent<
   PropsWithChildren<{
@@ -45,15 +46,25 @@ const AppScreens: React.FunctionComponent<
   };
 
   return (
-    <ImageGrid
-      lgrows={4}
-      lgcolumns={2}
-      mdrows={4}
-      mdcolumns={2}
-      frontmatter={frontmatter}
-      id={props.id}
-      className="no-figure-margins"
-    />
+    <Media
+      queries={{
+        sm: '(max-width: 480px)',
+        md: '(max-width: 1200px)',
+        lg: '(min-width: 1201px)',
+      }}
+    >
+      {(matches) => (
+        <ImageGrid
+          lgrows={4}
+          lgcolumns={2}
+          mdrows={4}
+          mdcolumns={2}
+          frontmatter={frontmatter}
+          id={props.id}
+          className={matches.sm ? '' : 'no-figure-margins'}
+        />
+      )}
+    </Media>
   );
 };
 
