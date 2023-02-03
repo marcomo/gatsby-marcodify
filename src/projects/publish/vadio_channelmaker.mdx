@@ -30,7 +30,9 @@ import Grid from '../../components/layouts/Grid';
 
 ## Overview
 
-Channel Maker provides a way for Vadio partners to quickly and easily generate custom playlists to embed into various music engagement platforms, giving partners a new revenue stream and a chance at new fans. This app contributed to partnership deals with Warner Music, Metro Lyrics, and Shazam.
+Channel Maker provides a way for Vadio partners to quickly and easily generate custom playlists
+to embed into various music engagement platforms, giving partners a new revenue stream and a chance
+at new fans. This app contributed to partnership deals with Warner Music, Metro Lyrics, and Shazam.
 
 ## Features
 
@@ -47,30 +49,29 @@ Channel Maker provides a way for Vadio partners to quickly and easily generate c
 
 <Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1} className="my-max">
   <div className="gridarea-1">
-    The playlist panel allows for drag-and-drop from adjacent lists and for reordering. It is always visible.
 
-    #### Goal
+    #### Challenge
 
-    Give the user a clear representation of their playlist.
+    Users wanted to see their existing playlist and be able to edit it directly while also being able to find and discover new videos.
 
     #### Solution
 
-    The playlist was designed to be visible in the app at all times giving the user context for making changes and decisions on videos and ads.
-
-    By keeping the playlist visible, central, and actionable, we shortened the time to complete tasks and gave the user an environment to experiment with playlist generation. This would have been much more difficult with modals and flyout panels.
+    The UI was designed with the playlist being central, visible, and actionable at all times.
+    This gave the user context for making changes and decisions on videos and ads.
+    We shortened the time to complete tasks by making the playlist instantly editable;
+    a user could add, remove, or edit the playlist without going into any secondary views.
 
   </div>
   <div className="gridarea-2">
     #### Usability
 
-    No matter what other feature the user is engaging, they can still adjust and view the playlist. A user could:
+    No matter what other feature the user engaged, they could still adjust and view the playlist. A user could:
 
-    - Place a video from search or explore panels to the playlist
-    - Place other video while actively editing another
-    - Move an item being actively edited to the playlist
+    - Place a video in the playlist from search or explore panels
+    - Place other videos while actively editing another
+    - Move an item in the playlist while it is being edited
     - See real-time playlist length changes while editing or replacing a video
     - Place, move, delete, and adjust ads while editing a video
-    - Place multiple ads
 
   </div>
 </Grid>
@@ -88,21 +89,27 @@ Channel Maker provides a way for Vadio partners to quickly and easily generate c
 
 <Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1} className="my-max">
   <div className="gridarea-1">
-    The search panel allows users to find, select, and place videos into the central playlist.
 
-    #### Goal
+    #### Challenge
 
-    Allow users to find and place videos quickly.
+    Users wanted to find, select, and place videos into the playlist directly from search results. The goal was to remove as many steps as possible between finding a video and adding it to a playlist.
 
     #### Solution
 
-    The search results automotically load into an actionable list when typing. There's no select dropdown or search modal. Search results can immediately be edited or moved to the playlist.
+    The search results were kept right next to the playlist so users can compare and immediately take action on results. And there was no strict flow for how users added or edited videos. A user could add immediately or edit first, whatever workflow they preferred.
 
   </div>
   <div className="gridarea-2">
     #### Usability
 
-    Async search allows the user to see results faster and promotes discovery by showing partial string matches. Showing results directly in a list view alongside the playlist, allows the user to more easily compare them.
+    Async search allowed the user to see results faster and promoted discovery by showing partial string matches.
+    Showing results directly in a list view alongside the playlist allowed for real time playlist experimentation. A user could:
+
+    - See results alongside their playlist for comparing versions or durations
+    - Drag one or more resulting videos to the playlist
+    - Play a resulting video without needing to add it to their playlist
+    - Edit a resulting video before commiting it to their playlist
+    - Filter active results by adding additional values to the search query
 
   </div>
 </Grid>
@@ -120,33 +127,28 @@ Channel Maker provides a way for Vadio partners to quickly and easily generate c
 
 <Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1} className="my-max">
   <div className="gridarea-1">
-    The replace feature gives the user the ability to swap out videos, avoiding a more manual flow.
 
-    #### Goal
+    #### Challenge
 
-    Give the user an easy path to swap out multiple or old videos.
+    Users wanted an easy path to swap out multiple or old videos without having to pre-delete the videos being removed.
 
     #### Solution
 
-    Users can swap any number of videos in search or explore with any number of videos in the playlist.
+    A replace feature was embedded into video editing. And with the editing feature being accessible from any video, a user could start a video swap from the playlist, search, or explore panels.
 
   </div>
   <div className="gridarea-2">
     #### Usability
 
-    Flexibility in how the user reshapes their playlist improves efficiency and satisfaction.
+    Flexibility in the video replacement task improved efficiency and satisfaction by potentially shortening the path to complete the task while also not forcing the user into a single flow.
 
-    Users don't need to:
+    A user could:
 
-    - Pre-delete videos before adding new ones
-    - Manually delete and replace individual videos
-    - Search through the playlist to replace duplicates of the same video
-
-    Users can:
-
-    - Use replace to start over
-    - Quickly replace large parts of a playlist with a specific artist
-    - Create variety in playlists by replacing large parts with selections from the explore panel
+    - Replace a video without having to delete the old video first
+    - Replace one or more videos in the playlist with one or more new videos
+    - Replace all instances of a single video without having to select them manually
+    - See the impact of the playlist time length before committing to the replacement
+    - Use the replace feature to creatively reshape playlists around artists or genres
 
   </div>
 </Grid>
@@ -164,25 +166,31 @@ Channel Maker provides a way for Vadio partners to quickly and easily generate c
 
 <Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1} className="my-max">
   <div className="gridarea-1">
-    The ad feature gives users control over ad placement, deciding where ads are placed and how long they will be.
 
-    #### Goal
+    #### Challenge
 
-    Make ad insertion and editing simple. Treat an ad just like another video.
+    YouTube and other video platforms have limits on how they monetize videos which impacts ad placement and duration.
+    But users wanted to be able to insert revenue-generating ads with little fuss and without having to read long ad placement rules.
 
     #### Solution
 
-    We separated ad insertion from placement to reduce the amount of complexity. Ads are placed in their earliest position then the user can move them to where they want. This significantly uncomplicated our previous UI where there were buttons between every two videos.
+    Ad insertion and editing was simplified by treating an ad just like another video. Optimization and validation was left to the tech.
 
-    We also moved ad placement validation to the "save" step to avoid disrupting the user's experience just to show errors. An auto-correct feature could adjust ad placements for the user at validation time.
+    Complexity was reduced by allowing the user to insert ads separate from finding an optimal location in the playlist. Once ads were placed, the user could move them around. This significantly uncomplicated the previous UI where there were buttons between every two videos and users had to scroll to the exact target location for their ad.
+
+    Ad placement validation was moved to the &ldquo;save&rdquo; step to avoid error messages from disrupting the user&rsquo;s experience. The user could enable an auto-correct feature in settings which would adjusts ad placements and durations for the user at validation time.
 
   </div>
   <div className="gridarea-2">
     #### Usability
 
-    The insert-then-place flow for ads was more efficient and less complex. A user could place a bunch of ads, spread them around, and save just once.
+    Separating ad insertion from validation&#8212;combined with the auto-correct feature&#8212;reduced friction in monetizing playlists. Users saw less errors, spent more time focusing on video content, and could publish playlists faster.
 
-    The ad placement validation and auto-correct steps reduced interuption of playlist creation.
+    A user could:
+
+    - Insert ads at will without worrying about the limits
+    - Validate and optimize their ad placements automatically
+    - Learn about the ideal ad placement through the auto-correct feature
 
   </div>
 </Grid>

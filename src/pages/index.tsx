@@ -29,13 +29,14 @@ const Index: React.FunctionComponent<PageProps<Queries.HomeProjectsQuery>> = ({
           >
             <p>
               Product design moves fast. Nobody wants to make a wrong turn. So
-              I&rsquo;m doing my part to navigate ideas from concept to
+              I&rsquo;m doing my part to help products move from concept to
               prototype to production.
             </p>
             <p>
-              I merge design and technology to help design teams build complex
-              interfaces, high fidelity prototypes, and coded UIs. To help get
-              ideas to their destination.
+              I merge design and technology to build complex artifacts, high
+              fidelity prototypes, and coded UIs. To help designers and
+              companies advance their ideas and help customers get to the next
+              part of their journey.
             </p>
           </div>
         </Grid>
