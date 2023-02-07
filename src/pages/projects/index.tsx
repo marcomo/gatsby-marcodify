@@ -9,7 +9,7 @@ const Index: React.FunctionComponent<PageProps<Queries.ProjectsQuery>> = ({
 }) => {
   const { projects } = data.allMdx;
   return (
-    <main className="width-control">
+    <main>
       <h2>Projects</h2>
       <div className={styles.projects}>
         {projects.map((proj) => {

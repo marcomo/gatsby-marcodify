@@ -30,6 +30,11 @@ const Header: React.FunctionComponent = () => {
                 projects
               </Link>
             </li>
+            <li>
+              <Link to="/prototypes" activeClassName={styles.liActive}>
+                prototypes
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
