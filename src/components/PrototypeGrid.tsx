@@ -10,13 +10,12 @@ interface IProps {
 const PrototypeGrid: React.FunctionComponent<IProps> = (props) => {
   return (
     <Grid
-      lgrows={1}
       lgcolumns={2}
-      mdcolumns={1}
+      lgrows={Math.ceil(props.prototypes.length / 2)}
+      mdcolumns={2}
       mdrows={2}
       smrows={2}
       smcolumns={1}
-      className="no-row-gaps"
     >
       {props.prototypes.map((proto, i) => (
         <IframeEmbed
