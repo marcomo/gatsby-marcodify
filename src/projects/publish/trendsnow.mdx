@@ -8,9 +8,12 @@ position: 'Principal UI Developer'
 role: ['Product Designer', 'Frontend Developer']
 rank: 1
 thumb: ../../images/ingrooves/tn/trends_now_hero.png
-featuredImg: ../../images/ingrooves/tn/trends_now_hero.png,
+featuredImg: ../../images/ingrooves/tn/trends_now_hero.png
 prototypes:
-  ['https://player.vimeo.com/video/777512579?h=bbfbb0be52&byline=0&portrait=0']
+  [
+    'https://player.vimeo.com/video/777512579?h=bbfbb0be52&byline=0&portrait=0',
+    'https://player.vimeo.com/video/798552596?h=8a887f8af1&byline=0&portrait=0',
+  ]
 images:
   [
     ../../images/ingrooves/tn/app_screen_territories_01.png,
@@ -39,7 +42,7 @@ imageAlts:
   ]
 ---
 
-import EmbedContainer from '../../components/EmbedContainer';
+import IFrameEmbed from '../../components/IFrameEmbed';
 import Image from '../../components/Image';
 import Grid from '../../components/layouts/Grid';
 import Concept from '../../components/projects/ingrooves/Concept.tsx';
@@ -82,6 +85,8 @@ import Search from '../../components/projects/ingrooves/Search.tsx';
 
 ## Features
 
+### Territories
+
 <Territories id="territories">
 
     #### Challenge
@@ -94,7 +99,18 @@ import Search from '../../components/projects/ingrooves/Search.tsx';
     The MVP design had all the data but no sizzle. It evolved into an interactive map
     visualization for desktop and mobile where the user could progress through the data like a story.
 
+    #### Prototype
+
+
+    <div className="mt-2">
+      <IFrameEmbed
+        src='https://player.vimeo.com/video/798552596?h=8a887f8af1&byline=0&portrait=0'
+      />
+    </div>
+
 </Territories>
+
+### Search
 
 <Search id="search">
 
@@ -107,7 +123,17 @@ import Search from '../../components/projects/ingrooves/Search.tsx';
 
     I started with a traditional lookup search in a dropdown list but there's only so much you can show before the user is overwhelmed. So I expanded search to the full window giving us room to better categorize and highlight results.
 
+    #### Prototype
+
+    <div className="mt-2">
+      <IFrameEmbed
+        src='https://player.vimeo.com/video/777512579?h=bbfbb0be52&byline=0&portrait=0'
+      />
+    </div>
+
 </Search>
+
+### On the Move
 
 <OnTheMove id="sotm">
 

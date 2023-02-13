@@ -67,7 +67,6 @@ const Search: React.FunctionComponent<
           }}
           caption={mobile.alt}
         >
-          <h3>Search</h3>
           <Image
             alt={original.alt}
             allowModal={!matches}
