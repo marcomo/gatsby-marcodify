@@ -10,7 +10,7 @@ const Index: React.FunctionComponent<PageProps<Queries.HomeProjectsQuery>> = ({
 }) => {
   const { projects } = data.allMdx;
   return (
-    <main className="width-control">
+    <main>
       <section>
         <Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1}>
           <div className="gridearea-1" style={{ minWidth: '20rem' }}>

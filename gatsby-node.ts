@@ -31,6 +31,7 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
     images: [File] @fileByRelativePath
     imageAlts: [String]
     position: String
+    prototypes: [String]
     skills: [String]
     slug: String!
     title: String!

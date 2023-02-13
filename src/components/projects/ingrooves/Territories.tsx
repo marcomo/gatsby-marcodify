@@ -73,7 +73,6 @@ const Territories: React.FunctionComponent<
             'gridarea-1': matches.lg ? 'pt-2' : '',
           }}
         >
-          <h3>Territories</h3>
           <Image
             alt={original.alt}
             allowModal={!matches}

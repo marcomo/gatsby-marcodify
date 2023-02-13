@@ -5,6 +5,11 @@ description: An open-source mobile navigation app for in-vehicle systems
 slug: agl-ivi-navigation
 company: Jaguar Land Rover
 position: Design Technologist
+prototypes:
+  [
+    'https://player.vimeo.com/video/788880746?h=b0e977f48e&byline=0&portrait=0',
+    'https://player.vimeo.com/video/788884155?h=524d384261e&byline=0&portrait=0',
+  ]
 role: ['Visual Designer', 'Prototyper']
 rank: 3
 thumb: ../../images/jlr/navigation/jlr_nav_hero.png
@@ -41,12 +46,10 @@ imageAlts:
   ]
 ---
 
-import EmbedContainer from '../../components/EmbedContainer';
-import FigmaEmbed from '../../components/FigmaEmbed';
-import Image from '../../components/Image';
 import Grid from '../../components/layouts/Grid';
 import AppScreens from '../../components/projects/jlr/navigation/AppScreens.tsx';
 import UserFlows from '../../components/projects/jlr/navigation/UserFlows.tsx';
+import Prototypes from '../../components/projects/jlr/navigation/Prototypes.tsx';
 import ExternalLink from '../../components/ExternalLink';
 
 ## Overview
@@ -95,31 +98,4 @@ We conducted some simple surveys amongst staff and colleagues to determine the t
 
 ## Prototypes
 
-<Grid
-  lgrows={1}
-  lgcolumns={2}
-  mdcolumns={1}
-  mdrows={2}
-  smrows={2}
-  smcolumns={1}
-  className="no-row-gaps"
->
-  <iframe
-    className="gridarea-1"
-    src="https://player.vimeo.com/video/788880746?h=b0e977f48e&byline=0&portrait=0"
-    width="640"
-    height="360"
-    frameBorder="0"
-    allow="autoplay; fullscreen"
-    allowFullScreen
-  ></iframe>
-  <iframe
-    className="gridarea-2"
-    src="https://player.vimeo.com/video/788884155?h=524d384261e&byline=0&portrait=0"
-    width="640"
-    height="360"
-    frameBorder="0"
-    allow="autoplay; fullscreen"
-    allowFullScreen
-  ></iframe>
-</Grid>
+<Prototypes />

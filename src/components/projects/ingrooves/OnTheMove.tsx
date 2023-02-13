@@ -66,7 +66,6 @@ const OnTheMove: React.FunctionComponent<
           }}
           caption={mobile.alt}
         >
-          <h3>On the Move</h3>
           <Image
             alt={desktop.alt}
             allowModal={!matches}

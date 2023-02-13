@@ -97,6 +97,7 @@ figure {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  padding: 0 8rem;
 
   &.dev {
     * {
@@ -121,9 +122,9 @@ figure {
   }
 
   main {
-    margin: 8rem auto;
+    margin: 8rem 0;
     flex: 1;
-    padding: 8rem;
+    padding: 8rem 0;
     aside {
       width: 20rem;
       flex: 0 0 20%;
@@ -329,10 +330,12 @@ iframe {
   h4 {
     margin-top: 2rem;
   }
+  #mdfy-wrapper {
+    padding: 0 4rem;
+  }
   #mdfy-wrapper main {
     margin-left: 0;
     margin-right: 0;
-    padding: 4rem;
   }
   .hide-on-mobile {
     display: none !important;
@@ -343,8 +346,8 @@ iframe {
   h3 {
     margin-top: 4rem;
   }
-  #mdfy-wrapper main {
-    padding: 4rem 2rem;
+  #mdfy-wrapper {
+    padding: 0 2rem;
   }
   iframe {
     width: 100%;
