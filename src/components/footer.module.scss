@@ -16,11 +16,33 @@
   }
 
   @media (max-width: 600px) {
+    align-items: flex-start;
     padding-left: 2rem;
     padding-right: 2rem;
   }
 }
-.linkedin {
+.inner {
+  display: flex;
+  align-items: center;
+  @media (max-width: 600px) {
+    align-items: initial;
+    flex-direction: column-reverse;
+  }
+}
+.contact {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  > :last-child {
+    margin-left: 4rem;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+}
+.icon {
   color: $light;
   font-size: 2rem;
 }
