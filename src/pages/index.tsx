@@ -77,45 +77,49 @@ const Index: React.FunctionComponent<PageProps<Queries.HomeProjectsQuery>> = ({
         </div>
       </section>
       <section className="mt-8">
-        <h2>How I Roll</h2>
+        <h2>About Me</h2>
         <Grid lgcolumns={3} lgrows={1}>
           <div className="gridarea-1">
-            <h3>Crafty Behavior</h3>
+            <h3>Cross-functional Experience</h3>
             <p>
-              Throughout my career I&rsquo;ve been creating and building
+              Frontend Developer, Design Technologist, Visual Designer, Art Director.
+              I&rsquo;ve done each role separately and all at once. I can deliver user
+              interfaces from design concept to shipped code and can adapt to the
+              needs of product and engineering teams.
+              {/* Throughout my career I&rsquo;ve been creating and building
               designs. When in advertising, I started in print production and
               moved on to art direction.&nbsp;&nbsp;While I ran my own business,
               I designed and built websites and marketing
               collateral.&nbsp;&nbsp;And in the tech space, I&rsquo;ve designed
               and coded entire products from zero to one to<i>&nbsp;n.</i>
               &nbsp;&nbsp;This experience has lead me to focus on design
-              technology: the craft of bringing creative concepts to life.
+              technology: the craft of bringing creative concepts to life. */}
             </p>
           </div>
           <div className="gridarea-2">
-            <h3>Thinking Design</h3>
+            <h3>Design Engineering</h3>
             <p>
-              Don&rsquo;t let my frontend developer experience sway you to think
+              Design tooling keeps design details from getting lost in translation.
+              My experience includes design systems, visual testing, and component libraries.
+              I&rsquo;ve helped increase design-to-code efficiency levering
+              the power of tools like Figma, Storybook, and CI/CD automation.
+              {/* Don&rsquo;t let my frontend developer experience sway you to think
               I&rsquo;m just an engineer who dabbles in design. I&rsquo;m a
               designer first. We build to fulfill design. And design to fulfill
               user needs. My goal is to honor the design and user experience. We
               know design and engineering can sometimes be at odds. So I aim to
               use my cross-functional experience to help keep things from
               getting lost in translation. We&rsquo;re all in this together,
-              right?
+              right? */}
             </p>
           </div>
           <div className="gridarea-3">
-            <h3>Fake it &lsquo;til You Make It</h3>
+            <h3>Prototyping</h3>
             <p>
-              Prototyping is the art of faking it. It gives designers a chance
-              at understanding how users feel about designed experiences. And it
-              gives developers a heads-up about complexity. You&rsquo;ve got to
-              have a variety of techniques and tools at the ready to get to
-              where you need. I&rsquo;ve built protoypes in Figma, InVision,
-              Principle, Framer, React, vanilla HTML/JS/CSS, PDF, and good
-              ol&rsquo; paper. And that list is always growing. Whatever gets it
-              done.
+              Prototypes are the best way to get user and stakeholder feedback
+              and to test code functionality and complexity. I build
+              functional prototypes in a range of design tools and JavaScript
+              frameworks including Figma, Framer, React, and NextJS.
             </p>
           </div>
         </Grid>
@@ -123,8 +127,7 @@ const Index: React.FunctionComponent<PageProps<Queries.HomeProjectsQuery>> = ({
       <section className="mt-8">
         <h3>Interested?</h3>
         <p>
-          I&rsquo;m open to full-time and contract work as a Design
-          Technologist.
+          I&rsquo;m open to full-time and contract work as a Design Engineer.
           <br />
           But if you have another role that suits me, please reach out.
         </p>
