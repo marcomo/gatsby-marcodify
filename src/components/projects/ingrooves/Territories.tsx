@@ -73,22 +73,6 @@ const Territories: React.FunctionComponent<
             'gridarea-1': matches.lg ? 'pt-2' : '',
           }}
         >
-          <Image
-            alt={original.alt}
-            allowModal={!matches}
-            showCaption={true}
-            className={matches.sm ? 'no-figure-margins' : ''}
-          >
-            <GatsbyImage
-              image={getImage(
-                original.image.childrenImageSharp[0].gatsbyImageData
-              )}
-              alt={original.alt}
-              objectFit="contain"
-              imgStyle={{ maxHeight: '75vh' }}
-              style={{ maxHeight: '75vh' }}
-            />
-          </Image>
           {props.children}
         </ProjectSection>
       )}
