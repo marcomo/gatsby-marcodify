@@ -1,5 +1,19 @@
 module.exports = {
   graphqlTypegen: true,
+  siteMetadata: {
+    navLinks: [
+      {
+        name: "projects",
+        link: "/projects",
+        publish: false,
+      },
+      {
+        name: "prototypes",
+        link: "/prototypes",
+        publish: false,
+      },
+    ],
+  },
   plugins: [
     `gatsby-plugin-image`,
     {
@@ -47,12 +61,6 @@ module.exports = {
       options: {
         name: "images",
         path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: `${__dirname}/src/projects/publish`,
       },
     },
     "gatsby-transformer-sharp",
