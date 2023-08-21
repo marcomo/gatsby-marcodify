@@ -463,12 +463,6 @@ $spacing-rems: 1 2 4 8;
 
 // TABLET
 
-@media (max-width: 1200px) {
-  html {
-    font-size: 12px;
-  }
-}
-
 @media (min-width: 1201px) {
   .lg-row-span-2 {
     grid-row: span 2;
