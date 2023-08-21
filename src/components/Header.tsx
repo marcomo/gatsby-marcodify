@@ -35,8 +35,8 @@ const Header: React.FunctionComponent = () => {
               <Media query={'(max-width: 600px)'}>
                 {(matches) =>
                   matches
-                    ? 'designer | prototyper | developer'
-                    : 'UI designer, prototyper, and developer'
+                    ? 'developer | prototyper | design'
+                    : 'UI developer, prototyper, and designer'
                 }
               </Media>
             </div>

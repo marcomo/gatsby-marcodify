@@ -28,13 +28,15 @@ const Index: React.FunctionComponent<PageProps<Queries.HomeProjectsQuery>> = ({
             style={{ marginRight: '5%', marginTop: '.5rem' }}
           >
             <p>
-              Product design moves fast. Nobody wants to make a wrong turn. So
-              I&rsquo;m doing my part to help products move from concept to
-              prototype to production.
+              <strong>
+                Cross-functional UI developer with 10+ years implementing and
+                designing web apps, design systems, and prototypes.
+              </strong>
             </p>
             <p>
-              I merge design and technology to build complex artifacts, high
-              fidelity prototypes, and coded UIs. To help designers and
+              I accelerate time-to-delivery and accuracy through intuition
+              for design and technology that comes through hands-on experience
+              as a designer and engineer. My goal is to help designers and
               companies advance their ideas and help customers get to the next
               part of their journey.
             </p>
