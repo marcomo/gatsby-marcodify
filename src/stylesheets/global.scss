@@ -319,7 +319,7 @@ iframe {
 
 @media (max-width: 1200px) {
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
   section {
     margin-top: 8rem;
@@ -343,6 +343,9 @@ iframe {
 }
 
 @media (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
   h3 {
     margin-top: 4rem;
   }
