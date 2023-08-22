@@ -18,7 +18,7 @@ const Territories: React.FunctionComponent<
         frontmatter {
           images {
             childrenImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, width: 1200)
+              gatsbyImageData(layout: CONSTRAINED, width: 1200, placeholder: BLURRED)
               original {
                 src
               }
@@ -69,9 +69,8 @@ const Territories: React.FunctionComponent<
               'gridarea-2': 'lg-row-span-2 lg-row-span-center',
             }}
             sectionGridClassNames={{
-              'gridarea-1': `col-span-2 no-figure-margins ${
-                matches.lg ? 'pt-2' : ''
-              }`,
+              'gridarea-1': `col-span-2 no-figure-margins ${matches.lg ? 'pt-2' : ''
+                }`,
             }}
           >
             {props.children}

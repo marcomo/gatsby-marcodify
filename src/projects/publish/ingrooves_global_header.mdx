@@ -19,60 +19,70 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 ## Overview
 
-Ingrooves has quickly developed new products offering over the years to better serve their music label clients and grow the business. But with the addition of these products came a lot of confusion for customers about where to find various tools and resources throughout the Ingrooves product environment.
+<Grid lgrows={2} lgcolumns={2} mdrows={2} mdcolumns={1} className="rows-auto no-figure-margins no-row-gaps">
+  <div className="gridarea-1">
 
-The purpose of this project was to redesign the universal navigation model and interface so that users would have easier access to and a better mental model of the product family.
+    Ingrooves has quickly developed new products over the years to better
+    serve their music label clients and grow the business. These new products
+    were only accessible through specific product categories making it
+    difficult to know where to find things.
+
+  </div>
+  <div className="gridarea-2">
+
+    The purpose of this project was to redesign the universal navigation
+    model and interface so that users would have faster access to products
+    and a better mental model of the entire Ingrooves product family.
+
+  </div>
+</Grid>
 
 ## Previous navigation
 
 <Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1} className="lg-cols-40-60 thick-row-gaps">
   <div className="gridarea-1">
-
+{/* 
     - Products are split into three groupings at the top level <small>(white fill)</small>
     - Products are nested within those groupings <small>(blue outlines)</small>
     - Some product groups are actually products <small>(white fill with blue outlines)</small>
     - Many items in the menu are product features <small>(green outlines)</small>
-    - Not all products listed are links, some are just nesting levels
+    - Not all products listed are links, some are just nesting levels */}
+
+    ### Issues
+
+    - <span className='box-outline-blue'>Products</span> only accessible from certain products pages
+    - Products acting as <span className='box-fill-white'>categories</span>
+    - Product <span className='box-outline-green'>features</span> seeming to be products
+    - Product pages not displaying their name or having different names than menu
 
   </div>
   <div className="gridarea-2">
-    <Image caption="Previous universal navigation model" includeShadow={false} className="no-figure-margins">
+    <Image caption="Previous universal navigation model" className="no-figure-margins">
       ![Previous universal navigation
       model](../../images/ingrooves/productnav/prev_universal_navigation_model.png)
     </Image>
   </div>
 </Grid>
 
-### Issues
-
-Current users were frustrated by the nesting of products especially where there was enough room for a flat list.
-They also noted there was a lack of labeling across many product pages. This made it difficult for users to remember
-and differentiate products. Another frustration heard was that users couldn't see other product grouping menus
-without first visiting those products. That's because each grouping only shows its own branch of the navigation.
-
 ## New Navigation
 
 <Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1} className="cols-60-40 rows-auto thick-row-gaps">
   <div className="gridarea-1">
-    <Image caption="New universal navigation model" includeShadow={false} className="no-figure-margins">
+    <Image caption="New universal navigation model" className="no-figure-margins">
       ![New universal navigation
       model](../../images/ingrooves/productnav/new_universal_navigation_model.png)
     </Image>
   </div>
   <div className="gridarea-2">
 
-    A few things changed within the business that mostly made things a bit easier:
+    ### Improvements
 
-    - Some products were sunsetted
-    - Some product features evolved into independent offerings
-    - Some new features were added
-
-    The new navigation model:
+    Some new products and features were added while others were retired. With that, a new navigation model was designed that:
 
     - Allows users to see the entire product suite from any product
-    - Commits to a common language for names tha display on products and features
-    - Reduces the number of levels to two
-    - Allows features in the second level in place of products depending on the groupings needs
+    - Uses a common language for names that display on products and features
+    - Reduces the number of nesting levels to reduce navigation fatigue
+    - Puts features as top-level navigation within products
 
   </div>
 </Grid>
@@ -87,7 +97,7 @@ without first visiting those products. That's because each grouping only shows i
   </div>
   <div className="gridarea-2">
     <div className="hide-on-mobile">
-      <Image caption="Previous navigation menus" includeShadow={false} showCaption>
+      <Image caption="Previous navigation menus" showCaption>
         ![Previous navigation
         menus](../../images/ingrooves/productnav/old_menus.png)
       </Image>
@@ -98,7 +108,7 @@ without first visiting those products. That's because each grouping only shows i
       The new side-only navigation:
 
       - Can be collapsed to conserve space for working or mobile
-      - Gives us room for supporting text to help users understand product groupings
+      - Gives us room for supporting text to help users understand product categories
       - Assigns icons to products to better connect menus to product pages
       - Contains both the universal and product-specific menus
       - Frees up topmost horizontal space in the main UI for product-specific content and tertiary menus

@@ -54,9 +54,27 @@ import ExternalLink from '../../components/ExternalLink';
 
 ## Overview
 
-Navigation is standard functionality and the most widely used application of <span className="text-no-wrap">in-vehicle</span> infotainment (IVI). Jaguar Land Rover contributes software to <ExternalLink href="https://www.automotivelinux.org/">an open source project</ExternalLink> as part of its research and development. This project provided a base navigation app that could be developed for an IVI system or peer-to-peer device.
+<Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1} className="rows-auto no-figure-margins no-row-gaps">
+  <div className="gridarea-1">
+    
+    Navigation is standard functionality and the most widely used 
+    application of <span className="text-no-wrap">in-vehicle</span> infotainment (IVI). 
+    Jaguar Land Rover contributes software to <ExternalLink href="https://www.automotivelinux.org/"> an 
+    open source project</ExternalLink> as part of its research and development. This project 
+    provided an open-source base navigation app that could be developed for an 
+    In-Vehicle Infotainment system or peer-to-peer device.
 
-The app started with <ExternalLink href="https://www.navit-project.org/">Navit</ExternalLink>, an open-source navigation system built on <ExternalLink href="https://www.openstreetmap.org">OpenStreetMaps</ExternalLink>. While Navit served as a good framework for development, it lacked an engaging and simple user experience. The map was quite difficult to read and many tasks required deep menu drilling to be completed. The key Navit features were centralized into the main map view, and reduced menu fatigue by using expanding lists and toggle switches.
+  </div>
+  <div className="gridarea-2">
+  
+    The app was built on <ExternalLink href="https://www.navit-project.org/">Navit</ExternalLink>, 
+    an open-source navigation system using <ExternalLink href="https://www.openstreetmap.org">OpenStreetMaps</ExternalLink>. 
+    While Navit served as a good framework for development, it lacked an engaging and simple 
+    user experience. Our app centralized key features into the main map view, and reduced menu 
+    fatigue by using expanding lists and toggle switches.
+
+  </div>
+</Grid>
 
 <div className="my-max">
   <AppScreens id="nav" />

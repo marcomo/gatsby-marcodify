@@ -1,9 +1,26 @@
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import Media from 'react-media';
 import * as styles from './header.module.scss';
 
 const Header: React.FunctionComponent = () => {
+  // Get all markdown pages, title and slug
+  const data = useStaticQuery<Queries.NavLinksQuery>(graphql`
+      query NavLinks {
+        site {
+          siteMetadata {
+            navLinks {
+              name
+              link
+              publish
+            }
+          }
+        }
+      }
+  `)
+
+  const links = data?.site?.siteMetadata?.navLinks ?? [];
+  const hasLinks = (links).filter(link => link.publish).length > 0
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
@@ -18,24 +35,29 @@ const Header: React.FunctionComponent = () => {
               <Media query={'(max-width: 600px)'}>
                 {(matches) =>
                   matches
-                    ? 'designer | prototyper | developer'
-                    : 'UI designer, prototyper, and developer'
+                    ? 'developer | prototyper | design'
+                    : 'UI developer, prototyper, and designer'
                 }
               </Media>
             </div>
           </Link>
-          <ul className={styles.ul}>
-            <li>
-              <Link to="/projects" activeClassName={styles.liActive}>
-                projects
-              </Link>
-            </li>
-            <li>
-              <Link to="/prototypes" activeClassName={styles.liActive}>
-                prototypes
-              </Link>
-            </li>
-          </ul>
+          {
+            hasLinks ?
+              <ul className={styles.ul}>
+                {
+                  links.map((link, idx) => (
+                    link.publish ?
+                      <li key={`link-${link.name}-${idx}`}>
+                        <Link to={link.link} activeClassName={styles.liActive}>
+                          {link.name}
+                        </Link>
+                      </li>
+                      : null
+                  ))
+                }
+              </ul>
+              : null
+          }
         </div>
       </nav>
     </header>

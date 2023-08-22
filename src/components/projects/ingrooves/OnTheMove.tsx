@@ -18,7 +18,7 @@ const OnTheMove: React.FunctionComponent<
         frontmatter {
           images {
             childrenImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, width: 1200)
+              gatsbyImageData(layout: CONSTRAINED, width: 1200, placeholder: BLURRED)
               original {
                 src
               }
