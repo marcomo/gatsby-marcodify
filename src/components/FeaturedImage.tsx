@@ -16,7 +16,7 @@ const FeaturedImage: React.FunctionComponent<PropsWithChildren<IProps>> = (
   const imageNode = (
     <GatsbyImage
       image={props.image}
-      className="m-auto drop-shadow border-bottom-dark"
+      className="m-auto border-bottom-dark"
       alt={props.alt}
       loading="eager"
     />

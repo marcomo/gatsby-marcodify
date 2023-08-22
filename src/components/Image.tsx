@@ -6,7 +6,6 @@ interface IProps {
   alt?: string;
   allowModal?: boolean;
   showCaption?: boolean;
-  includeShadow?: boolean;
   className?: string;
 }
 
@@ -32,7 +31,6 @@ const Image: React.FunctionComponent<PropsWithChildren<IProps>> = (props) => {
   return (
     <div
       className={[
-        props.includeShadow ? 'drop-shadow' : '',
         props.className || '',
       ].join(' ')}
       onClick={() => {
@@ -42,10 +40,6 @@ const Image: React.FunctionComponent<PropsWithChildren<IProps>> = (props) => {
       {figure}
     </div>
   );
-};
-
-Image.defaultProps = {
-  includeShadow: true,
 };
 
 export default Image;

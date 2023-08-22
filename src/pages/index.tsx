@@ -63,8 +63,8 @@ const Index: React.FunctionComponent<PageProps<Queries.HomeProjectsQuery>> = ({
                               proj.node.frontmatter?.thumb?.childImageSharp
                                 ?.fluid
                             }
-                            loading="eager"
                             alt=""
+                            loading="eager"
                           />
                         ) : null}
                       </div>
