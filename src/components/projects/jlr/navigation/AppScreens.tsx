@@ -16,7 +16,7 @@ const AppScreens: React.FunctionComponent<
         frontmatter {
           images {
             childrenImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, width: 650)
+              gatsbyImageData(layout: CONSTRAINED, width: 650, placeholder: BLURRED)
               original {
                 src
               }

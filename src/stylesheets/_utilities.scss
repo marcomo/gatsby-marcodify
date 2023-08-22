@@ -403,14 +403,6 @@ $spacing-rems: 1 2 4 8;
   }
 }
 
-// FILTERS
-
-.drop-shadow {
-  filter: drop-shadow(-0.5rem 1rem 2rem rgba(0, 0, 0, 0.4))
-    drop-shadow(-1rem 2rem 4rem rgba(0, 0, 0, 0.2))
-    drop-shadow(-0.5rem 2rem 5rem rgba(0, 0, 0, 0.1));
-}
-
 // TEXT
 
 .text-strong {

@@ -2,8 +2,6 @@ import { useStaticQuery } from 'gatsby';
 import { graphql } from 'gatsby';
 import React, { PropsWithChildren } from 'react';
 import ProjectSection from '../../ProjectSection';
-import Image from '../../Image';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Media from 'react-media';
 
 const Territories: React.FunctionComponent<
@@ -18,7 +16,7 @@ const Territories: React.FunctionComponent<
         frontmatter {
           images {
             childrenImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, width: 1200)
+              gatsbyImageData(layout: CONSTRAINED, width: 1200, placeholder: BLURRED)
               original {
                 src
               }
@@ -43,7 +41,6 @@ const Territories: React.FunctionComponent<
       alt: data.mdx.frontmatter.imageAlts[index],
     }));
 
-  const original = images.find((img) => img.alt.includes('MVP'));
   const mobile = images.filter((img) => img.alt.includes('mobile'));
 
   return (
