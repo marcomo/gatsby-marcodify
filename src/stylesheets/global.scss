@@ -21,6 +21,7 @@
   #___gatsby,
   #gatsby-focus-wrapper {
     height: 100%;
+    overflow: auto;
   }
   body {
     font-family: 'Lato', sans-serif;
@@ -115,7 +116,6 @@
     flex-direction: column;
     margin: 0 auto;
     padding: 0 8rem;
-    overflow: hidden;
 
     &.dev {
       * {
@@ -404,6 +404,7 @@
           background-image: url(../images/cc_vector_bg.png);
           background-position: center;
           background-repeat: no-repeat;
+          background-size: cover;
         }
       }
     }
