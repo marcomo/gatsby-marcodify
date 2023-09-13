@@ -1,0 +1,176 @@
+---
+title: Trends Now
+h1: Trends Now
+description: AI-powered music insights across multiple streaming services
+slug: ingrooves-trends-now
+company: Ingrooves
+position: 'Principal UI Developer'
+role: ['Product Designer', 'Frontend Developer']
+order: 1
+thumb: ./images/trends_now_hero.png
+featuredImg: ./images/trends_now_hero.png
+prototypes:
+  [
+    'https://player.vimeo.com/video/777512579?h=bbfbb0be52&byline=0&portrait=0',
+    'https://player.vimeo.com/video/798552596?h=8a887f8af1&byline=0&portrait=0',
+  ]
+images:
+  [
+    ./images/app_screen_territories_01.png,
+    ./images/app_screen_territories_02.png,
+    ./images/app_screen_territories_03.png,
+    ./images/app_screen_sotm_mobile_01.png,
+    ./images/app_screen_search_01.png,
+    ./images/search_v0.png,
+    ./images/territories_v0.png,
+    ./images/sotm_desktop.png,
+    ./images/card_progression.png,
+    ./images/card_progression_grid.png,
+  ]
+imageAlts:
+  [
+    Territories mobile view,
+    Territories mobile view single territory,
+    Territories mobile view single territory expanded,
+    On the Move 2022 screen mobile,
+    Search 2022 screen mobile,
+    Search dropdown MVP desktop design,
+    Territories MVP desktop design,
+    On the Move screen desktop,
+    Evolution of a trend card 2017-2022,
+    Evolution of a trend card 2017-2022,
+  ]
+---
+
+## Overview
+
+<Grid xlrows={1} xlcolumns={2} lgrows={1} lgcolumns={2} lgColGaps={4} className="rows-auto no-figure-margins mb-8">
+  <div className="gridarea-2">
+
+    The goal was to replace the existing outdated analytics product with a new insight-centric product that drove marketing actions through AI-powered data analysis.
+    The core of the app was a series of 'Trend' cards presented in views by user, label, artist, or song alongside high-level aggregations.
+
+  </div>
+
+  <div className="gridarea-1">
+
+    Trends Now was developed to help the customers at Ingrooves&#8212;label managers, artists, and music industry
+    professionals&#8212;discover how their music is performing across a number of streaming retailers and territories.
+    I built the UI design, frontend, and API from the ground up.
+
+  </div>
+
+</Grid>
+
+## Features
+
+{/* TERRITORIES */}
+
+<Grid xlcolumns={2} xlrows={2} lgcolumns={2} lgrows={2} lgColGaps={4} lgRowGaps={4} xlRowGaps={4} mdColGaps={4} mdRowGaps={4} smRowGaps={4} lgTemplateRows="auto 1fr" xlTemplateRows="auto 1fr" className="mt-4">
+  <div className="gridarea-1">
+    
+    ### Territories
+
+    #### Challenge
+
+    Users wanted to know how each of their songs was performing in specific
+    countries, retailers, and timeframes.
+
+    #### Solution
+
+    An interactive map visualization for desktop and mobile allowed users to explore broad and granular data metrics. User can toggle retailers, countries, and date ranges to home in on the insights they seek.
+
+  </div>
+  <div className="gridarea-3 mt-2">
+    #### Prototype
+    <IframeEmbed
+      src='https://player.vimeo.com/video/798552596?h=8a887f8af1&byline=0&portrait=0'
+    />
+  </div>
+  <div className="gridarea-2 lg-row-span-2">
+    <Grid xlcolumns={2} xlrows={2} lgcolumns={2} lgrows={2} mdcolumns={2} mdColGaps={2} mdRowGaps={2} smRowGaps={2} mdrows={2} lgColGaps={2} lgRowGaps={2} xlColGaps={4} xlRowGaps={4}>
+      <Image
+        caption="Territories mobile view"
+        className="gridarea-1 mdx-image no-figure-margins"
+      >
+        ![Territories mobile view](./images/app_screen_territories_01.png)
+      </Image>
+      <Image
+        caption="Territories mobile view single territory expanded"
+        className="gridarea-3 mdx-image no-figure-margins"
+      >
+        ![Territories mobile view single territory expanded](./images/app_screen_territories_03.png)
+      </Image>
+      <Image
+        caption="Territories mobile view single territory"
+        className="gridarea-2 row-span-2 align-self-center mdx-image no-figure-margins"
+      >
+        ![Territories mobile view single territory](./images/app_screen_territories_02.png)
+      </Image>
+    </Grid>
+  </div>
+</Grid>
+
+{/* SEARCH */}
+
+<Grid xlcolumns={2} xlrows={2} lgcolumns={2} lgrows={2} lgColGaps={4} lgRowGaps={4} xlRowGaps={4} mdColGaps={4} mdRowGaps={4} smRowGaps={4} className="mt-8 pt-8 sm-pt-0" mdTemplateColumns="33% auto" lgTemplateRows="1fr auto" lgTemplateColumns="33% auto" xlTemplateColumns="33% auto" xlTemplateRows="1fr auto">
+  <div className="gridarea-2 md-gridarea-1 sm-gridarea-1">
+    
+    ### Search
+
+    #### Challenge
+
+    Song, artist, and label names are creative and run the gamut.
+    The user needed to be able to differentiate between them quickly.
+
+    #### Solution
+
+    A full window search gave us room to better communicate results to users by categorizing, sorting by significance, leveraging artwork, and including search history.
+
+  </div>
+  <div className="gridarea-4 mt-2">
+    #### Prototype
+    <IframeEmbed
+      src='https://player.vimeo.com/video/777512579?h=bbfbb0be52&byline=0&portrait=0'
+    />
+  </div>
+  <div className="gridarea-1 row-span-2">
+    <Image
+      caption="Territories mobile view" className="mdx-image no-figure-margins"
+    >
+      ![Territories mobile view](./images/app_screen_search_01.png)
+    </Image>
+  </div>
+</Grid>
+
+{/* On the Move */}
+
+<Grid xlcolumns={2} xlrows={1} lgcolumns={2} lgrows={1} lgColGaps={4} mdColGaps={4} mdRowGaps={4} smRowGaps={4} className="mt-8 pt-8 mb-8 sm-pt-0" mdTemplateColumns="auto 33%" lgTemplateColumns="auto 33%" xlTemplateColumns="auto 33%">
+  <div className="gridarea-1">
+    
+    ### On the Move
+
+    <Image
+      caption="On the Move screen desktop" className="mdx-image no-figure-margins"
+    >
+      ![On the Move screen desktop](./images/sotm_desktop.png)
+    </Image>
+
+    #### Challenge
+
+    Ingrooves uses AI to analyze trending data and identify drivers of continuing growth.
+    There are various stages of growth so a styling system was needed to handle varying messaging and emphasize high-value insights.
+
+    #### Solution
+
+    Songs with marketing opportunities get the greatest emphasis while browsing through all trending songs is made easier by paging and scrolling.
+
+  </div>
+  <div className="gridarea-2">
+    <Image
+      caption="On the Move 2022 screen mobile" className="mdx-image no-figure-margins"
+    >
+      ![On the Move 2022 screen mobile](./images/app_screen_sotm_mobile_01.png)
+    </Image>
+  </div>
+</Grid>

@@ -11,23 +11,23 @@ prototypes:
     'https://player.vimeo.com/video/788884155?h=524d384261e&byline=0&portrait=0',
   ]
 role: ['Visual Designer', 'Prototyper']
-rank: 3
-thumb: ../../images/jlr/navigation/jlr_nav_hero.png
-featuredImg: ../../images/jlr/navigation/jlr_nav_hero.png
+order: 5
+thumb: ./images/jlr_nav_hero.png
+featuredImg: ./images/jlr_nav_hero.png
 images:
   [
-    ../../images/jlr/navigation/app_screen_start_dark.png,
-    ../../images/jlr/navigation/app_screen_current_location_dark.png,
-    ../../images/jlr/navigation/app_screen_settings_headup_light.png,
-    ../../images/jlr/navigation/app_screen_eiffel_location_headup_light.png,
-    ../../images/jlr/navigation/app_screen_search_eiffel_results.png,
-    ../../images/jlr/navigation/app_screen_eiffel_route_northup_light.png,
-    ../../images/jlr/navigation/app_screen_enroute_headup_light_02.png,
-    ../../images/jlr/navigation/app_screen_enroute_northup_dark_01.png,
-    ../../images/jlr/navigation/route_selection_wireflow.png,
-    ../../images/jlr/navigation/search_wireflow.png,
-    ../../images/jlr/navigation/navigation_wireflow.png,
-    ../../images/jlr/navigation/add_waypoint_wireflow.png,
+    ./images/app_screen_start_dark.png,
+    ./images/app_screen_current_location_dark.png,
+    ./images/app_screen_settings_headup_light.png,
+    ./images/app_screen_eiffel_location_headup_light.png,
+    ./images/app_screen_search_eiffel_results.png,
+    ./images/app_screen_eiffel_route_northup_light.png,
+    ./images/app_screen_enroute_headup_light_02.png,
+    ./images/app_screen_enroute_northup_dark_01.png,
+    ./images/route_selection_wireflow.png,
+    ./images/search_wireflow.png,
+    ./images/navigation_wireflow.png,
+    ./images/add_waypoint_wireflow.png,
   ]
 imageAlts:
   [
@@ -46,15 +46,14 @@ imageAlts:
   ]
 ---
 
-import Grid from '../../components/layouts/Grid';
-import AppScreens from '../../components/projects/jlr/navigation/AppScreens.tsx';
-import UserFlows from '../../components/projects/jlr/navigation/UserFlows.tsx';
-import Prototypes from '../../components/projects/jlr/navigation/Prototypes.tsx';
-import ExternalLink from '../../components/ExternalLink';
+import AppScreens from './components/AppScreens.tsx';
+import UserFlows from './components/UserFlows.tsx';
+import Prototypes from './components/Prototypes.tsx';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 ## Overview
 
-<Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1} className="rows-auto no-figure-margins no-row-gaps">
+<Grid xlrows={1} xlcolumns={2} lgrows={1} lgcolumns={2} mdRowGaps={4} smRowGaps={2} lgColGaps={4} className="row-auto no-figure-margins">
   <div className="gridarea-1">
     
     Navigation is standard functionality and the most widely used 
@@ -76,18 +75,47 @@ import ExternalLink from '../../components/ExternalLink';
   </div>
 </Grid>
 
-<div className="my-max">
-  <AppScreens id="nav" />
+<div className="pos-rel flex-row justify-center">
+  <Grid
+    xlrows={2}
+    xlcolumns={4}
+    xlColGaps={4}
+    xlRowGaps={4}
+    lgrows={2}
+    lgcolumns={4}
+    mdrows={4}
+    mdcolumns={2}
+    lgColGaps={4}
+    smRowGaps={4}
+    className="xl-py-8 lg-py-8 md-py-4 sm-py-4 xl-row-flex-beyond lg-row-flex-beyond pos-rel"
+  >
+    {props.pageContext.frontmatter.images.slice(0, 8).map((image, i) => (
+      <div className={`gridarea-${i + 1}`} key={`gridarea-${i + 1}`}>
+        <Image
+          caption={props.pageContext.frontmatter.imageAlts[i]}
+          className="mdx-image no-figure-margins"
+        >
+          <GatsbyImage
+            image={getImage(image)}
+            alt={props.pageContext.frontmatter.imageAlts[i]}
+            objectFit="contain"
+            imgStyle={{ maxHeight: '75vh' }}
+            style={{ maxHeight: '75vh' }}
+          />
+        </Image>
+      </div>
+    ))}
+  </Grid>
 </div>
 
-<div className="my-max">
+<Grid xlrows={2} xlcolumns={2} lgrows={2} lgcolumns={2} mdrows={2} mdcolumns={2} xlRowGaps={1} lgRowGaps={1} mdRowGaps={1} xlTemplateColumns="auto 1fr" lgTemplateColumns="auto 1fr" className="rows-auto no-figure-margins mb-8 md-mt-8">
+  <div className="gridarea-1 xl-col-span-2 lg-col-span-2 md-col-span-2">
+    ## Features
 
-## Features
+    We conducted some simple surveys amongst staff and colleagues to determine the target features which included:
 
-We conducted some simple surveys amongst staff and colleagues to determine the target features which included:
-
-<Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1}>
-  <div className="gridarea-1">
+  </div>
+  <div className="gridarea-3">
 
     - Finding a location
     - Selecting a navigation route
@@ -96,7 +124,7 @@ We conducted some simple surveys amongst staff and colleagues to determine the t
     - Head-up / North-up orientation
 
   </div>
-  <div className="gridarea-2">
+  <div className="gridarea-4">
 
     - Saving a favorite location
     - Selecting a location from favorites
@@ -107,9 +135,7 @@ We conducted some simple surveys amongst staff and colleagues to determine the t
   </div>
 </Grid>
 
-</div>
-
-<div className="my-max">
+<div>
   ## Wireflows
   <UserFlows id="nav" />
 </div>

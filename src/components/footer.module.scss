@@ -1,4 +1,4 @@
-@import './base';
+@use './base' as vars;
 .footer {
   display: flex;
   padding: 2rem 8rem;
@@ -8,7 +8,7 @@
   height: 8rem;
   min-height: 8rem;
   justify-content: center;
-  @include overlay-stripes;
+  @include vars.overlay-stripes;
 
   @media (max-width: 1200px) {
     padding-left: 4rem;
@@ -43,6 +43,6 @@
   }
 }
 .icon {
-  color: $light;
+  color: vars.$light;
   font-size: 2rem;
 }

@@ -5,7 +5,7 @@ description: Retirement Plan Campaign
 slug: schwab-franklin-templeton
 company: Charles Schwab & Co.
 role: ['Art Director']
-rank: 4
+order: 4
 thumb: ../../images/schwab/franklin_templeton/franklin_integrated_thumb.jpg
 ---
 

@@ -1,18 +1,15 @@
-@import './_variables';
+@use './_variables' as vars;
+
 .projects {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 4rem;
-  h3 {
-    text-align: center;
-    margin: 1rem auto 0;
-  }
   p {
-    color: rgba($light, 0.6);
+    color: rgba(vars.$light, 0.6);
     margin-top: 0.5rem;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .projects {
     display: flex;
     flex-direction: column;

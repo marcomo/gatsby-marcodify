@@ -6,14 +6,14 @@ slug: vadio-channel-maker
 company: Vadio
 position: 'Frontend Developer'
 role: ['Product Designer', 'Frontend Developer']
-rank: 2
-thumb: ../../images/vadio/channelmaker/channelmaker_hero.png
-featuredImg: ../../images/vadio/channelmaker/channelmaker_hero.png
+order: 3
+thumb: ./images/channelmaker_hero.png
+featuredImg: ./images/channelmaker_hero.png
 images: [
-    ../../images/vadio/channelmaker/channelmaker_playlist.jpg
-    ../../images/vadio/channelmaker/channelmaker_edit_from_search_selection.jpg
-    ../../images/vadio/channelmaker/channelmaker_replace_selection.jpg,
-    ../../images/vadio/channelmaker/channelmaker_insert_ad.jpg,
+    ./images/channelmaker_playlist.jpg
+    ./images/channelmaker_edit_from_search_selection.jpg
+    ./images/channelmaker_replace_selection.jpg,
+    ./images/channelmaker_insert_ad.jpg,
   ]
 imageAlts:
   [
@@ -24,31 +24,58 @@ imageAlts:
   ]
 ---
 
-import EmbedContainer from '../../components/EmbedContainer';
-import Image from '../../components/Image';
-import Grid from '../../components/layouts/Grid';
-
 ## Overview
 
-Channel Maker provides a way for Vadio partners to quickly and easily generate custom playlists
-to embed into various music engagement platforms, giving partners a new revenue stream and a chance
-at new fans. This app contributed to partnership deals with Warner Music, Metro Lyrics, and Shazam.
+<Grid
+  xlrows={1}
+  xlcolumns={2}
+  lgrows={1}
+  lgcolumns={2}
+  className="rows-auto no-figure-margins mb-8"
+>
+  <div className="gridarea-1">
+    Channel Maker provides a way for Vadio partners to quickly and easily generate custom playlists
+    to embed into various music engagement platforms.
+  </div>
+  <div className="gridarea-2">
+    This gives partners a new revenue stream and a chance at new fans. This app contributed to 
+    partnership deals with Warner Music, Metro Lyrics, and Shazam.
+  </div>
+
+</Grid>
 
 ## Features
 
-### Playlist
+{/* PLAYLIST */}
 
-<Image
-  showCaption
-  alt="Browse video playlist and recommended videos"
-  className="no-figure-margins"
+<Grid
+  xlcolumns={2}
+  xlrows={2}
+  lgcolumns={2}
+  lgrows={2}
+  mdRowGaps={4}
+  smRowGaps={4}
+  lgTemplateRows="1fr auto"
+  xlTemplateRows="1fr auto"
+  className="mt-4"
 >
-  ![Browse video playlist and recommended
-  videos](../../images/vadio/channelmaker/channelmaker_playlist.jpg)
-</Image>
+  
+  <div className="gridarea-1 col-span-2">
 
-<Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1} className="my-max">
-  <div className="gridarea-1">
+    ### Playlist
+
+    <Image
+      showCaption
+      alt="Browse video playlist and recommended videos"
+      className="no-figure-margins"
+    >
+      ![Browse video playlist and recommended
+      videos](./images/channelmaker_playlist.jpg)
+
+  </Image>
+  </div>
+
+  <div className="gridarea-3">
 
     #### Challenge
 
@@ -62,7 +89,7 @@ at new fans. This app contributed to partnership deals with Warner Music, Metro 
     into any secondary menus or views.
 
   </div>
-  <div className="gridarea-2">
+  <div className="gridarea-4">
     #### Usability
 
     No matter what other feature the user engaged, they could awlays see and edit the playlist. A user could:
@@ -76,20 +103,31 @@ at new fans. This app contributed to partnership deals with Warner Music, Metro 
   </div>
 </Grid>
 
-### Search
+{/* SEARCH */}
 
-<Image
-  showCaption
-  alt="Select and edit a video from search results"
-  className="no-figure-margins"
+<Grid
+  xlcolumns={2}
+  xlrows={2}
+  lgcolumns={2}
+  lgrows={2}
+  xlTemplateRows="1fr auto"
+  lgTemplateRows="1fr auto"
+  mdRowGaps={4}
+  smRowGaps={4}
+  className="mt-8"
 >
-  ![Select and edit a video from search
-  results](../../images/vadio/channelmaker/channelmaker_edit_from_search_selection.jpg)
-</Image>
-
-<Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1} className="my-max">
-  <div className="gridarea-1">
-
+  <div className="gridarea-1 col-span-2">
+    ### Search
+    <Image
+      showCaption
+      alt="Select and edit a video from search results"
+      className="no-figure-margins"
+    >
+      ![Select and edit a video from search
+      results](./images/channelmaker_edit_from_search_selection.jpg)
+    </Image>
+  </div>
+  <div className="gridarea-3">
     #### Challenge
 
     Users wanted to find, select, and place videos into the playlist directly from search results.
@@ -102,7 +140,7 @@ at new fans. This app contributed to partnership deals with Warner Music, Metro 
     A user could immediately add a video or edit first, whatever workflow they preferred.
 
   </div>
-  <div className="gridarea-2">
+  <div className="gridarea-4">
     #### Usability
 
     Async search allowed the user to see results faster and promoted discovery by showing partial string matches.
@@ -117,20 +155,31 @@ at new fans. This app contributed to partnership deals with Warner Music, Metro 
   </div>
 </Grid>
 
-### Replace
+{/* REPLACE */}
 
-<Image
-  showCaption
-  alt="Replace a video in the playlist with one from search"
-  className="no-figure-margins"
+<Grid
+  xlcolumns={2}
+  xlrows={2}
+  lgcolumns={2}
+  lgrows={2}
+  xlTemplateRows="1fr auto"
+  lgTemplateRows="1fr auto"
+  mdRowGaps={4}
+  smRowGaps={4}
+  className="mt-8"
 >
-  ![Replace a video in the playlist with one from
-  search](../../images/vadio/channelmaker/channelmaker_replace_selection.jpg)
-</Image>
-
-<Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1} className="my-max">
-  <div className="gridarea-1">
-
+  <div className="gridarea-1 col-span-2">
+    ### Replace
+    <Image
+      showCaption
+      alt="Replace a video in the playlist with one from search"
+      className="no-figure-margins"
+    >
+      ![Replace a video in the playlist with one from
+      search](./images/channelmaker_replace_selection.jpg)
+    </Image>
+  </div>
+  <div className="gridarea-3">
     #### Challenge
 
     Users wanted an easy path to swap out multiple or old videos without having to pre-delete the videos being removed.
@@ -140,7 +189,7 @@ at new fans. This app contributed to partnership deals with Warner Music, Metro 
     A replace feature was embedded into video editing. And with the editing feature being accessible from any video, a user could start a video swap from the playlist, search, or explore panels.
 
   </div>
-  <div className="gridarea-2">
+  <div className="gridarea-4">
     #### Usability
 
     Faster and more flexible video replacement increased playlist building. A user could:
@@ -154,19 +203,31 @@ at new fans. This app contributed to partnership deals with Warner Music, Metro 
   </div>
 </Grid>
 
-### Ad Placement
+{/* AD PLACEMENT */}
 
-<Image
-  showCaption
-  alt="Insert and position an ad into the video playlist"
-  className="no-figure-margins"
+<Grid
+  xlcolumns={2}
+  xlrows={2}
+  lgcolumns={2}
+  lgrows={2}
+  xlTemplateRows="1fr auto"
+  lgTemplateRows="1fr auto"
+  mdRowGaps={4}
+  smRowGaps={4}
+  className="mt-8 mb-8"
 >
-  ![Insert and position an ad into the video
-  playlist](../../images/vadio/channelmaker/channelmaker_insert_ad.jpg)
-</Image>
-
-<Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1} className="my-max">
-  <div className="gridarea-1">
+  <div className="gridarea-1 col-span-2">
+    ### Ad Placement
+    <Image
+      showCaption
+      alt="Insert and position an ad into the video playlist"
+      className="no-figure-margins"
+    >
+      ![Insert and position an ad into the video
+      playlist](./images/channelmaker_insert_ad.jpg)
+    </Image>
+  </div>
+  <div className="gridarea-3">
 
     #### Challenge
 
@@ -184,7 +245,7 @@ at new fans. This app contributed to partnership deals with Warner Music, Metro 
     in settings which would adjusts ad placements and durations for the user at validation time.
 
   </div>
-  <div className="gridarea-2">
+  <div className="gridarea-4">
     #### Usability
 
     Separating ad insertion from validation&#8212;combined with the auto-correct

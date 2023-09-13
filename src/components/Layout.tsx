@@ -5,7 +5,7 @@ import Modal from './Modal';
 
 const Layout: React.FunctionComponent<PropsWithChildren> = (props) => {
   return (
-    <div id="mdfy-wrapper" className="width-control">
+    <div id="mdfy-wrapper" className="width-control over-hidden">
       <Modal />
       <Header />
       {props.children}

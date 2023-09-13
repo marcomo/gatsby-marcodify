@@ -6,7 +6,7 @@ slug: shelti-ads
 company: MOVE Advertising
 client: Shelti, Inc.
 role: ['Art Director']
-rank: 5
+order: 5
 thumb: ../../images/shelti/ads/shelti_ads_thumb.jpg
 images: [../../images/shelti/ads/images/dart_ad.jpg]
 ---
