@@ -116,6 +116,7 @@
     flex-direction: column;
     margin: 0 auto;
     padding: 0 8rem;
+    overflow: hidden;
 
     &.dev {
       * {
@@ -373,7 +374,7 @@
     &:before {
       z-index: -1;
       content: '';
-      width: 100vw;
+      width: 95vw;
       top: 0;
       bottom: 0;
       position: absolute;
@@ -404,7 +405,7 @@
           background-image: url(../images/cc_vector_bg.png);
           background-position: center;
           background-repeat: no-repeat;
-          background-size: cover;
+          background-size: 105% auto;
         }
       }
     }
