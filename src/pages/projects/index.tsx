@@ -1,7 +1,7 @@
 import { graphql, Link, PageProps } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import React from 'react';
-import ConditionalRender from '../../components/ConditionalRender';
+import ConditionalRender from '@components/ConditionalRender';
 import * as styles from '../../stylesheets/projects.module.scss';
 
 const Index: React.FunctionComponent<PageProps<Queries.ProjectsQuery>> = ({
@@ -10,7 +10,7 @@ const Index: React.FunctionComponent<PageProps<Queries.ProjectsQuery>> = ({
   const { projects } = data.allMdx;
   return (
     <main>
-      <h2>Projects</h2>
+      <h2 className="h2">Projects</h2>
       <div className={styles.projects}>
         {projects.map((proj) => {
           return (
@@ -18,7 +18,7 @@ const Index: React.FunctionComponent<PageProps<Queries.ProjectsQuery>> = ({
               shouldRender={!!proj.node.frontmatter}
               key={proj.node.id}
             >
-              <Link to={'/projects/' + proj.node.frontmatter?.slug ?? ''}>
+              <Link className="thumb-link" to={'/projects/' + proj.node.frontmatter?.slug ?? ''}>
                 <div className={proj.node.id}>
                   {proj.node.frontmatter?.thumb?.childImageSharp?.fluid ? (
                     <GatsbyImage
@@ -30,7 +30,7 @@ const Index: React.FunctionComponent<PageProps<Queries.ProjectsQuery>> = ({
                     />
                   ) : null}
                 </div>
-                <h4>{proj.node.frontmatter?.title}</h4>
+                <h4 className="h4">{proj.node.frontmatter?.title}</h4>
                 <p>{proj.node.frontmatter?.description}</p>
               </Link>
             </ConditionalRender>
@@ -47,7 +47,7 @@ export default Index;
 export const query = graphql`
   query Projects {
     allMdx(
-      sort: [{ frontmatter: { rank: ASC } }, { frontmatter: { title: ASC } }]
+      sort: [{ frontmatter: { order: ASC } }, { frontmatter: { title: ASC } }]
       filter: { internal: { contentFilePath: { regex: "/(/projects/)/" } } }
     ) {
       projects: edges {

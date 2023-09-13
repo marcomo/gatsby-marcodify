@@ -14,10 +14,16 @@ const ImageGrid: React.FunctionComponent<PropsWithChildren<IProps>> = (
 ) => {
   return (
     <Grid
+      xlrows={props.lgrows}
+      xlcolumns={props.lgcolumns}
       lgrows={props.lgrows}
       lgcolumns={props.lgcolumns}
+      lgColGaps={props.lgColGaps}
+      lgRowGaps={props.lgRowGaps}
       mdcolumns={props.mdcolumns}
       mdrows={props.mdrows}
+      mdRowGaps={props.mdRowGaps}
+      mdColGaps={props.mdColGaps}
       className={props.className || ''}
     >
       {props.frontmatter.images.map((img, i) => {

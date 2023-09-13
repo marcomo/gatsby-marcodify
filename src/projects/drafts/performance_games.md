@@ -5,7 +5,7 @@ description: Performance Games / Brand and Product Identities
 slug: performance-games-identity
 company: Performance Games
 role: ['Art Director']
-rank: 4
+order: 4
 thumb: ../../images/performance_games/identity/pgi_thumb.jpg
 images:
   [

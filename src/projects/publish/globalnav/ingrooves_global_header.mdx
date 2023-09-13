@@ -6,20 +6,16 @@ description: Designing a multi-product navigation model and universal menu
 company: Ingrooves
 position: 'Principal UI Developer'
 role: ['UX Designer']
-rank: 4
-thumb: ../../images/ingrooves/productnav/ingrooves_productnav_hero.png
-featuredImg: ../../images/ingrooves/productnav/ingrooves_productnav_hero.png
-images: [../../images/ingrooves/productnav/prev_universal_navigation_model.png]
+order: 4
+thumb: ./images/ingrooves_productnav_hero.png
+featuredImg: ./images/ingrooves_productnav_hero.png
+images: [./images/prev_universal_navigation_model.png]
 imageAlts: ['Previous universal navigation model']
 ---
 
-import Image from '../../components/Image';
-import Grid from '../../components/layouts/Grid';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-
 ## Overview
 
-<Grid lgrows={2} lgcolumns={2} mdrows={2} mdcolumns={1} className="rows-auto no-figure-margins no-row-gaps">
+<Grid xlrows={2} xlcolumns={2} xlColGaps={4} lgColGaps={4} lgrows={2} lgcolumns={2} className="rows-auto no-figure-margins no-row-gaps mb-8">
   <div className="gridarea-1">
 
     Ingrooves has quickly developed new products over the years to better
@@ -37,17 +33,11 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
   </div>
 </Grid>
 
-## Previous navigation
+## Previous Navigation
 
-<Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1} className="lg-cols-40-60 thick-row-gaps">
+<Grid xlrows={1} xlcolumns={2} xlColGaps={4} lgColGaps={4} lgrows={1} lgcolumns={2} mdRowGaps={4} smRowGaps={4} className="md-row-gaps mb-8">
   <div className="gridarea-1">
-{/* 
-    - Products are split into three groupings at the top level <small>(white fill)</small>
-    - Products are nested within those groupings <small>(blue outlines)</small>
-    - Some product groups are actually products <small>(white fill with blue outlines)</small>
-    - Many items in the menu are product features <small>(green outlines)</small>
-    - Not all products listed are links, some are just nesting levels */}
-
+    
     ### Issues
 
     - <span className='box-outline-blue'>Products</span> only accessible from certain products pages
@@ -59,18 +49,18 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
   <div className="gridarea-2">
     <Image caption="Previous universal navigation model" className="no-figure-margins">
       ![Previous universal navigation
-      model](../../images/ingrooves/productnav/prev_universal_navigation_model.png)
+      model](./images/prev_universal_navigation_model.png)
     </Image>
   </div>
 </Grid>
 
 ## New Navigation
 
-<Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1} className="cols-60-40 rows-auto thick-row-gaps">
-  <div className="gridarea-1">
+<Grid xlrows={1} xlcolumns={2} xlColGaps={4} lgColGaps={4} lgrows={1} lgcolumns={2} mdRowGaps={4} smRowGaps={4} className="rows-auto mb-8">
+  <div className="gridarea-1 md-mt-4 sm-mt-4">
     <Image caption="New universal navigation model" className="no-figure-margins">
       ![New universal navigation
-      model](../../images/ingrooves/productnav/new_universal_navigation_model.png)
+      model](./images/new_universal_navigation_model.png)
     </Image>
   </div>
   <div className="gridarea-2">
@@ -89,21 +79,21 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 ## New Navigation Menu
 
-<Grid lgrows={1} lgcolumns={2} mdrows={2} mdcolumns={1} className="lg-cols-40-60" >
+<Grid xlrows={1} xlcolumns={2} xlColGaps={4} lgColGaps={4} lgrows={1} lgcolumns={2} mdRowGaps={2} smRowGaps={2} className="mb-8">
   <div className="gridarea-1">
     <Image caption="New product menus" showCaption className="mdx-image">
-      ![New product menus](../../images/ingrooves/productnav/product_menus.png)
+      ![New product menus](./images/product_menus.png)
     </Image>
   </div>
   <div className="gridarea-2">
-    <div className="hide-on-mobile">
+    <div className="hide-on-mobile mb-4">
       <Image caption="Previous navigation menus" showCaption>
         ![Previous navigation
-        menus](../../images/ingrooves/productnav/old_menus.png)
+        menus](./images/old_menus.png)
       </Image>
     </div>
 
-    <div className="mt-4">
+    <div>
 
       The new side-only navigation:
 

@@ -5,7 +5,7 @@ description: Automotice Grade Linux In-Vehicle Email App
 slug: agl-ivi-email
 company: Jaguar Land Rover
 role: ['UX Designer']
-rank: 3
+order: 3
 thumb: ../../images/jlr/email/jlr_agl_email_thumb.jpg
 ---
 

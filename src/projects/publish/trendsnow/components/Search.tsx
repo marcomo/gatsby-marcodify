@@ -1,7 +1,7 @@
 import { useStaticQuery } from 'gatsby';
 import { graphql } from 'gatsby';
 import React, { PropsWithChildren } from 'react';
-import ProjectSection from '../../ProjectSection';
+import ProjectSection from '@components/ProjectSection';
 import Media from 'react-media';
 
 const Search: React.FunctionComponent<

@@ -5,7 +5,7 @@ description: Web Widget
 slug: vadio-player
 company: Vadio
 role: ['UX Designer']
-rank: 3
+order: 3
 thumb: ../../images/vadio/player/player_thumb.jpg
 ---
 

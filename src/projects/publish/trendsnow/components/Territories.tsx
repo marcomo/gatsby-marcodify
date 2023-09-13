@@ -1,7 +1,7 @@
 import { useStaticQuery } from 'gatsby';
 import { graphql } from 'gatsby';
 import React, { PropsWithChildren } from 'react';
-import ProjectSection from '../../ProjectSection';
+import ProjectSection from '@components/ProjectSection';
 import Media from 'react-media';
 
 const Territories: React.FunctionComponent<
@@ -60,7 +60,7 @@ const Territories: React.FunctionComponent<
             `lg-grid-2-2`,
             `md-grid-3-1`,
             `sm-grid-1-3`,
-            'thin-gaps',
+            'sm-gaps',
             matches.sm ? '' : 'no-figure-margins',
           ].join(' ')}
           imgGridItemClassNames={{

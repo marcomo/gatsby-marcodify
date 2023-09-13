@@ -6,7 +6,7 @@ slug: schwab-republic-airways
 company: Charles Shwab & Co.
 client: Republic Airways
 role: ['Art Director']
-rank: 4
+order: 4
 thumb: ../../images/schwab/republic_airways/republic_integrated_thumb.jpg
 featuredImg: ../../images/schwab/republic_airways/images/republic_guide_cover.jpg
 images:

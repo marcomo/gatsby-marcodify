@@ -5,7 +5,7 @@ description: Vadio Analytics Dashboard
 slug: vadio-analytics-dashboard
 company: Vadio
 role: ['UX Designer', 'Frontend Developer']
-rank: 3
+order: 3
 thumb: ../../images/vadio/analytics_dashboard/vadio_analyticsdashboard_thumb.jpg
 ---
 

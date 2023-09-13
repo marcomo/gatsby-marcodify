@@ -1,6 +1,6 @@
 import { graphql, PageProps } from 'gatsby';
 import React from 'react';
-import PrototypeGrid from '../../components/PrototypeGrid';
+import PrototypeGrid from '@components/PrototypeGrid';
 
 const Index: React.FunctionComponent<PageProps<Queries.PrototypesQuery>> = ({
   data,
@@ -27,7 +27,7 @@ export default Index;
 export const query = graphql`
   query Prototypes {
     allMdx(
-      sort: [{ frontmatter: { rank: ASC } }, { frontmatter: { title: ASC } }]
+      sort: [{ frontmatter: { order: ASC } }, { frontmatter: { title: ASC } }]
       filter: {
         internal: { contentFilePath: { regex: "/(/projects/)/" } }
         frontmatter: { prototypes: { ne: null } }

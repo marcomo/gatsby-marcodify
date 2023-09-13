@@ -30,8 +30,8 @@ const Header: React.FunctionComponent = () => {
             className={styles.mdfySimpleLogo}
             style={{ borderBottom: 'none' }}
           >
-            <p>Marco Morales</p>
-            <div>
+            <p className="brand-font">Marco Morales</p>
+            <div className="brand-font">
               <Media query={'(max-width: 600px)'}>
                 {(matches) =>
                   matches
