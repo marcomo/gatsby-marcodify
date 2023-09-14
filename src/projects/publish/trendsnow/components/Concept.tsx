@@ -1,8 +1,8 @@
 import { useStaticQuery } from 'gatsby';
 import { graphql } from 'gatsby';
 import React, { PropsWithChildren } from 'react';
-import ProjectSection from '../../ProjectSection';
-import Image from '../../Image';
+import ProjectSection from '@components/ProjectSection';
+import Image from '@components/Image';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Media from 'react-media';
 
@@ -64,7 +64,7 @@ const Territories: React.FunctionComponent<
         return (
           <ProjectSection
             id={props.id}
-            imgGridClassName={['thin-gaps'].join(' ')}
+            imgGridClassName={['sm-gaps'].join(' ')}
             imgGridItemClassNames={{
               'gridarea-2': 'lg-row-span-2 lg-row-span-center',
             }}

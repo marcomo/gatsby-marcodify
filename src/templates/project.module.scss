@@ -1,4 +1,4 @@
-@import '../stylesheets/_variables';
+@use '../stylesheets/_variables' as vars;
 .project {
   flex: 1 0 80%;
   header {
@@ -7,7 +7,7 @@
       margin-top: 1rem;
       margin-bottom: 1rem;
       font-size: 1.5rem;
-      color: rgba($light, 0.6);
+      color: rgba(vars.$light, 0.6);
       font-weight: 300;
       font-size: 1.5rem;
       line-height: 100%;
@@ -19,20 +19,15 @@
     .credits {
       display: flex;
       flex-direction: column;
-      h2 {
+      .h2 {
         margin-top: 1rem;
       }
-    }
-  }
-  article {
-    h2 {
-      margin-top: 8rem;
     }
   }
   .concept-badge {
     display: inline-block;
     margin-top: 2rem;
-    background-color: $green;
+    background-color: vars.$green;
     border-radius: 0.75rem;
     font-size: 1rem;
     font-weight: 700;
@@ -41,21 +36,10 @@
       margin-top: 0.5rem;
     }
   }
-  @media (max-width: 1200px) {
-    article {
-      padding: 4rem 0;
-      h2 {
-        margin-top: 6rem;
-      }
-    }
+  @media (max-width: 960px) {
     header {
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(2, auto);
-      grid-template-areas: 'area2' 'area1';
-      row-gap: 4rem;
-      .credits {
-        flex-direction: row;
-      }
+      grid-template-rows: auto 1fr;
     }
   }
 }

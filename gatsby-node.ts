@@ -8,6 +8,7 @@ export const onCreateWebpackConfig = ({ actions }) => {
     resolve: {
       alias: {
         path: path.resolve("path-browserify"),
+        "@components": path.resolve(__dirname, "src/components")
       },
       fallback: {
         fs: false,

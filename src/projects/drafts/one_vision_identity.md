@@ -5,7 +5,7 @@ description: One Vision Entertainment Identity
 slug: one-vision-identity
 company: One Vision Entertainment
 role: ['Art Director']
-rank: 4
+order: 4
 thumb: ../../images/onevision/onevision_thumb.jpg
 images: [../../images/onevision/images/postcard_front.jpg]
 ---

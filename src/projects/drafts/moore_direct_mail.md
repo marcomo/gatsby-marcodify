@@ -6,7 +6,7 @@ slug: moore-direct-mail
 company: Rhea & Kaiser
 client: Moore Healthcare Solutions
 role: ['Art Director']
-rank: 5
+order: 5
 thumb: ../../images/moore/moore_thumb.jpg
 images:
   [

@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
-import PrototypeGrid from '../../../PrototypeGrid';
+import PrototypeGrid from '@components/PrototypeGrid';
 
 const Prototypes = () => {
   const data = useStaticQuery<Queries.ProjectPrototypesQuery>(graphql`

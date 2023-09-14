@@ -9,8 +9,12 @@ const Footer: React.FunctionComponent = () => {
         ©2023 Marco Morales
         <div className={styles.contact}>
           <div className="flex-row align-center">
-            <i className={styles.icon + ' fa-solid fa-envelope mr-1'}></i>
-            <span>me @ marcodify dot com</span>
+            <span className="color-green">
+              <a href='mailto:me@marcodify.com'>
+                <i className={styles.icon + ' fa-solid fa-envelope mr-1'}></i>
+                <span>me @ marcodify . com</span>
+              </a>
+            </span>
           </div>
           <ExternalLink
             href="https://www.linkedin.com/in/marcodify"

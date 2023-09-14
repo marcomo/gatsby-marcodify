@@ -1,21 +1,22 @@
 import { useStaticQuery } from 'gatsby';
 import { graphql } from 'gatsby';
 import React, { PropsWithChildren } from 'react';
-import ImageGrid from '../../../ImageGrid';
+import ImageGrid from '@components/ImageGrid';
+import Media from 'react-media';
 
 const AppScreens: React.FunctionComponent<
   PropsWithChildren<{
     id: string;
   }>
 > = (props) => {
-  const data = useStaticQuery<Queries.ProjectUserflowImagesQuery>(graphql`
-    query ProjectUserflowImages {
+  const data = useStaticQuery<Queries.ProjectImagesQuery>(graphql`
+    query ProjectImages {
       mdx(internal: { contentFilePath: { regex: "/(/agl_ivi_navigation)/" } }) {
         id
         frontmatter {
           images {
             childrenImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, width: 1200, placeholder: BLURRED)
+              gatsbyImageData(layout: CONSTRAINED, width: 650, placeholder: BLURRED)
               original {
                 src
               }
@@ -28,7 +29,7 @@ const AppScreens: React.FunctionComponent<
     }
   `);
   const imageIndexes = data.mdx.frontmatter.images.reduce((acc, img, i) => {
-    if (img.childrenImageSharp[0].original.src.includes('wireflow')) {
+    if (img.childrenImageSharp[0].original.src.includes('app_screen')) {
       acc.push(i);
     }
     return acc;
@@ -45,16 +46,25 @@ const AppScreens: React.FunctionComponent<
   };
 
   return (
-    <ImageGrid
-      lgrows={2}
-      lgcolumns={2}
-      mdrows={2}
-      mdcolumns={2}
-      frontmatter={frontmatter}
-      id={props.id}
-      showCaptions
-      className="no-figure-margins thin-gaps"
-    />
+    <Media
+      queries={{
+        sm: '(max-width: 480px)',
+        md: '(max-width: 1200px)',
+        lg: '(min-width: 1201px)',
+      }}
+    >
+      {(matches) => (
+        <ImageGrid
+          lgrows={4}
+          lgcolumns={2}
+          mdrows={4}
+          mdcolumns={2}
+          frontmatter={frontmatter}
+          id={props.id}
+          className={matches.sm ? '' : 'no-figure-margins'}
+        />
+      )}
+    </Media>
   );
 };
 

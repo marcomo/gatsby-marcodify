@@ -1,3 +1,4 @@
+@use './variables' as vars;
 @mixin overlay-stripes {
   &::before {
     content: '';
@@ -31,7 +32,7 @@
     right: 0;
     bottom: 0;
     box-sizing: border-box;
-    background-color: rgba($grey-200, 0.95);
+    background-color: rgba(vars.$grey-200, 0.95);
     z-index: -2;
     background-image: repeating-linear-gradient(
       to right,
