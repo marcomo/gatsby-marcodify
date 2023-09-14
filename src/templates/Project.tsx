@@ -52,7 +52,7 @@ const ProjectSection: React.FunctionComponent<
             <div className="text-label">
               <span>{frontmatter?.company}</span>
             </div>
-            <h1>{frontmatter?.h1}</h1>
+            <h1 className="brand-font">{frontmatter?.h1}</h1>
             {frontmatter?.isConcept ? (
               <div className={conceptBadge}>concept</div>
             ) : null}
