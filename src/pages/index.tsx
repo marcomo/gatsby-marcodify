@@ -1,15 +1,8 @@
-import { graphql, Link, PageProps } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import React from 'react';
-import ConditionalRender from '@components/ConditionalRender';
+import React, { FC } from 'react';
 import Grid from '@components/layouts/Grid';
-import * as styles from '../stylesheets/projects.module.scss';
-import NonBreakingText from "@components/NonBreakingText";
+import ProjectsGrid from '@components/ProjectsGrid';
 
-const Index: React.FunctionComponent<PageProps<Queries.HomeProjectsQuery>> = ({
-  data,
-}) => {
-  const { projects } = data.allMdx;
+const Index: FC = () => {
   return (
     <main className="xl-py-8 lg-py-8 md-py-8 sm-py-8">
       <section>
@@ -46,35 +39,7 @@ const Index: React.FunctionComponent<PageProps<Queries.HomeProjectsQuery>> = ({
         <h2 className="h2">Projects</h2>
         <div className="flex-row">
           <div className="flex-item">
-            <div className={styles.projects}>
-              {projects.map((proj) => {
-                return (
-                  <ConditionalRender
-                    shouldRender={!!proj.node.frontmatter}
-                    key={proj.node.id}
-                  >
-                    <Link className="thumb-link" to={'/projects/' + proj.node.frontmatter?.slug ?? ''}>
-                      <div className="flex-row justify-center">
-                        {proj.node.frontmatter?.thumb?.childImageSharp
-                          ?.fluid ? (
-                          <GatsbyImage
-                            image={
-                              proj.node.frontmatter?.thumb?.childImageSharp
-                                ?.fluid
-                            }
-                            alt=""
-                            loading="eager"
-                          />
-                        ) : null}
-                      </div>
-                      <h5 className="h5">{proj.node.frontmatter?.company}</h5>
-                      <h4 className="h4 m-0"><NonBreakingText text={proj.node.frontmatter?.heading} /></h4>
-                      <p>{proj.node.frontmatter?.description}</p>
-                    </Link>
-                  </ConditionalRender>
-                );
-              })}
-            </div>
+            <ProjectsGrid />
           </div>
         </div>
       </section>
@@ -140,39 +105,3 @@ export default Index;
 export const Head: React.FunctionComponent = () => {
   return <title>Marcodify | UI Developer, Prototyper, and Designer</title>
 }
-
-// Get all projects so we can generate a list in the Projects view
-export const query = graphql`
-  query HomeProjects {
-    allMdx(
-      sort: [{ frontmatter: { order: ASC } }, { frontmatter: { title: ASC } }]
-      filter: { internal: { contentFilePath: { regex: "/(/projects/)/" } } }
-    ) {
-      projects: edges {
-        node {
-          id
-          body
-          frontmatter {
-            slug
-            title
-            heading
-            company
-            description
-            thumb {
-              childImageSharp {
-                fluid: gatsbyImageData(
-                  layout: CONSTRAINED
-                  placeholder: BLURRED
-                  width: 400
-                )
-              }
-            }
-          }
-          internal {
-            contentFilePath
-          }
-        }
-      }
-    }
-  }
-`;
