@@ -4,6 +4,7 @@ import React from 'react';
 import ConditionalRender from '@components/ConditionalRender';
 import Grid from '@components/layouts/Grid';
 import * as styles from '../stylesheets/projects.module.scss';
+import NonBreakingText from "@components/NonBreakingText";
 
 const Index: React.FunctionComponent<PageProps<Queries.HomeProjectsQuery>> = ({
   data,
@@ -66,7 +67,8 @@ const Index: React.FunctionComponent<PageProps<Queries.HomeProjectsQuery>> = ({
                           />
                         ) : null}
                       </div>
-                      <h4 className="h4">{proj.node.frontmatter?.title}</h4>
+                      <h5 className="h5">{proj.node.frontmatter?.company}</h5>
+                      <h4 className="h4 m-0"><NonBreakingText text={proj.node.frontmatter?.heading} /></h4>
                       <p>{proj.node.frontmatter?.description}</p>
                     </Link>
                   </ConditionalRender>
@@ -133,6 +135,12 @@ const Index: React.FunctionComponent<PageProps<Queries.HomeProjectsQuery>> = ({
 
 export default Index;
 
+
+
+export const Head: React.FunctionComponent = () => {
+  return <title>Marcodify | UI Developer, Prototyper, and Designer</title>
+}
+
 // Get all projects so we can generate a list in the Projects view
 export const query = graphql`
   query HomeProjects {
@@ -147,6 +155,8 @@ export const query = graphql`
           frontmatter {
             slug
             title
+            heading
+            company
             description
             thumb {
               childImageSharp {

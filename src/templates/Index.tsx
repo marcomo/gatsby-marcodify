@@ -7,8 +7,8 @@ const Index: React.FunctionComponent<PageProps<{ mdx: Queries.Mdx }>> = (
 ) => {
   return (
     <div className={styles.homepage}>
-      {props.data?.mdx?.frontmatter?.h1 ? (
-        <h1>{props.data?.mdx?.frontmatter?.h1}</h1>
+      {props.data?.mdx?.frontmatter?.heading ? (
+        <h1>{props.data?.mdx?.frontmatter?.heading}</h1>
       ) : null}
       <p>{props.data?.mdx?.frontmatter?.description}</p>
       {props.children}

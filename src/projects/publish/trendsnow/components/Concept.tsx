@@ -25,7 +25,7 @@ const Territories: React.FunctionComponent<
             }
           }
           imageAlts
-          h1
+          heading
         }
       }
     }
