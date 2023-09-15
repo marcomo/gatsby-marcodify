@@ -10,7 +10,7 @@ const Markdown: React.FunctionComponent<PageProps<PropsType, ContextType>> = (
   return (
     <section style={{ flex: '1 0 80%' }}>
       <header>
-        <h1>{props.pageContext.frontmatter?.h1}</h1>
+        <h1>{props.pageContext.frontmatter.heading}</h1>
       </header>
       <div className="this-is-it">{props.children}</div>
     </section>

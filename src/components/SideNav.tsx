@@ -10,7 +10,7 @@ const SideNav: React.FunctionComponent = () => {
         id
         frontmatter {
           slug
-          title
+          heading
         }
       }
     }
@@ -22,7 +22,7 @@ const SideNav: React.FunctionComponent = () => {
       {data.allMdx.nodes.map((node) => {
         return node.frontmatter ?
           <li key={node.id}>
-            <Link to={node.frontmatter.slug}>{node.frontmatter.title}</Link>
+            <Link to={node.frontmatter.slug}>{node.frontmatter.heading}</Link>
           </li>
           : null
       })}

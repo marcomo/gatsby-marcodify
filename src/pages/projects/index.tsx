@@ -3,6 +3,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import React from 'react';
 import ConditionalRender from '@components/ConditionalRender';
 import * as styles from '../../stylesheets/projects.module.scss';
+import NonBreakingText from '@components/NonBreakingText';
 
 const Index: React.FunctionComponent<PageProps<Queries.ProjectsQuery>> = ({
   data,
@@ -30,7 +31,7 @@ const Index: React.FunctionComponent<PageProps<Queries.ProjectsQuery>> = ({
                     />
                   ) : null}
                 </div>
-                <h4 className="h4">{proj.node.frontmatter?.title}</h4>
+                <h4 className="h4"><NonBreakingText text={proj.node.frontmatter?.heading} /></h4>
                 <p>{proj.node.frontmatter?.description}</p>
               </Link>
             </ConditionalRender>
@@ -57,6 +58,7 @@ export const query = graphql`
           frontmatter {
             slug
             title
+            heading
             description
             thumb {
               childImageSharp {

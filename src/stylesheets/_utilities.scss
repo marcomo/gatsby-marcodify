@@ -180,6 +180,9 @@
       padding-left: #{$space}rem;
       padding-right: #{$space}rem;
     }
+    .#{$prefix}p-#{$space} {
+      padding: #{$space}rem;
+    }
     .#{$prefix}mr-#{$space} {
       margin-right: #{$space}rem;
     }
@@ -199,6 +202,9 @@
     .#{$prefix}mx-#{$space} {
       margin-left: #{$space}rem;
       margin-right: #{$space}rem;
+    }
+    .#{$prefix}m-#{$space} {
+      margin: #{$space}rem;
     }
   }
 }
