@@ -294,40 +294,13 @@
   row-gap: var(--#{$prefix}grid-row-gaps);
 }
 
-@mixin grid-container-xl {
-  display: grid;
-  $prefix: 'xl-';
-  @include grid-col-gaps(8, $prefix);
-  @include grid-row-gaps(8, $prefix);
-}
-
-@mixin grid-container-lg {
-  display: grid;
-  $prefix: 'lg-';
-  @include grid-col-gaps(8, $prefix);
-  @include grid-row-gaps(8, $prefix);
-}
-
-@mixin grid-container-sm {
-  display: grid;
-  $prefix: 'sm-';
-  @include grid-col-gaps(2, $prefix);
-  @include grid-row-gaps(2, $prefix);
-}
-
-@mixin grid-container-md {
-  display: grid;
-  $prefix: 'md-';
-  @include grid-col-gaps(4, $prefix);
-  @include grid-row-gaps(4, $prefix);
-}
-
 @mixin grid-container-base($cols, $rows, $prefix) {
   $gap: (
     'xl-': 8,
     'lg-': 8,
     'md-': 4,
     'sm-': 2,
+    '': 2,
   );
   display: grid;
   @include grid-col-gaps(map.get($gap, $prefix), $prefix);
