@@ -9,6 +9,7 @@ import Grid from '@components/layouts/Grid';
 import ExternalLink from '@components/ExternalLink';
 import IframeEmbed from '@components/IframeEmbed';
 import EmbedContainer from '@components/EmbedContainer';
+import NonBreakingText from "@components/NonBreakingText";
 
 type PropsType = Queries.AllMdxProjectsQuery['allMdx']['edges'][number];
 type ContextType = PropsType['node'];
@@ -52,7 +53,7 @@ const ProjectSection: React.FunctionComponent<
             <div className="text-label">
               <span>{frontmatter?.company}</span>
             </div>
-            <h1>{frontmatter?.h1}</h1>
+            <h1 className="brand-font"><NonBreakingText text={frontmatter?.heading} /></h1>
             {frontmatter?.isConcept ? (
               <div className={conceptBadge}>concept</div>
             ) : null}
@@ -100,5 +101,11 @@ const Project: React.FunctionComponent<PageProps<PropsType, ContextType>> = (
     </MDXProvider>
   );
 };
+
+export const Head: React.FunctionComponent<
+  PageProps<PropsType, ContextType>
+> = (props) => {
+  return <title>{props.pageContext.frontmatter.title}</title>
+}
 
 export default Project;

@@ -28,7 +28,7 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
     company: String
     description: String
     featuredImg: File @fileByRelativePath
-    h1: String
+    heading: String
     images: [File] @fileByRelativePath
     imageAlts: [String]
     position: String
@@ -61,7 +61,7 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql 
             }
             frontmatter {
               slug
-              h1
+              heading
               description
             }
           }
@@ -101,7 +101,7 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql 
                   id
                 }
               }
-              h1
+              heading
               images {
                 childImageSharp {
                   gatsbyImageData(layout: CONSTRAINED width: 1200 placeholder: BLURRED)
