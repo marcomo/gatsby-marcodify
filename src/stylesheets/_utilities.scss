@@ -1,5 +1,6 @@
 @use './_variables' as vars;
 @use 'sass:map';
+@use 'sass:list';
 
 // FONTS
 
@@ -14,9 +15,13 @@
   display: none;
 }
 
+@function size-prefix($size) {
+  @return #{$size}-;
+}
+
 @each $size, $query in vars.$breakpoints {
   @media (#{$query}) {
-    .#{$size}-hidden {
+    .#{size-prefix($size)}hidden {
       display: none;
     }
   }
@@ -55,7 +60,7 @@
 
 @each $size, $query in vars.$breakpoints {
   @media (#{$query}) {
-    @include gaps(#{$size}-);
+    @include gaps(size-prefix($size));
   }
 }
 
@@ -74,7 +79,7 @@
 
 @each $size, $query in vars.$breakpoints {
   @media (#{$query}) {
-    @include flex-parents(#{$size}-);
+    @include flex-parents(size-prefix($size));
   }
 }
 
@@ -129,11 +134,12 @@
 }
 
 @each $size, $query in vars.$breakpoints {
+  $prefix: size-prefix($size);
   @media (#{$query}) {
-    .#{$size}-align-self-end {
+    .#{$prefix}align-self-end {
       align-self: flex-end;
     }
-    .#{$size}-row-flex-beyond {
+    .#{$prefix}row-flex-beyond {
       flex: 1 0 110vw;
       max-width: vars.$max-content-width;
     }
@@ -154,12 +160,8 @@
 
 // PADDING & MARGINS
 
-@mixin spacing($size: '') {
+@mixin spacing($prefix: '') {
   @each $space in (vars.$spacing-rems) {
-    $prefix: #{$size}- !default;
-    @if $size == '' {
-      $prefix: #{$size};
-    }
     .#{$prefix}pr-#{$space} {
       padding-right: #{$space}rem;
     }
@@ -213,7 +215,7 @@
 
 @each $size, $query in vars.$breakpoints {
   @media (#{$query}) {
-    @include spacing($size);
+    @include spacing(size-prefix($size));
   }
 }
 
@@ -267,213 +269,174 @@
   max-width: vars.$max-content-width;
 }
 
-@mixin subgrid($size) {
-  &.#{$size}-subgrid {
-    grid-template-columns: subgrid;
-    grid-template-rows: subgrid;
-  }
+.subgrid {
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
 }
 
-@mixin grid-template-cols($size, $cols) {
-  --#{$size}-grid-template-columns: repeat(#{$cols}, 1fr);
-  grid-template-columns: var(--#{$size}-grid-template-columns);
+@mixin grid-template-cols($cols, $prefix: '') {
+  --#{$prefix}grid-template-columns: repeat(#{$cols}, 1fr);
+  grid-template-columns: var(--#{$prefix}grid-template-columns);
 }
 
-@mixin grid-col-gaps($size, $rems) {
-  --#{$size}-grid-col-gaps: #{$rems}rem;
-  column-gap: var(--#{$size}-grid-col-gaps);
+@mixin grid-col-gaps($rems, $prefix: '') {
+  --#{$prefix}grid-col-gaps: #{$rems}rem;
+  column-gap: var(--#{$prefix}grid-col-gaps);
 }
 
-@mixin grid-template-rows($size, $cols) {
-  --#{$size}-grid-template-rows: repeat(#{$cols}, 1fr);
-  grid-template-rows: var(--#{$size}-grid-template-rows);
+@mixin grid-template-rows($cols, $prefix) {
+  --#{$prefix}grid-template-rows: repeat(#{$cols}, 1fr);
+  grid-template-rows: var(--#{$prefix}grid-template-rows);
 }
 
-@mixin grid-row-gaps($size, $rems) {
-  --#{$size}-grid-row-gaps: #{$rems}rem;
-  row-gap: var(--#{$size}-grid-row-gaps);
+@mixin grid-row-gaps($rems, $prefix: '') {
+  --#{$prefix}grid-row-gaps: #{$rems}rem;
+  row-gap: var(--#{$prefix}grid-row-gaps);
 }
 
-@mixin grid-container-xl {
-  display: grid;
-  @include subgrid('xl');
-  @include grid-col-gaps('xl', 8);
-  @include grid-row-gaps('xl', 8);
-}
-
-@mixin grid-container-lg {
-  display: grid;
-  @include subgrid('lg');
-  @include grid-col-gaps('lg', 8);
-  @include grid-row-gaps('lg', 8);
-}
-
-@mixin grid-container-sm {
-  display: grid;
-  @include subgrid('sm');
-  @include grid-col-gaps('sm', 2);
-  @include grid-row-gaps('sm', 2);
-}
-
-@mixin grid-container-md {
-  display: grid;
-  @include subgrid('md');
-  @include grid-col-gaps('md', 4);
-  @include grid-row-gaps('md', 4);
-}
-
-@mixin grid-container-base($size, $cols, $rows) {
+@mixin grid-container-base($cols, $rows, $prefix) {
   $gap: (
-    'xl': 8,
-    'lg': 8,
-    'md': 4,
-    'sm': 2,
+    'xl-': 8,
+    'lg-': 8,
+    'md-': 4,
+    'sm-': 2,
+    '': 2,
   );
   display: grid;
-  @include subgrid($size);
-  @include grid-col-gaps($size, map.get($gap, $size));
-  @include grid-row-gaps($size, map.get($gap, $size));
-  @include grid-template-cols($size, $cols);
-  @include grid-template-rows($size, $rows);
+  @include grid-col-gaps(map.get($gap, $prefix), $prefix);
+  @include grid-row-gaps(map.get($gap, $prefix), $prefix);
+  @include grid-template-cols($cols, $prefix);
+  @include grid-template-rows($rows, $prefix);
 }
 
 @mixin thin-column-gap {
   column-gap: 2rem;
 }
 
+[class^='gridarea-'] {
+  > :first-child {
+    margin-top: 0;
+  }
+}
+
+@function areas($cols, $rows) {
+  $col-areas: ();
+  @for $row from 0 to $rows {
+    $row-areas: '';
+    @for $col from 0 to $cols {
+      $row-areas: '#{$row-areas area#{calc($col + 1) + calc($cols * $row)}}';
+    }
+    $col-areas: append($col-areas, $row-areas);
+  }
+  @return $col-areas;
+}
+
+@mixin grids($prefix: '') {
+  .#{$prefix}grid-1-1 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--#{$prefix}grid-row-gaps);
+  }
+  .#{$prefix}grid-1-2 {
+    @include grid-container-base(1, 2, $prefix);
+    grid-template-areas: areas(1, 2);
+    gap: var(--#{$prefix}grid-row-gaps);
+  }
+  .#{$prefix}grid-1-3 {
+    @include grid-container-base(1, 3, $prefix);
+    grid-template-areas: areas(1, 3);
+    gap: var(--#{$prefix}grid-row-gaps);
+  }
+  .#{$prefix}grid-1-4 {
+    @include grid-container-base(1, 4, $prefix);
+    grid-template-areas: areas(1, 4);
+    gap: var(--#{$prefix}grid-row-gaps);
+  }
+  .#{$prefix}grid-2-1 {
+    @include grid-container-base(2, 1, $prefix);
+    grid-template-areas: areas(2, 1);
+    gap: var(--#{$prefix}grid-col-gaps);
+  }
+  .#{$prefix}grid-2-2 {
+    @include grid-container-base(2, 2, $prefix);
+    grid-template-areas: areas(2, 2);
+  }
+  .#{$prefix}grid-2-3 {
+    @include grid-container-base(2, 3, $prefix);
+    grid-template-areas: areas(2, 3);
+  }
+  .#{$prefix}grid-2-4 {
+    @include grid-container-base(2, 4, $prefix);
+    grid-template-areas: areas(2, 4);
+  }
+  .#{$prefix}grid-2-5 {
+    @include grid-container-base(2, 5, $prefix);
+    grid-template-areas: areas(2, 5);
+  }
+  .#{$prefix}grid-3-1 {
+    @include grid-container-base(3, 1, $prefix);
+    grid-template-areas: areas(3, 1);
+    gap: var(--#{$prefix}grid-col-gaps);
+  }
+  .#{$prefix}grid-3-2 {
+    @include grid-container-base(3, 2, $prefix);
+    grid-template-areas: areas(3, 2);
+  }
+  .#{$prefix}grid-3-3 {
+    @include grid-container-base(3, 3, $prefix);
+    grid-template-areas: areas(3, 3);
+  }
+  .#{$prefix}grid-3-4 {
+    @include grid-container-base(3, 4, $prefix);
+    grid-template-areas: areas(3, 4);
+  }
+  .#{$prefix}grid-4-2 {
+    @include grid-container-base(4, 2, $prefix);
+    grid-template-areas: areas(4, 2);
+  }
+  .#{$prefix}grid-4-3 {
+    @include grid-container-base(4, 3, $prefix);
+    grid-template-areas: areas(4, 2);
+  }
+  .#{$prefix}grid-5-1 {
+    @include grid-container-base(5, 1, $prefix);
+    grid-template-areas: areas(5, 1);
+    gap: var(--#{$prefix}grid-col-gaps);
+  }
+  .#{$prefix}grid-5-2 {
+    @include grid-container-base(5, 2, $prefix);
+    grid-template-areas: areas(5, 2);
+  }
+  .#{$prefix}cols-40-60 {
+    grid-template-columns: auto 60%;
+  }
+  .#{$prefix}cols-30-70 {
+    grid-template-columns: auto 70%;
+  }
+  .#{$prefix}cols-60-40 {
+    grid-template-columns: 60% auto;
+  }
+  .#{$prefix}cols-70-30 {
+    grid-template-columns: 70% auto;
+  }
+  .#{$prefix}rows-70-30 {
+    grid-template-rows: 70% auto;
+  }
+  .#{$prefix}rows-auto-1-1 {
+    grid-template-rows: auto 1fr 1fr;
+  }
+  .#{$prefix}rows-1-auto {
+    grid-template-rows: 1fr auto;
+  }
+}
+
+// Generate generic grid classes, eg. grid-1-2
+@include grids();
+
+// Generate screensize-specific grid classes, eg. md-grid-1-2
 @each $size, $query in vars.$breakpoints {
   @media (#{$query}) {
-    [class^='gridarea-'] {
-      > :first-child {
-        margin-top: 0;
-      }
-    }
-    .#{$size}-grid-1-1 {
-      display: flex;
-      flex-direction: column;
-      gap: var(--#{$size}-grid-row-gaps);
-    }
-    .#{$size}-grid-1-2 {
-      @include grid-container-base($size, 1, 2);
-      grid-template-areas: 'area1' 'area2';
-      gap: var(--#{$size}-grid-row-gaps);
-    }
-    .#{$size}-grid-1-3 {
-      @include grid-container-base($size, 1, 3);
-      grid-template-areas: 'area1' 'area2' 'area3';
-      gap: var(--#{$size}-grid-row-gaps);
-    }
-    .#{$size}-grid-1-4 {
-      @include grid-container-base($size, 1, 4);
-      grid-template-areas: 'area1' 'area2' 'area3' 'area4';
-      gap: var(--#{$size}-grid-row-gaps);
-    }
-    .#{$size}-grid-2-1 {
-      @include grid-container-base($size, 2, 1);
-      grid-template-areas: 'area1 area2';
-      gap: var(--#{$size}-grid-col-gaps);
-    }
-    .#{$size}-grid-2-2 {
-      @include grid-container-base($size, 2, 2);
-      grid-template-areas:
-        'area1 area2'
-        'area3 area4';
-    }
-    .#{$size}-grid-2-3 {
-      @include grid-container-base($size, 2, 3);
-      grid-template-areas:
-        'area1 area2'
-        'area3 area4'
-        'area5 area6';
-    }
-    .#{$size}-grid-2-4 {
-      @include grid-container-base($size, 2, 4);
-      grid-template-areas:
-        'area1 area2'
-        'area3 area4'
-        'area5 area6'
-        'area7 area8';
-    }
-    .#{$size}-grid-2-5 {
-      @include grid-container-base($size, 2, 5);
-      grid-template-areas:
-        'area1 area2'
-        'area3 area4'
-        'area5 area6'
-        'area7 area8'
-        'area9 area10';
-    }
-    .#{$size}-grid-3-1 {
-      @include grid-container-base($size, 3, 1);
-      grid-template-areas: 'area1 area2 area3';
-      gap: var(--#{$size}-grid-col-gaps);
-    }
-    .#{$size}-grid-3-2 {
-      @include grid-container-base($size, 3, 2);
-      grid-template-areas:
-        'area1 area2 area3'
-        'area4 area5 area6';
-    }
-    .#{$size}-grid-3-3 {
-      @include grid-container-base($size, 3, 3);
-      grid-template-areas:
-        'area1 area2 area3'
-        'area4 area5 area6'
-        'area7 area8 area9';
-    }
-    .#{$size}-grid-3-4 {
-      @include grid-container-base($size, 3, 4);
-      grid-template-areas:
-        'area1 area2 area3'
-        'area4 area5 area6'
-        'area7 area8 area9'
-        'area10 area11 area12';
-    }
-    .#{$size}-grid-4-2 {
-      @include grid-container-base($size, 4, 2);
-      grid-template-areas:
-        'area1 area2 area3 area4'
-        'area5 area6 area7 area8';
-    }
-    .#{$size}-grid-4-3 {
-      @include grid-container-base($size, 4, 3);
-      grid-template-areas:
-        'area1 area2 area3 area4'
-        'area5 area6 area7 area8'
-        'area9 area10 area11 area12';
-    }
-    .#{$size}-grid-5-1 {
-      @include grid-container-base($size, 5, 1);
-      grid-template-areas: 'area1 area2 area3 area4 area5';
-      gap: var(--#{$size}-grid-col-gaps);
-    }
-    .#{$size}-grid-5-2 {
-      @include grid-container-base($size, 5, 2);
-      grid-template-areas:
-        'area1 area2 area3 area4 area5'
-        'area6 area7 area8 area9 area10';
-    }
-    .#{$size}-cols-40-60 {
-      grid-template-columns: auto 60%;
-    }
-    .#{$size}-cols-30-70 {
-      grid-template-columns: auto 70%;
-    }
-    .#{$size}-cols-60-40 {
-      grid-template-columns: 60% auto;
-    }
-    .#{$size}-cols-70-30 {
-      grid-template-columns: 70% auto;
-    }
-    .#{$size}-rows-70-30 {
-      grid-template-rows: 70% auto;
-    }
-    .#{$size}-rows-auto-1-1 {
-      grid-template-rows: auto 1fr 1fr;
-    }
-    .#{$size}-rows-1-auto {
-      grid-template-rows: 1fr auto;
-    }
+    @include grids(size-prefix($size));
   }
 }
 
@@ -505,7 +468,7 @@
 // Generate screensize-specific grid area classes, eg. md-gridarea-1
 @each $size, $query in vars.$breakpoints {
   @media (#{$query}) {
-    @include gridareas(#{$size}-);
+    @include gridareas(size-prefix($size));
   }
 }
 
@@ -544,7 +507,7 @@
 // Generate screensize-specific col and row span classes, eg. md-col-span-2
 @each $size, $query in vars.$breakpoints {
   @media (#{$query}) {
-    @include gridspans(#{$size}-);
+    @include gridspans(size-prefix($size));
   }
 }
 

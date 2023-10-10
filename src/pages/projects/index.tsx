@@ -1,80 +1,13 @@
-import { graphql, Link, PageProps } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import React from 'react';
-import ConditionalRender from '@components/ConditionalRender';
-import * as styles from '../../stylesheets/projects.module.scss';
-import NonBreakingText from '@components/NonBreakingText';
+import React, { FC } from 'react';
+import ProjectsGrid from '@components/ProjectsGrid';
+const Index: FC = () => {
 
-const Index: React.FunctionComponent<PageProps<Queries.ProjectsQuery>> = ({
-  data,
-}) => {
-  const { projects } = data.allMdx;
   return (
     <main>
       <h2 className="h2">Projects</h2>
-      <div className={styles.projects}>
-        {projects.map((proj) => {
-          return (
-            <ConditionalRender
-              shouldRender={!!proj.node.frontmatter}
-              key={proj.node.id}
-            >
-              <Link className="thumb-link" to={'/projects/' + proj.node.frontmatter?.slug ?? ''}>
-                <div className={proj.node.id}>
-                  {proj.node.frontmatter?.thumb?.childImageSharp?.fluid ? (
-                    <GatsbyImage
-                      image={
-                        proj.node.frontmatter?.thumb?.childImageSharp?.fluid
-                      }
-                      alt=""
-                      loading="eager"
-                    />
-                  ) : null}
-                </div>
-                <h4 className="h4"><NonBreakingText text={proj.node.frontmatter?.heading} /></h4>
-                <p>{proj.node.frontmatter?.description}</p>
-              </Link>
-            </ConditionalRender>
-          );
-        })}
-      </div>
+      <ProjectsGrid />
     </main>
   );
 };
 
 export default Index;
-
-// Get all projects so we can generate a list in the Projects view
-export const query = graphql`
-  query Projects {
-    allMdx(
-      sort: [{ frontmatter: { order: ASC } }, { frontmatter: { title: ASC } }]
-      filter: { internal: { contentFilePath: { regex: "/(/projects/)/" } } }
-    ) {
-      projects: edges {
-        node {
-          id
-          body
-          frontmatter {
-            slug
-            title
-            heading
-            description
-            thumb {
-              childImageSharp {
-                fluid: gatsbyImageData(
-                  layout: CONSTRAINED
-                  placeholder: BLURRED
-                  width: 400
-                )
-              }
-            }
-          }
-          internal {
-            contentFilePath
-          }
-        }
-      }
-    }
-  }
-`;
